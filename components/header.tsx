@@ -1,8 +1,11 @@
 import { View, Text, StyleSheet, Image } from "react-native";
 import Logo from '../assets/images/sunrin-logo.png'
 import { style } from "../lib/style";
+import { useEffect, useState } from "react";
+import * as Font from "expo-font";
 
 export default function Header() {
+
     return (
         <View style={styles.container}>
             <Image source={Logo} style={styles.schoolIcon} />
@@ -26,7 +29,7 @@ const styles = StyleSheet.create({
     },
     schoolName: {
         fontSize: 20,
-        fontWeight: '500',
+        fontWeight: '800',
         letterSpacing: -1,
         marginLeft: 5,
     },
