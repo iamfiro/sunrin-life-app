@@ -37,14 +37,14 @@ const styles = StyleSheet.create({
         height: 50,
     },
     itemTitle: {
-        fontSize: 15,
+        fontSize: style.fontSize.Text_17,
         fontWeight: 'bold',
         letterSpacing: style.letterSpacing.big,
     },
     itemDescription: {
         color: style.colors.textTransparent,
-        
-        fontSize: 13,
+
+        fontSize: style.fontSize.Text_14,
         fontWeight: '400',
 
         marginTop: 1,

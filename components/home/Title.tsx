@@ -30,11 +30,11 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
     },
     mainText: {
-        fontSize: 24,
+        fontSize: style.fontSize.DisplayXS_24,
         fontWeight: 'bold',
     },
     mainCurrentDate: {
-        fontSize: 17,
+        fontSize: style.fontSize.Text_16,
         color: style.colors.textTransparent,
         marginTop: 5,
     }

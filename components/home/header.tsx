@@ -36,7 +36,7 @@ const styles = StyleSheet.create({
         marginTop: 3,
     },
     mainSchoolClass: {
-        fontSize: 16,
+        fontSize: style.fontSize.Text_16,
         letterSpacing: style.letterSpacing.big,
 
         marginLeft: 5,

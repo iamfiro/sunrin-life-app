@@ -1,5 +1,5 @@
-import { Platform, SafeAreaView, StyleSheet, Text, StatusBar } from 'react-native';
-import { Header } from './components/home/header';
+import { SafeAreaView, StyleSheet, StatusBar } from 'react-native';
+import { Header } from './components/home/Header';
 import { Button } from './components/home/Button';
 import OnboardWord from './components/home/Title';
 import { style } from './lib/style';
