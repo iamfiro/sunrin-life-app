@@ -1,7 +1,8 @@
 export const style = {
     colors: {
-        border: '#E5E5E5',
-        textTransparent: '#00000050',
+        border: '#f2f2f2',
+        textTransparent: '#8A8A8A',
         gray050: '#F8F8F8',
+        primary: '#B9CEF7'
     }
 }

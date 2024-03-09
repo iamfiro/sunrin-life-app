@@ -1,16 +1,15 @@
 import { View, Text, StyleSheet, Image } from "react-native";
-import Logo from '../assets/images/sunrin-logo.png'
-import { style } from "../lib/style";
-import { useEffect, useState } from "react";
-import * as Font from "expo-font";
+import Logo from '../../assets/images/sunrin-logo.png'
+import { style } from "../../lib/style";
 
 export default function Header() {
 
     return (
         <View style={styles.container}>
             <Image source={Logo} style={styles.schoolIcon} />
-            <Text style={styles.schoolName}>선린인터넷고등학교</Text>
-            <Text style={styles.schoolClass}>1학년 6반</Text>
+            <View style={styles.schoolDataContainer}>
+                <Text style={styles.schoolClass}>1학년 6반</Text>
+            </View>
         </View>
     );
 }
@@ -18,8 +17,11 @@ export default function Header() {
 const styles = StyleSheet.create({
     container: {
         height: 60,
+
         backgroundColor: '#ffffff',
-        alignItems: 'center',
+
+        alignItems: 'flex-end',
+        justifyContent: 'space-between',
         flexDirection: 'row',
     },
     schoolIcon: {
@@ -27,17 +29,15 @@ const styles = StyleSheet.create({
         height: 30,
         marginTop: 3,
     },
-    schoolName: {
-        fontSize: 20,
-        fontWeight: '800',
-        letterSpacing: -1,
-        marginLeft: 5,
+    schoolDataContainer: {
+        flexDirection: 'row',
     },
     schoolClass: {
-        fontSize: 20,
-        fontWeight: '500',
+        fontSize: 16,
         letterSpacing: -1,
+
         marginLeft: 5,
+
         color: style.colors.textTransparent,
     }
 });
