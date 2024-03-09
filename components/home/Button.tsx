@@ -5,7 +5,7 @@ import { AntDesign } from '@expo/vector-icons';
 import { useState } from "react";
 import TouchableScale from 'react-native-touchable-scale';
 
-export default function CompetitionButtton() {
+export function Button() {
     return (
         <TouchableScale style={styles.container}  activeScale={0.97}>
             <Image source={Trophy} style={styles.itemIcon} />
@@ -24,10 +24,8 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
 
         padding: 15,
-        paddingTop: 15,
-        paddingBottom: 15,
 
-        borderRadius: 20,
+        borderRadius: style.radius.button,
         borderWidth: 1,
         borderColor: style.colors.border,
     },
@@ -41,14 +39,17 @@ const styles = StyleSheet.create({
     itemTitle: {
         fontSize: 15,
         fontWeight: 'bold',
-        letterSpacing: -1,
+        letterSpacing: style.letterSpacing.big,
     },
     itemDescription: {
-        fontSize: 13,
         color: style.colors.textTransparent,
+        
+        fontSize: 13,
         fontWeight: '400',
+
         marginTop: 1,
-        letterSpacing: -.5,
+
+        letterSpacing: style.letterSpacing.small,
     },
     rightIcon: {
         marginLeft: 'auto',

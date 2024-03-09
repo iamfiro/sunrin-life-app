@@ -2,20 +2,26 @@ import { View, Text, StyleSheet, Image } from "react-native";
 import Logo from '../../assets/images/sunrin-logo.png'
 import { style } from "../../lib/style";
 
-export default function Header() {
+interface HeaderProps {
+    type: 'main'
+}
 
-    return (
-        <View style={styles.container}>
-            <Image source={Logo} style={styles.schoolIcon} />
-            <View style={styles.schoolDataContainer}>
-                <Text style={styles.schoolClass}>1학년 6반</Text>
-            </View>
-        </View>
-    );
+export function Header({ type }: HeaderProps) {
+    switch (type) {
+        case 'main':
+            return (
+                <View style={styles.mainContainer}>
+                    <Image source={Logo} style={styles.mainSchoolIcon} />
+                    <Text style={styles.mainSchoolClass}>1학년 6반</Text>
+                </View>
+            );
+        default:
+            return <Text>Error: Invalid Header type</Text>
+    }
 }
 
 const styles = StyleSheet.create({
-    container: {
+    mainContainer: {
         height: 60,
 
         backgroundColor: style.colors.white,
@@ -24,17 +30,14 @@ const styles = StyleSheet.create({
         justifyContent: 'space-between',
         flexDirection: 'row',
     },
-    schoolIcon: {
+    mainSchoolIcon: {
         width: 40,
         height: 40,
         marginTop: 3,
     },
-    schoolDataContainer: {
-        flexDirection: 'row',
-    },
-    schoolClass: {
+    mainSchoolClass: {
         fontSize: 16,
-        letterSpacing: -1,
+        letterSpacing: style.letterSpacing.big,
 
         marginLeft: 5,
 
