@@ -18,15 +18,15 @@ const styles = StyleSheet.create({
     container: {
         height: 60,
 
-        backgroundColor: '#ffffff',
+        backgroundColor: style.colors.white,
 
         alignItems: 'flex-end',
         justifyContent: 'space-between',
         flexDirection: 'row',
     },
     schoolIcon: {
-        width: 30,
-        height: 30,
+        width: 40,
+        height: 40,
         marginTop: 3,
     },
     schoolDataContainer: {

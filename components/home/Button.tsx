@@ -13,7 +13,7 @@ export default function CompetitionButtton() {
                 <Text style={styles.itemTitle}>다가오는 대회 보기 🏆</Text>
                 <Text style={styles.itemDescription}>이번엔 우승 기기?</Text>
             </View>
-            <AntDesign name="right" size={22} color="#c2c2c2" style={styles.rightIcon} />
+            <AntDesign name="right" size={22} color={style.colors.gray200} style={styles.rightIcon} />
         </TouchableScale>
     );
 }
