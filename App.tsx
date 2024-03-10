@@ -3,8 +3,17 @@ import { Header } from './components/home/Header';
 import { Button } from './components/home/Button';
 import OnboardWord from './components/home/Title';
 import { style } from './lib/style';
+import { setCustomText } from 'react-native-global-props';
+
+const customTextProps = {
+    style: {
+      fontFamily: 'WantedSans'
+    }
+};
 
 export default function App() {
+    setCustomText(customTextProps);
+    
     return (
         <SafeAreaView style={styles.container}>
             <StatusBar backgroundColor={style.colors.white} barStyle="dark-content" animated={true} />

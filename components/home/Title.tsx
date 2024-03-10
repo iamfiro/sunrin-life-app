@@ -32,6 +32,7 @@ const styles = StyleSheet.create({
     mainText: {
         fontSize: style.fontSize.DisplayXS_24,
         fontWeight: 'bold',
+        lineHeight: 25,
     },
     mainCurrentDate: {
         fontSize: style.fontSize.Text_16,
