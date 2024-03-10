@@ -27,5 +27,14 @@ export const style = {
         Text_16: 16,
         Text_14: 14,
         Text_12: 12,
+    },
+    font: {
+        WantedSans300: 'Wanted Sans Regular',
+        WantedSans400: 'Wanted Sans Medium',
+        WantedSans500: 'Wanted Sans SemiBold',
+        WantedSans600: 'Wanted Sans Bold',
+        WantedSans700: 'Wanted Sans ExtraBold',
+        WantedSans800: 'Wanted Sans Black',
+        WantedSans900: 'Wanted Sans ExtraBlack',
     }
 }
