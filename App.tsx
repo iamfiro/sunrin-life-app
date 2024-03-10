@@ -1,7 +1,7 @@
 import { SafeAreaView, StyleSheet, StatusBar } from 'react-native';
-import { Header } from './components/home/Header';
-import { Button } from './components/home/Button';
-import OnboardWord from './components/home/Title';
+import { Header } from './components/Header';
+import { Button } from './components/Button';
+import OnboardWord from './components/Title';
 import { style } from './lib/style';
 import * as SplashScreen from 'expo-splash-screen';
 import { useFonts } from 'expo-font';
@@ -45,7 +45,7 @@ const styles = StyleSheet.create({
         flex: 1,
         flexDirection: 'column',
         backgroundColor: style.colors.white,
-        paddingLeft: 15,
-        paddingRight: 15,
+        paddingLeft: 17.5,
+        paddingRight: 17.5,
     },
 });

@@ -1,8 +1,7 @@
 import { View, Text, StyleSheet, Image } from "react-native";
 import Trophy from '../../assets/images/icons/trophy.png'
-import { style } from "../../lib/style";
+import { style } from "../lib/style";
 import { AntDesign } from '@expo/vector-icons';
-import { useState } from "react";
 import TouchableScale from 'react-native-touchable-scale';
 
 export function Button() {
@@ -37,15 +36,14 @@ const styles = StyleSheet.create({
         height: 50,
     },
     itemTitle: {
-        fontSize: style.fontSize.Text_17,
-        fontWeight: 'bold',
-        fontFamily: 'Wanted Sans',
+        fontSize: style.fontSize.Text_16,
+        fontFamily: style.font.WantedSans600,
         letterSpacing: style.letterSpacing.big,
     },
     itemDescription: {
         color: style.colors.textTransparent,
 
-        fontFamily: 'Wanted Sans',
+        fontFamily: style.font.WantedSans400,
         fontSize: style.fontSize.Text_14,
 
         marginTop: 1,

@@ -1,6 +1,6 @@
 import { View, Text, StyleSheet, Image } from "react-native";
 import Logo from '../../assets/images/sunrin-logo.png'
-import { style } from "../../lib/style";
+import { style } from "../lib/style";
 
 interface HeaderProps {
     type: 'main'

@@ -1,6 +1,6 @@
 import { View, Text, StyleSheet } from "react-native";
-import { style } from "../../lib/style";
-import { dateToString } from "../../lib/time";
+import { style } from "../lib/style";
+import { dateToString } from "../lib/time";
 
 interface TitleProps {
     type: 'main'
@@ -31,12 +31,12 @@ const styles = StyleSheet.create({
     },
     mainText: {
         fontSize: style.fontSize.DisplayXS_24,
-        fontFamily: 'Wanted Sans Regular',
+        fontFamily: style.font.WantedSans500,
         lineHeight: 25,
     },
     mainCurrentDate: {
         fontSize: style.fontSize.Text_16,
-        fontFamily: 'Wanted Sans Medium',
+        fontFamily: style.font.WantedSans400,
 
         color: style.colors.textTransparent,
 
