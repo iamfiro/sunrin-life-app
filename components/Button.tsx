@@ -1,5 +1,5 @@
 import { View, Text, StyleSheet, Image } from "react-native";
-import Trophy from '../../assets/images/icons/trophy.png'
+import Trophy from '../assets/images/icons/trophy.png'
 import { style } from "../lib/style";
 import { AntDesign } from '@expo/vector-icons';
 import TouchableScale from 'react-native-touchable-scale';
