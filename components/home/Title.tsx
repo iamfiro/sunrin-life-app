@@ -31,12 +31,15 @@ const styles = StyleSheet.create({
     },
     mainText: {
         fontSize: style.fontSize.DisplayXS_24,
-        fontWeight: 'bold',
+        fontFamily: 'Wanted Sans Regular',
         lineHeight: 25,
     },
     mainCurrentDate: {
         fontSize: style.fontSize.Text_16,
+        fontFamily: 'Wanted Sans Medium',
+
         color: style.colors.textTransparent,
+
         marginTop: 5,
     }
 });

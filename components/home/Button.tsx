@@ -39,13 +39,14 @@ const styles = StyleSheet.create({
     itemTitle: {
         fontSize: style.fontSize.Text_17,
         fontWeight: 'bold',
+        fontFamily: 'Wanted Sans',
         letterSpacing: style.letterSpacing.big,
     },
     itemDescription: {
         color: style.colors.textTransparent,
 
+        fontFamily: 'Wanted Sans',
         fontSize: style.fontSize.Text_14,
-        fontWeight: '400',
 
         marginTop: 1,
 
