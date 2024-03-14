@@ -1,4 +1,4 @@
-import { SafeAreaView, ScrollView, StatusBar, StyleSheet, View } from "react-native";
+import { ScrollView, StatusBar, StyleSheet, View } from "react-native";
 import * as SplashScreen from "expo-splash-screen";
 import { useFonts } from "expo-font";
 import { useCallback } from "react";
@@ -41,7 +41,7 @@ export default function ScreenHome({ navigation }: any) {
 					</View>
                     <View style={style.bottom}>
                         <View style={style.progressDataContainer}>
-                            <Title size={5} color="#ffffffe0" weight="200">1교시 🏃</Title>
+                            <Title size={5} color="#ffffffe0" weight="200">1교시 쉬는시간 🏃</Title>
                             <Title size={5} color="#ffffffe0" weight="200">🕐 32분 남음</Title>
                             <Title size={5} color="#ffffffe0" weight="200">2교시 🚩</Title>
                         </View>
