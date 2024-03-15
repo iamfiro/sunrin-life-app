@@ -73,7 +73,7 @@ const style = StyleSheet.create({
 	},
 
     bottom: {
-        height: 115,
+        height: 100,
 
         paddingLeft: 17.5,
 		paddingRight: 17.5,
