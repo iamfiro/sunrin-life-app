@@ -13,7 +13,7 @@ export default function HomearticleList({ navigation }: IDefaultScreenProps) {
 const style = StyleSheet.create({
     section: {
         padding: 17.5,
-        paddingTop: 25,
+        paddingTop: 0,
         paddingBottom: 30,
     }
 })
