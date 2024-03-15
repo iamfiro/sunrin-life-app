@@ -30,7 +30,7 @@ export default function HomeSchoolDataList({ navigation }: IDefaultScreenProps) 
                     <Title size={5} color="#979797" weight="200">위젯 편집하기</Title>
                 </TouchableOpacity>
             </View>
-            <View style={{ marginTop: 15 }}>
+            <View style={{ marginTop: 25}}>
                 <SchoolInfoComponent emoji="🍽️" title="오늘의 급식" data="차조밥
 짬뽕만두국
 도토리묵야채무침
@@ -54,7 +54,7 @@ const style = StyleSheet.create({
     section: {
         padding: 17.5,
         paddingTop: 25,
-        paddingBottom: 20,
+        paddingBottom: 25,
     },
     
     schoolInfoContainer: {

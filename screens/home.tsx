@@ -77,12 +77,13 @@ const style = StyleSheet.create({
 	},
 
     bottom: {
-        height: 100,
+        height: 110,
 
         paddingLeft: 17.5,
 		paddingRight: 17.5,
+		paddingBottom: 23,
 
-        justifyContent: "center",
+        justifyContent: "flex-end",
     },
 
     progressDataContainer: {
