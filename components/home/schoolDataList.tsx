@@ -58,7 +58,7 @@ export default function SchoolDataList({ navigation }: SchoolDataListProps) {
 const style = StyleSheet.create({
     section: {
         padding: 17.5,
-        paddingTop: 30,
+        paddingTop: 25,
         paddingBottom: 30,
     },
     

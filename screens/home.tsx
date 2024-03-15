@@ -61,6 +61,8 @@ const style = StyleSheet.create({
 		flex: 1,
 
 		backgroundColor: "#fff",
+
+		paddingBottom: 100,
 	},
 
 	top: {
