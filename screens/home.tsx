@@ -3,7 +3,8 @@ import * as SplashScreen from "expo-splash-screen";
 import { useFonts } from "expo-font";
 import { useCallback } from "react";
 import Title from "../components/title";
-import SchoolDataList from "../components/home/schoolDataList";
+import HomeSchoolDataList from "../components/home/schoolDataList";
+import HomearticleList from "../components/home/articleList";
 
 export default function ScreenHome({ navigation }: any) {
 	SplashScreen.preventAutoHideAsync();
@@ -49,7 +50,8 @@ export default function ScreenHome({ navigation }: any) {
                         </View>
                     </View>
 				</View>
-                <SchoolDataList navigation={navigation} />
+                <HomeSchoolDataList navigation={navigation} />
+				<HomearticleList navigation={navigation} />
 			</ScrollView>
 			<StatusBar backgroundColor={"#04C28F"} barStyle={"light-content"} />
 		</>

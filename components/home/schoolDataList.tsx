@@ -1,9 +1,6 @@
 import { View, TouchableOpacity, StyleSheet } from "react-native";
 import Title from "../title";
-
-interface SchoolDataListProps {
-    navigation: any;
-}
+import { IDefaultScreenProps } from "../../types/screen";
 
 interface SchoolInfoComponentProps {
     emoji: string;
@@ -24,7 +21,7 @@ function SchoolInfoComponent({ emoji, title, data }: SchoolInfoComponentProps) {
     )
 }
 
-export default function SchoolDataList({ navigation }: SchoolDataListProps) {
+export default function HomeSchoolDataList({ navigation }: IDefaultScreenProps) {
     return (
         <View style={style.section}>
             <View style={{ flexDirection: "row", justifyContent: "space-between" }}>
@@ -47,8 +44,6 @@ export default function SchoolDataList({ navigation }: SchoolDataListProps) {
 국어A
 자율" />
                 <SchoolInfoComponent emoji="⛅" title="날씨" data="맑음 (1°C)" />
-                <SchoolInfoComponent emoji="🌫️" title="미세먼지" data="미세먼지 - 보통 (59㎍/m³)
-초미세먼지 - 나쁨 (39㎍/m³)" />
             </View>
         </View>
     )
