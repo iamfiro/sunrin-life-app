@@ -43,7 +43,6 @@ export default function ScreenHome({ navigation }: any) {
                         <View style={style.progressDataContainer}>
                             <Title size={5} color="#ffffffe0" weight="200">1교시 쉬는시간 🏃</Title>
                             <Title size={5} color="#ffffffe0" weight="200">🕐 32분 남음</Title>
-                            <Title size={5} color="#ffffffe0" weight="200">2교시 🚩</Title>
                         </View>
                         <View style={style.progressContainer}>
                             <View style={{ backgroundColor: "#ffffffd0", height: 18, width: '50%', borderRadius: 100 }} />
