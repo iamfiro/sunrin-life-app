@@ -16,7 +16,7 @@ function SchoolInfoComponent({ emoji, title, data }: SchoolInfoComponentProps) {
         <View style={style.schoolInfoContainer}>
             <Title size={0} color="#000" weight="300">{emoji}</Title>
             <View style={{ marginLeft: 15}}>
-                <Title size={4} color="#000" weight="400">{title}</Title>
+                <Title size={5} color="#000" weight="400">{title}</Title>
                 <View style={{ marginTop: 3 }} />
                 <Title size={5} color="#838383" weight="200">{data}</Title>
             </View>
