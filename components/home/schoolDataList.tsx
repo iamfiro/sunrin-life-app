@@ -1,4 +1,4 @@
-import { View, TouchableOpacity, StyleSheet } from "react-native";
+import { View, TouchableOpacity, StyleSheet, ScrollView } from "react-native";
 import Title from "../title";
 import { IDefaultScreenProps } from "../../types/screen";
 
@@ -11,12 +11,11 @@ interface SchoolInfoComponentProps {
 function SchoolInfoComponent({ emoji, title, data }: SchoolInfoComponentProps) {
     return (
         <View style={style.schoolInfoContainer}>
-            <Title size={0} color="#000" weight="300">{emoji}</Title>
-            <View style={{ marginLeft: 15}}>
-                <Title size={5} color="#000" weight="400">{title}</Title>
-                <View style={{ marginTop: 3 }} />
-                <Title size={5} color="#838383" weight="200">{data}</Title>
-            </View>
+            <Title size={2} color="#000" weight="300">{emoji}</Title>
+            <View style={{ marginTop: 10 }} />
+            <Title size={5} color="#000" weight="400">{title}</Title>
+            <View style={{ marginTop: 3 }} />
+            <Title size={5} color="#838383" weight="200">{data}</Title>
         </View>
     )
 }
@@ -30,7 +29,7 @@ export default function HomeSchoolDataList({ navigation }: IDefaultScreenProps) 
                     <Title size={5} color="#979797" weight="200">위젯 편집하기</Title>
                 </TouchableOpacity>
             </View>
-            <View style={{ marginTop: 25}}>
+            <ScrollView horizontal style={{ marginTop: 25}}>
                 <SchoolInfoComponent emoji="🍽️" title="오늘의 급식" data="차조밥
 짬뽕만두국
 도토리묵야채무침
@@ -44,7 +43,7 @@ export default function HomeSchoolDataList({ navigation }: IDefaultScreenProps) 
 국어A
 자율" />
                 <SchoolInfoComponent emoji="⛅" title="날씨" data="맑음 (1°C)" />
-            </View>
+            </ScrollView>
         </View>
     )
 }
@@ -58,15 +57,14 @@ const style = StyleSheet.create({
     },
     
     schoolInfoContainer: {
-        flexDirection: "row",
+        minWidth: 210,
 
         borderWidth: 1,
         borderColor: "#ededed",
-        borderRadius: 10,
+        borderRadius: 15,
 
-        padding: 17.5,
-        paddingTop: 15,
-        paddingBottom: 15,
+        padding: 19,
         marginBottom: 10,
+        marginRight: 10,
     },
 });
