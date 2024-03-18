@@ -2,7 +2,7 @@ import { ReactNode } from "react";
 import { Text } from "react-native";
 
 interface TitleProps {
-    size: 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7;
+    size: 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8;
     color: string;
     weight: '100' | '200' | '300' | '400' | '500' | '600' | '700';
     children?: ReactNode;
@@ -47,6 +47,8 @@ function sizeToFontSize(size: TitleProps['size']) {
             return 14
         case 7:
             return 12
+        case 8:
+            return 10
     }
 
 }
