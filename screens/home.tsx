@@ -70,14 +70,11 @@ export default function ScreenHome({ navigation }: any) {
 						<FilterSelectButton onPress={() => { }} selected={true}>🗂️  전체</FilterSelectButton>
 						<FilterSelectButton onPress={() => { }} selected={false}>📢  공지</FilterSelectButton>
 						<FilterSelectButton onPress={() => { }} selected={false}>📄  숙제</FilterSelectButton>
-						<FilterSelectButton onPress={() => { }} selected={false}>❕  확인 안 됨</FilterSelectButton>
-						<FilterSelectButton onPress={() => { }} selected={false}>👁️  확인됨</FilterSelectButton>
 					</ScrollView>
 				</View>
 				<View style={{ paddingHorizontal: 17.5 }}>
 					<HomeArticleList navigation={navigation} />
 				</View>
-				
 				<View style={{ height: 50 }} />
 			</ScrollView>
 			<StatusBar backgroundColor={"#ffffff"} barStyle={"dark-content"} />
