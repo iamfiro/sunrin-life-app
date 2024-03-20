@@ -91,7 +91,7 @@ const style = StyleSheet.create({
 
 		backgroundColor: "#fff",
 
-		paddingBottom: 100,
+		paddingBottom: 150,
 	},
 
 	menuItem: {
@@ -101,8 +101,6 @@ const style = StyleSheet.create({
 
 		height: 90,
 		width: 85,
-
-		backgroundColor: "#ffffff",
 
 		padding: 10,
 

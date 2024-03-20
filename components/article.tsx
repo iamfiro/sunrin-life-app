@@ -21,9 +21,9 @@ export function ArticleReact({ emoji, count, isClicked }: ArticleReactProps) {
 function ArticleTypeData(type: ArticleProps['type']) {
     switch (type) {
         case "notice":
-            return { text: "📢  공지", color: '#8447ff'}
+            return { text: "공지", color: '#8447ff'}
         case "homework":
-            return { text: "📄  숙제", color: '#F04438'}
+            return { text: "숙제", color: '#F04438'}
     }
 }
 
@@ -39,24 +39,20 @@ export default function Article({ title, article, type, id, navigation }: Articl
     return (
         <TouchableOpacity style={style.container} onPress={() => navigation.navigate("Article", { id })}>
             <View style={{ flexDirection: "row", justifyContent: 'space-between' }}>
-                <Title size={4} color="#000" weight="300">{title}</Title>
-                <View style={propsStyle(ArticleTypeData(type).color).container}>
-                    <Title size={8} color="#fff" weight="400">{ArticleTypeData(type).text}</Title>
+                <Title size={5} color="#000" weight="300">{title}</Title>
+                <View style={propsStyle(`${ArticleTypeData(type).color}15`).container}>
+                    <Title size={8} color={ArticleTypeData(type).color} weight="400">{ArticleTypeData(type).text}</Title>
                 </View>
             </View>
-            <View style={{ marginTop: 15 }} />
-            <Title size={6} color="#838383" weight="200">{article}</Title>
-            <View style={{ height: 10 }} />
-            <Title size={6} color="#b1b1b1" weight="200">2024-03-15</Title>
-            <View style={{ height: 10 }} />
-            <View style={{ flexDirection: "row", justifyContent: 'space-between', alignItems: 'center' }}>
-                <View style={{ flexDirection: "row", marginTop: 9 }}>
-                    <ArticleReact emoji="👍" count={5} isClicked={true} />
-                    <ArticleReact emoji="👎" count={0} isClicked={false} />
+            <View style={{ marginTop: 5 }} />
+            <Title size={7} color="#838383" weight="200">{article}</Title> 
+            <View style={{ flexDirection: "row", justifyContent: 'space-between', alignItems: 'flex-end' }}>
+                <View style={{ flexDirection: "row", marginTop: 9, alignItems: 'center' }}>
+                    <Title size={7} color="#b1b1b1" weight="200">좋아요 23개  ·  2024-03-15  ·  </Title>
+                    {
+                        type === "homework" && <Title size={7} color={ArticleTypeData(type).color} weight="200">2일 남음</Title>
+                    }
                 </View>
-                {
-                    type === "homework" && <Title size={6} color={ArticleTypeData(type).color} weight="200">2일 남음</Title>
-                }
             </View>
         </TouchableOpacity>
     )
@@ -65,7 +61,7 @@ export default function Article({ title, article, type, id, navigation }: Articl
 const style = StyleSheet.create({
     container: {
         borderWidth: 1,
-        borderColor: "#ededed",
+        borderColor: "#f4f4f4",
 
         borderRadius: 15,
 
@@ -83,7 +79,6 @@ const style = StyleSheet.create({
 
 const propsStyle = (backgroundColor: string) => StyleSheet.create({
     container: {
-        
         backgroundColor: backgroundColor,
         
         paddingHorizontal: 10,

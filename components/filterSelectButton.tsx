@@ -22,8 +22,8 @@ const style = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
 
-        paddingVertical: 6,
-        paddingHorizontal: 12,
+        paddingVertical: 8,
+        paddingHorizontal: 15,
 
         borderRadius: 10,
         borderWidth: 1,
@@ -40,7 +40,7 @@ const style = StyleSheet.create({
     text: {
         color: 'black',
 
-        fontSize: 14,
+        fontSize: 13,
     },
     textSelected: {
         color: 'white',
