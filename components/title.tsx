@@ -55,6 +55,6 @@ function sizeToFontSize(size: TitleProps['size']) {
 
 export default function Title({ size, color, weight, children }: TitleProps) {
     return (
-        <Text style={{ color, fontSize: sizeToFontSize(size), fontFamily: weightToFontWeight(weight) }}>{children}</Text>
+        <Text style={{ color, fontSize: sizeToFontSize(size), fontFamily: weightToFontWeight(weight), letterSpacing: -0.5 }}>{children}</Text>
     )
 }

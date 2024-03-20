@@ -8,7 +8,8 @@
     "ios": "expo start --ios",
     "web": "expo start --web",
     "start:web": "webpack serve --config ./webpack.config.js --mode development",
-    "build:web": "webpack --mode production"
+    "build:web": "webpack --mode production",
+    "build:android-preview": "npx eas build -p android --profile development"
   },
   "dependencies": {
     "@expo/metro-runtime": "~3.1.3",
@@ -17,6 +18,7 @@
     "@react-navigation/native-stack": "^6.9.25",
     "babel-preset-es2015": "^6.24.1",
     "expo": "~50.0.13",
+    "expo-dev-client": "~3.3.10",
     "expo-splash-screen": "^0.26.4",
     "expo-status-bar": "~1.11.1",
     "react": "18.2.0",

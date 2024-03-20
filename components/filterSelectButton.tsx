@@ -22,10 +22,10 @@ const style = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
 
-        paddingVertical: 10,
-        paddingHorizontal: 20,
+        paddingVertical: 6,
+        paddingHorizontal: 12,
 
-        borderRadius: 100,
+        borderRadius: 10,
         borderWidth: 1,
         borderColor: "#ededed",
 
@@ -35,10 +35,12 @@ const style = StyleSheet.create({
         marginRight: -9.5,
     },
     buttonSelected: {
-        backgroundColor: "#04C28F",
+        backgroundColor: "#477AFF",
     },
     text: {
         color: 'black',
+
+        fontSize: 14,
     },
     textSelected: {
         color: 'white',

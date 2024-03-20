@@ -1,4 +1,4 @@
-import { ScrollView, StatusBar, StyleSheet, View } from "react-native";
+import { ScrollView, StatusBar, StyleSheet, View, Image, TouchableOpacity, ImageSourcePropType, ToastAndroid } from "react-native";
 import * as SplashScreen from "expo-splash-screen";
 import { useFonts } from "expo-font";
 import { useCallback } from "react";
@@ -6,6 +6,28 @@ import Title from "../components/title";
 import HomeSchoolDataList from "../components/home/schoolDataList";
 import HomeArticleList from "../components/home/articleList";
 import FilterSelectButton from "../components/filterSelectButton";
+import Header from "../components/header";
+import Banner from "../components/banner";
+import TrophyImage from '../assets/icon/trophy.png';
+import CalenderImage from '../assets/icon/calender.png';
+import Divider from "../components/divider";
+
+interface MenuItemProps {
+	title: string;
+	icon: ImageSourcePropType;
+	onPress: () => void;
+}
+
+function MenuItem({ title, icon, onPress }: MenuItemProps) {
+	return (
+		<TouchableOpacity style={style.menuItem} onPress={onPress}>
+			<Image source={icon} style={{ width: 40, height: 40 }} />
+			<View style={{ height: 7 }} />
+			<Title size={7} color="#000" weight="300">{title}</Title>
+		</TouchableOpacity>
+	);
+
+}
 
 export default function ScreenHome({ navigation }: any) {
 	SplashScreen.preventAutoHideAsync();
@@ -32,28 +54,16 @@ export default function ScreenHome({ navigation }: any) {
 
 	return (
 		<>
-			<ScrollView style={style.container} onLayout={onLayoutRootView} stickyHeaderIndices={[3]}>
-				<View style={{ backgroundColor: '#04C28F' }}>
-					<View style={style.top}>
-                    <Title size={5} color="#ffffff" weight="300">1학년 6반</Title>
-					</View>
-					<View style={{ paddingLeft: 17.5, paddingRight: 17.5 }}>
-                        <Title size={1} color="#ffffffad" weight="300">졸음이 오는 오후</Title>
-                        <Title size={1} color="#fff" weight="500">마지막까지 우다다ㅏㄷㄱ 😎</Title>
-					</View>
-                    <View style={style.bottom}>
-                        <View style={style.progressDataContainer}>
-                            <Title size={5} color="#ffffffe0" weight="200">1교시 쉬는시간 🏃</Title>
-                            <Title size={5} color="#ffffffe0" weight="200">🕐 5분 남음</Title>
-                        </View>
-                        <View style={style.progressContainer}>
-                            <View style={{ backgroundColor: "#ffffffd0", height: 18, width: '50%', borderRadius: 100 }} />
-                        </View>
-                    </View>
+			<ScrollView style={style.container} onLayout={onLayoutRootView} stickyHeaderIndices={[5]}>
+				<Header type="president" grade={1} classNumber={4} />
+				<Banner imgUrl="https://images.unsplash.com/photo-1709290649154-54c725bd4484?q=80&w=3864&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+				<View style={{ paddingHorizontal: 17.5, paddingVertical: 10, justifyContent: 'center', flexDirection: 'row' }}>
+					<MenuItem title="대회 일정" icon={TrophyImage} onPress={() => { }} />
+					<MenuItem title="학사 일정" icon={CalenderImage} onPress={() => { ToastAndroid.show('🛠️ 개발중인 구역입니다. 잠시만 이따 방문해주세요 🏃', ToastAndroid.SHORT); }} />
 				</View>
 				<HomeSchoolDataList navigation={navigation} />
-				<View style={{ padding: 17.5, paddingTop: 30, paddingBottom: 0 }}>
-					<Title size={4} color="#000" weight="300">최근에 올라온 공지 📢</Title>
+				<View style={{ padding: 17.5, paddingTop: 30, paddingBottom: 10 }}>
+					<Title size={4} color="#000" weight="400">최근에 올라온 공지</Title>
 				</View>
 				<View style={{ backgroundColor: "white" }}>
 					<ScrollView style={style.ArticleFilterContainer} horizontal>
@@ -70,7 +80,7 @@ export default function ScreenHome({ navigation }: any) {
 				
 				<View style={{ height: 50 }} />
 			</ScrollView>
-			<StatusBar backgroundColor={"#04C28F"} barStyle={"light-content"} />
+			<StatusBar backgroundColor={"#ffffff"} barStyle={"dark-content"} />
 		</>
 	);
 }
@@ -84,43 +94,20 @@ const style = StyleSheet.create({
 		paddingBottom: 100,
 	},
 
-	top: {
-		height: 50,
-
+	menuItem: {
+		flexDirection: "column",
+		alignItems: "center",
 		justifyContent: "center",
 
-		paddingLeft: 17.5,
-		paddingRight: 17.5,
+		height: 90,
+		width: 85,
+
+		backgroundColor: "#ffffff",
+
+		padding: 10,
+
+		borderRadius: 10,
 	},
-
-    bottom: {
-        height: 110,
-
-        paddingLeft: 17.5,
-		paddingRight: 17.5,
-		paddingBottom: 23,
-
-        justifyContent: "flex-end",
-    },
-
-    progressDataContainer: {
-        flexDirection: "row",
-        justifyContent: "space-between",
-        
-        marginBottom: 12,
-    },
-    progressContainer: {
-        backgroundColor: "#00906a",
-
-        height: 25,
-        width: '100%',
-
-        borderRadius: 100,
-
-        padding: 3,
-
-        justifyContent: "center",
-    },
 
     section: {
         padding: 17.5,
