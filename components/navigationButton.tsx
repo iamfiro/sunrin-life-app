@@ -9,10 +9,7 @@ interface NavigationButtonProps {
 export default function NavigationButton({ name }: NavigationButtonProps) {
     return (
         <TouchableOpacity style={style.container}>
-            <Icon name="left" size={20} color="#000" />
-            <View style={{ width: 10 }} />
-            <Title size={5} color="#000" weight="300">{name}</Title>
-            <Title size={5} color="#9f9f9f" weight="300">으로 이동하기</Title>
+            <Icon name="left" size={25} color="#797979" />
         </TouchableOpacity>
     )
 }
@@ -20,9 +17,9 @@ export default function NavigationButton({ name }: NavigationButtonProps) {
 const style = StyleSheet.create({
     container: {
         borderColor: "#ededed",
-        borderBottomWidth: 1,
+        // borderBottomWidth: 1,
 
-        height: 50,
+        height: 70,
 
         alignItems: "center",
 
