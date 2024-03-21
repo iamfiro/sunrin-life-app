@@ -58,7 +58,7 @@ export default function ScreenHome({ navigation }: any) {
 				<Header type="president" grade={1} classNumber={4} />
 				<Banner imgUrl="https://images.unsplash.com/photo-1709290649154-54c725bd4484?q=80&w=3864&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
 				<View style={{ paddingHorizontal: 17.5, paddingVertical: 10, justifyContent: 'center', flexDirection: 'row' }}>
-					<MenuItem title="대회 일정" icon={TrophyImage} onPress={() => { }} />
+					<MenuItem title="대회 일정" icon={TrophyImage} onPress={() => { navigation.navigate("Competition") }} />
 					<MenuItem title="학사 일정" icon={CalenderImage} onPress={() => { ToastAndroid.show('🛠️ 개발중인 구역입니다. 잠시만 이따 방문해주세요 🏃', ToastAndroid.SHORT); }} />
 				</View>
 				<HomeSchoolDataList navigation={navigation} />

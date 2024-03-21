@@ -3,12 +3,12 @@ import Icon from "react-native-vector-icons/AntDesign";
 import Title from "./title";
 
 interface NavigationButtonProps {
-    name: string;
+    onClick: () => void;
 }
 
-export default function NavigationButton({ name }: NavigationButtonProps) {
+export default function NavigationButton({ onClick }: NavigationButtonProps) {
     return (
-        <TouchableOpacity style={style.container}>
+        <TouchableOpacity style={style.container} onPress={() => onClick()}>
             <Icon name="left" size={25} color="#797979" />
         </TouchableOpacity>
     )
