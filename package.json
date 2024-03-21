@@ -7,8 +7,6 @@
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
-    "start:web": "webpack serve --config ./webpack.config.js --mode development",
-    "build:web": "webpack --mode production",
     "build:android-preview": "npx eas build -p android --profile development"
   },
   "dependencies": {
