@@ -6,13 +6,16 @@ export default function Divider() {
     )
 }
 
+/**
+ * Styles for the Divider component.
+ */
 const style = StyleSheet.create({
 	container: {
-        height: 8,
+    height: 8,
 
-        backgroundColor: "#fafafa",
-        borderTopWidth: 1,
-        borderBottomWidth: 0,
-        borderColor: "#ededed",
+    backgroundColor: "#fafafa",
+    borderTopWidth: 1,
+    borderBottomWidth: 0,
+    borderColor: "#ededed",
 	},
 })

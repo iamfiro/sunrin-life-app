@@ -19,6 +19,15 @@ function typeToKorean(type: HeaderProps['type']) {
 
 }
 
+/**
+ * Renders the header component.
+ *
+ * @param {Object} props - The component props.
+ * @param {string} props.type - The type of the account.
+ * @param {number} props.classNumber - The class number.
+ * @param {number} props.grade - The grade level.
+ * @returns {JSX.Element} The rendered header component.
+ */
 export default function Header({ type, classNumber, grade }: HeaderProps) {
     return (
         <View style={style.container}>

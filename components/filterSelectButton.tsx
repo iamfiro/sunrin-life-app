@@ -17,6 +17,9 @@ export default function FilterSelectButton({ children, onPress, selected }: Filt
     )
 }
 
+/**
+ * Styles for the filter select button component.
+ */
 const style = StyleSheet.create({
     button: {
         alignItems: 'center',
