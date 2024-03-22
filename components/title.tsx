@@ -6,6 +6,7 @@ interface TitleProps {
     color: string;
     weight: '100' | '200' | '300' | '400' | '500' | '600' | '700';
     children?: ReactNode;
+    textAlign?: 'left' | 'center' | 'right';
 }
 
 function weightToFontWeight(weight: TitleProps['weight']) {
@@ -53,8 +54,14 @@ function sizeToFontSize(size: TitleProps['size']) {
 
 }
 
-export default function Title({ size, color, weight, children }: TitleProps) {
+export default function Title({ size, color, weight, children, textAlign }: TitleProps) {
     return (
-        <Text style={{ color, fontSize: sizeToFontSize(size), fontFamily: weightToFontWeight(weight), letterSpacing: -0.5 }}>{children}</Text>
+        <Text style={{
+            color,
+            fontSize: sizeToFontSize(size), 
+            fontFamily: weightToFontWeight(weight), 
+            letterSpacing: -0.5, 
+            textAlign: textAlign ?? 'left'
+        }}>{children}</Text>
     )
 }

@@ -66,7 +66,7 @@ export default function ScreenHome({ navigation }: any) {
 				<View style={{ padding: 17.5, paddingTop: 30, paddingBottom: 10 }}>
 					<Title size={4} color="#000" weight="400">최근에 올라온 공지</Title>
 				</View>
-				<View style={{ backgroundColor: "white" }}>
+				<View style={{ backgroundColor: "white", paddingLeft: 17.5 }}>
 					<ScrollView style={style.ArticleFilterContainer} horizontal>
 						<FilterSelectButton onPress={() => { }} selected={true}>🗂️  전체</FilterSelectButton>
 						<FilterSelectButton onPress={() => { }} selected={false}>📢  공지</FilterSelectButton>

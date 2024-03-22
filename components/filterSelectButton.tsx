@@ -34,8 +34,8 @@ const style = StyleSheet.create({
 
         backgroundColor: 'white',
 
-        marginLeft: 17.5,
-        marginRight: -9.5,
+        marginRight: 8,
+        // marginRight: -9.5,
     },
     buttonSelected: {
         backgroundColor: "#477AFF",

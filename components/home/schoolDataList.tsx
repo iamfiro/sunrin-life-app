@@ -25,7 +25,7 @@ export default function HomeSchoolDataList({ navigation }: IDefaultScreenProps) 
         <View style={style.section}>
             <View style={{ flexDirection: "row", justifyContent: "space-between" }}>
                 <Title size={4} color="#000" weight="300"></Title>
-                <TouchableOpacity onPress={() => navigation.navigate("Setting")} style={{ marginRight: 17.5 }}>
+                <TouchableOpacity onPress={() => navigation.navigate("WidgetSetting")} style={{ marginRight: 17.5 }}>
                     <Title size={7} color="#979797" weight="200">위젯 편집하기</Title>
                 </TouchableOpacity>
             </View>

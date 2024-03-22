@@ -6,6 +6,7 @@ import ScreenCompetitionList from "./screens/competition";
 import ScreenArticleList from "./screens/articleList";
 import ScreenMenu from "./screens/menu";
 import ScreenWidgetSetting from "./screens/widgetSetting";
+import ScreenCommunity from "./screens/community";
 
 const Stack = createNativeStackNavigator();
 
@@ -18,7 +19,7 @@ export default function App() {
                 <Stack.Screen name="Article" component={ScreenArticle} />
                 <Stack.Screen name="ArticleList" component={ScreenArticleList} />
                 <Stack.Screen name="Menu" component={ScreenMenu} />
-                <Stack.Screen name="Community" component={ScreenMenu} />
+                <Stack.Screen name="Community" component={ScreenCommunity} />
                 <Stack.Screen name="Competition" component={ScreenCompetitionList} />
             </Stack.Navigator>
         </NavigationContainer>
