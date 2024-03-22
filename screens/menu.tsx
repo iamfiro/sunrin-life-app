@@ -57,7 +57,7 @@ export default function ScreenMenu({ navigation }: IDefaultScreenProps) {
     return (
         <>
         <ScrollView style={style.container} onLayout={onLayoutRootView}>
-            <NavigationButton onClick={() => navigation.pop()} />
+            <NavigationButton onClick={() => navigation.navigate("Home")} />
             <View style={{ paddingHorizontal: 17.5, marginTop: 10 }}>
                 <Title size={3} color="#000000" weight="400">기본 설정</Title>
                 <View style={{ height: 20 }} />
