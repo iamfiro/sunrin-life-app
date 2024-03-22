@@ -5,6 +5,12 @@ interface NavigationButtonProps {
     onClick: () => void;
 }
 
+/**
+ * Renders a navigation button component.
+ *
+ * @param onClick - The function to be called when the button is clicked.
+ * @returns The rendered navigation button component.
+ */
 export default function NavigationButton({ onClick }: NavigationButtonProps) {
     return (
         <TouchableOpacity style={style.container} onPress={() => onClick()}>

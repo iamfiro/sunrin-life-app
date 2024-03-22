@@ -9,6 +9,14 @@ import BottomNavigation from "../components/bottomNavigation";
 import FilterSelectButton from "../components/filterSelectButton";
 import HomeArticleList from "../components/home/articleList";
 
+/**
+ * Renders the screen for the article list.
+ * 
+ * @param {object} route - The route object containing navigation information.
+ * @param {object} navigation - The navigation object for navigating between screens.
+ * @returns {JSX.Element} The rendered article list screen.
+ */
+
 export default function ScreenArticleList({ route, navigation }: any) {
 	SplashScreen.preventAutoHideAsync();
 

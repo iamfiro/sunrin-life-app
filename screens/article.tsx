@@ -6,6 +6,14 @@ import * as SplashScreen from "expo-splash-screen";
 import { useFonts } from "expo-font";
 import { useCallback } from "react";
 
+/**
+ * Renders the article screen.
+ * 
+ * @param {Object} route - The route object containing navigation parameters.
+ * @param {Object} navigation - The navigation object for navigating between screens.
+ * @returns {JSX.Element} The rendered article screen.
+ */
+
 export default function ScreenArticle({ route, navigation }: any) {
     // if(!route.params) return navigation.navigate("Home");
     // const { id } = route.params;

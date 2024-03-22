@@ -1,7 +1,5 @@
-import { View, StyleSheet, ScrollView } from "react-native";
-import Title from "../title";
+import { View } from "react-native";
 import { IDefaultScreenProps } from "../../types/screen";
-import FilterSelectButton from "../filterSelectButton";
 import Article from "../article";
 
 export default function HomeArticleList({ navigation }: IDefaultScreenProps) {

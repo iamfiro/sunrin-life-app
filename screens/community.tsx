@@ -4,6 +4,12 @@ import { IDefaultScreenProps } from "../types/screen";
 import FrogImage from '../assets/icon/frog.png'
 import Title from "../components/title";
 
+/**
+ * Renders the Community screen.
+ * 
+ * @param navigation - The navigation object used for navigating between screens.
+ * @returns The rendered Community screen.
+ */
 export default function ScreenCommunity({ navigation }: IDefaultScreenProps) {
     return (
         <>

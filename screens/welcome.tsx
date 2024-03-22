@@ -2,6 +2,12 @@ import { StatusBar, Text, View, StyleSheet, Image, TouchableOpacity } from "reac
 import Title from "../components/title";
 import { IDefaultScreenProps } from "../types/screen";
 
+/**
+ * Renders the welcome screen.
+ *
+ * @param {IDefaultScreenProps} navigation - The navigation object.
+ * @returns {JSX.Element} The rendered welcome screen.
+ */
 export default function ScreenWelcome({ navigation }: IDefaultScreenProps) {
     return (
         <>

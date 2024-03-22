@@ -35,6 +35,17 @@ interface ArticleProps {
     navigation: any;
 }
 
+/**
+ * Renders an article component.
+ *
+ * @param {Object} props - The component props.
+ * @param {string} props.title - The title of the article.
+ * @param {string} props.article - The content of the article.
+ * @param {string} props.type - The type of the article.
+ * @param {string} props.id - The ID of the article.
+ * @param {Object} props.navigation - The navigation object.
+ * @returns {JSX.Element} The rendered article component.
+ */
 export default function Article({ title, article, type, id, navigation }: ArticleProps) {
     return (
         <TouchableOpacity style={style.container} onPress={() => navigation.navigate("Article", { id })}>

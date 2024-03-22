@@ -9,6 +9,14 @@ import Button from "../components/button";
 import { CompetitionStateType } from "../types/competition";
 import { TouchableOpacity } from "react-native";
 
+/**
+ * Renders the screen for the competition list.
+ * 
+ * @param {object} route - The route object.
+ * @param {object} navigation - The navigation object.
+ * @returns {JSX.Element} The competition list screen component.
+ */
+
 export default function ScreenCompetitionList({ route, navigation }: any) {
 	SplashScreen.preventAutoHideAsync();
 

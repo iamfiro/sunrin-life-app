@@ -20,6 +20,12 @@ function SchoolInfoComponent({ emoji, title, data }: SchoolInfoComponentProps) {
     )
 }
 
+/**
+ * Renders a list of school data in the home screen.
+ * 
+ * @param navigation - The navigation object for navigating between screens.
+ * @returns The rendered school data list component.
+ */
 export default function HomeSchoolDataList({ navigation }: IDefaultScreenProps) {
     return (
         <View style={style.section}>

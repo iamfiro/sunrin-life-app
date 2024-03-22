@@ -31,7 +31,13 @@ export default function Button({ type, text, onClick }: ButtonProps) {
     );
 }
 
+/**
+ * Styles for the button component.
+ */
 const style = StyleSheet.create({
+    /**
+     * Styles for the primary button.
+     */
     primaryButton: {
         width: "100%",
         height: 55,
@@ -40,6 +46,9 @@ const style = StyleSheet.create({
         backgroundColor: "#477AFF",
         borderRadius: 10,
     },
+    /**
+     * Styles for the secondary button.
+     */
     secondaryButton: {
         width: "100%",
         height: 55,

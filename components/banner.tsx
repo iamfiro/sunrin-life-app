@@ -12,18 +12,21 @@ export default function Banner({ imgUrl }: BannerProps) {
     )
 }
 
+/**
+ * Styles for the banner component.
+ */
 const style = StyleSheet.create({
-	container: {
+    container: {
         flexDirection: "row",
-		alignItems: "center",
-		justifyContent: "space-between",
+        alignItems: "center",
+        justifyContent: "space-between",
 
-		height: 150,
+        height: 150,
 
         backgroundColor: "#dadada",
 
         marginHorizontal: 17.5,
 
         borderRadius: 10,
-	},
-})
+    },
+});

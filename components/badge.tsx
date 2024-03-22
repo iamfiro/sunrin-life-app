@@ -5,6 +5,12 @@ interface BadgeProps {
     type: 'teacher' | 'president' | 'twoPresident';
 }
 
+/**
+ * Renders a badge component based on the provided type.
+ * @param {Object} props - The component props.
+ * @param {string} props.type - The type of the badge.
+ * @returns {JSX.Element} The rendered badge component.
+ */
 export default function Badge({ type }: BadgeProps) {
     switch (type) {
         case "teacher":

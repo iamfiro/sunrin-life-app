@@ -31,6 +31,11 @@ function MenuItem({ title, icon, onPress }: MenuItemProps) {
     )
 }
 
+/**
+ * Renders the menu screen.
+ * @param {IDefaultScreenProps} navigation - The navigation object.
+ * @returns {JSX.Element} The rendered menu screen.
+ */
 export default function ScreenMenu({ navigation }: IDefaultScreenProps) {
     SplashScreen.preventAutoHideAsync();
 

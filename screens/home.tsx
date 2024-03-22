@@ -29,6 +29,13 @@ function MenuItem({ title, icon, onPress }: MenuItemProps) {
 
 }
 
+/**
+ * Renders the home screen.
+ * 
+ * @param navigation - The navigation object.
+ * @returns The rendered home screen.
+ */
+
 export default function ScreenHome({ navigation }: any) {
 	SplashScreen.preventAutoHideAsync();
 

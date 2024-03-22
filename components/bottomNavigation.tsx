@@ -42,6 +42,11 @@ export default function BottomNavigation({ pageName, navigation }: BottomNavigat
     )
 }
 
+/**
+ * Returns the style object for the bottom navigation component.
+ * @param selected - Indicates whether the item is selected or not.
+ * @returns The style object.
+ */
 const style = (selected: boolean) => StyleSheet.create({
     container: {
         height: 65,

@@ -9,6 +9,11 @@ interface TitleProps {
     textAlign?: 'left' | 'center' | 'right';
 }
 
+/**
+ * Converts the weight value to the corresponding font weight.
+ * @param weight - The weight value to convert.
+ * @returns The corresponding font weight.
+ */
 function weightToFontWeight(weight: TitleProps['weight']) {
     switch (weight) {
         case '100':
