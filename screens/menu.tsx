@@ -7,6 +7,7 @@ import { useCallback } from "react";
 import Title from "../components/title";
 import NavigationButton from "../components/navigationButton";
 import Icon from "react-native-vector-icons/AntDesign";
+import WidgetImage from '../assets/icon/menu/widget.png';
 
 interface MenuItemProps {
     title: string;
@@ -55,7 +56,7 @@ export default function ScreenMenu({ navigation }: IDefaultScreenProps) {
                 <Title size={2} color="#000" weight="300">🔨  메뉴</Title>
                 <View style={{ height: 10 }} />
             </View>
-            <MenuItem title="공지 리스트" icon={""} onPress={() => navigation.navigate("ArticleList")} />
+            <MenuItem title="공지 리스트" icon={WidgetImage} onPress={() => navigation.navigate("ArticleList")} />
         </ScrollView>
         <BottomNavigation pageName="Menu" navigation={navigation} />
 		<StatusBar backgroundColor={"#ffffff"} barStyle={"dark-content"} />

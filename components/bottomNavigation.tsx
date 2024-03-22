@@ -1,13 +1,13 @@
 import { View, StyleSheet, Text, Image, ImageSourcePropType } from "react-native";
 import Title from "./title";
-import HomeIcon from "../assets/icon/home.png";
-import HomeGrayIcon from "../assets/icon/home-gray.png";
-import MenuIcon from "../assets/icon/menu.png";
-import MenuGrayIcon from "../assets/icon/menu-gray.png";
-import CommunityIcon from "../assets/icon/community.png";
-import CommunityGrayIcon from "../assets/icon/community-gray.png";
-import ArticleIcon from "../assets/icon/article.png";
-import ArticleGrayIcon from "../assets/icon/article-gray.png";
+import HomeIcon from "../assets/icon/navigation/home.png";
+import HomeGrayIcon from "../assets/icon/navigation/home-gray.png";
+import MenuIcon from "../assets/icon/navigation/menu.png";
+import MenuGrayIcon from "../assets/icon/navigation/menu-gray.png";
+import CommunityIcon from "../assets/icon/navigation/community.png";
+import CommunityGrayIcon from "../assets/icon/navigation/community-gray.png";
+import ArticleIcon from "../assets/icon/navigation/article.png";
+import ArticleGrayIcon from "../assets/icon/navigation/article-gray.png";
 import { TouchableOpacity } from "react-native";
 
 interface MenuItemProps {
