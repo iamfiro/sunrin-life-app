@@ -1,6 +1,5 @@
 import { StyleSheet, TouchableOpacity, View } from "react-native";
 import Icon from "react-native-vector-icons/AntDesign";
-import Title from "./title";
 
 interface NavigationButtonProps {
     onClick: () => void;

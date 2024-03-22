@@ -10,7 +10,6 @@ import Header from "../components/header";
 import Banner from "../components/banner";
 import TrophyImage from '../assets/icon/trophy.png';
 import CalenderImage from '../assets/icon/calender.png';
-import Divider from "../components/divider";
 import BottomNavigation from "../components/bottomNavigation";
 
 interface MenuItemProps {
