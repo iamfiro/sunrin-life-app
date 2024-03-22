@@ -5,6 +5,7 @@ import ScreenHome from "./screens/home";
 import ScreenArticle from "./screens/article";
 import ScreenCompetitionList from "./screens/competition";
 import ScreenArticleList from "./screens/articleList";
+import ScreenMenu from "./screens/menu";
 
 const Stack = createNativeStackNavigator();
 
@@ -16,6 +17,7 @@ export default function App() {
                 <Stack.Screen name="Setting" component={ScreenSetting} />
                 <Stack.Screen name="Article" component={ScreenArticle} />
                 <Stack.Screen name="ArticleList" component={ScreenArticleList} />
+                <Stack.Screen name="Menu" component={ScreenMenu} />
                 <Stack.Screen name="Competition" component={ScreenCompetitionList} />
             </Stack.Navigator>
         </NavigationContainer>
