@@ -7,13 +7,14 @@ import ScreenArticleList from "./screens/articleList";
 import ScreenMenu from "./screens/menu";
 import ScreenWidgetSetting from "./screens/widgetSetting";
 import ScreenCommunity from "./screens/community";
+import { AppRegistry, Platform } from 'react-native';
 
 const Stack = createNativeStackNavigator();
 
 export default function App() {
     return (
         <NavigationContainer>
-            <Stack.Navigator screenOptions={{ headerShown: false }} initialRouteName="Home">
+            <Stack.Navigator screenOptions={{ headerShown: false }} initialRouteName="Menu">
                 <Stack.Screen name="Home" component={ScreenHome} />
                 <Stack.Screen name="WidgetSetting" component={ScreenWidgetSetting} />
                 <Stack.Screen name="Article" component={ScreenArticle} />
