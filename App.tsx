@@ -7,9 +7,7 @@ import ScreenArticleList from "./screens/articleList";
 import ScreenMenu from "./screens/menu";
 import ScreenWidgetSetting from "./screens/widgetSetting";
 import ScreenCommunity from "./screens/community";
-import { AppRegistry, Platform } from 'react-native';
 import ScreenWelcome from "./screens/welcome";
-
 const Stack = createNativeStackNavigator();
 
 export default function App() {

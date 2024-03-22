@@ -9,6 +9,9 @@ import { IDefaultScreenProps } from "../types/screen";
  * @returns {JSX.Element} The rendered welcome screen.
  */
 export default function ScreenWelcome({ navigation }: IDefaultScreenProps) {
+    const handleLogin = () => {
+        navigation.navigate("Home")
+    };
     return (
         <>
         <View style={style.container}>
@@ -19,7 +22,7 @@ export default function ScreenWelcome({ navigation }: IDefaultScreenProps) {
                 <View style={{ height: 30 }} />
                 <Title size={2} color="#000000" weight="300">🗨️  커뮤니티</Title>
                 <View style={{ height: 30 }} />
-                <Title size={2} color="#000000" weight="300">🍤  급식</Title>
+                <Title size={2} color="#000000" weight="300">🍤  급s식</Title>
                 <View style={{ height: 30 }} />
                 <Title size={2} color="#000000" weight="300">📅  시간표</Title>
                 <View style={{ height: 30 }} />
@@ -29,7 +32,7 @@ export default function ScreenWelcome({ navigation }: IDefaultScreenProps) {
                 <View style={{ height: 30 }} />
                 <Title size={2} color="#000000" weight="300">등등 ...</Title>
             </View>
-            <TouchableOpacity style={style.googleButton} onPress={() => navigation.navigate("Home")}>
+            <TouchableOpacity style={style.googleButton} onPress={() => handleLogin()}>
                 <Title size={5} color="#ffffff" weight="300">학교 이메일로 로그인</Title>
             </TouchableOpacity>
         </View>
