@@ -22,7 +22,7 @@ interface MenuItemProps {
 function MenuItem({ title, icon, onPress }: MenuItemProps) {
 	return (
 		<TouchableOpacity style={style.menuItem} onPress={onPress}>
-			<Image source={icon} style={{ width: 40, height: 40 }} />
+			<Image source={icon} style={{ width: 43, height: 43 }} />
 			<View style={{ height: 7 }} />
 			<Title size={7} color="#000" weight="300">{title}</Title>
 		</TouchableOpacity>
