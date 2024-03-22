@@ -11,6 +11,7 @@ import Banner from "../components/banner";
 import TrophyImage from '../assets/icon/trophy.png';
 import CalenderImage from '../assets/icon/calender.png';
 import Divider from "../components/divider";
+import BottomNavigation from "../components/bottomNavigation";
 
 interface MenuItemProps {
 	title: string;
@@ -77,6 +78,7 @@ export default function ScreenHome({ navigation }: any) {
 				</View>
 				<View style={{ height: 150 }} />
 			</ScrollView>
+			<BottomNavigation pageName="Home" navigation={navigation} />
 			<StatusBar backgroundColor={"#ffffff"} barStyle={"dark-content"} />
 		</>
 	);

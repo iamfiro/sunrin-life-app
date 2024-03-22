@@ -35,7 +35,7 @@ export default function ScreenArticle({ route, navigation }: any) {
     return (
         <>
         <ScrollView style={style.container} onLayout={onLayoutRootView}>
-            <NavigationButton onClick={() => navigation.navigate()} />
+            <NavigationButton onClick={() => navigation.pop()} />
             <View style={{ paddingHorizontal: 17.5, marginTop: 10 }}>
                 <Title size={6} color="#000000" weight="200">📄  숙제</Title>
                 <View style={{ height: 10 }} />
