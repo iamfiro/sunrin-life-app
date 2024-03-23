@@ -38,7 +38,8 @@ function MenuItem({ title, icon, onPress }: MenuItemProps) {
  * @returns {JSX.Element} The rendered menu screen.
  */
 export default function ScreenMenu({ navigation }: IDefaultScreenProps) {
-    SplashScreen.preventAutoHideAsync();
+    // 폰트 로딩
+	SplashScreen.preventAutoHideAsync();
 
 	const [fontsLoaded, fontError] = useFonts(FontList);
 

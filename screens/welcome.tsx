@@ -13,7 +13,8 @@ import { FontList } from ".";
  * @returns {JSX.Element} The rendered welcome screen.
  */
 export default function ScreenWelcome({ navigation }: IDefaultScreenProps) {
-    SplashScreen.preventAutoHideAsync();
+    // 폰트 로딩
+	SplashScreen.preventAutoHideAsync();
 
 	const [fontsLoaded, fontError] = useFonts(FontList);
 

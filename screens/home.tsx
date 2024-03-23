@@ -38,6 +38,7 @@ function MenuItem({ title, icon, onPress }: MenuItemProps) {
  */
 
 export default function ScreenHome({ navigation }: any) {
+	// 폰트 로딩
 	SplashScreen.preventAutoHideAsync();
 
 	const [fontsLoaded, fontError] = useFonts(FontList);

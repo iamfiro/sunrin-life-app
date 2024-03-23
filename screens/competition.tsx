@@ -19,6 +19,7 @@ import { FontList } from ".";
  */
 
 export default function ScreenCompetitionList({ route, navigation }: any) {
+    // 폰트 로딩
 	SplashScreen.preventAutoHideAsync();
 
 	const [fontsLoaded, fontError] = useFonts(FontList);

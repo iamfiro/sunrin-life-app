@@ -88,6 +88,7 @@ function AdminAnalytics() {
  */
 
 export default function ScreenArticle({ navigation }: any) {
+	// 폰트 로딩
 	SplashScreen.preventAutoHideAsync();
 
 	const [fontsLoaded, fontError] = useFonts(FontList);

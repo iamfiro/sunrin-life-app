@@ -1,3 +1,4 @@
+// Wanted Sans 폰트 리스트
 export const FontList = {
     "Wanted Sans ExtraBlack": require("../assets/fonts/WantedSans-ExtraBlack.otf"),
     "Wanted Sans Black": require("../assets/fonts/WantedSans-Black.otf"),
