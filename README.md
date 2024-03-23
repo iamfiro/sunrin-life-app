@@ -46,7 +46,7 @@
 
 /components - 앱에서 사용하는 각종 컴포넌트 파일
 
-/node_modul조
+/node_modules - 패키지 매니저로 설치한 모듈이 들어가 있는 폴더
 
 .gitignore - Github에 올라가면 안되는 파일을 적어둔 파일 (예시: .env 파일)
 
