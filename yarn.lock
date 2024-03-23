@@ -5058,6 +5058,11 @@ execa@^5.0.0, execa@^5.1.1:
     signal-exit "^3.0.3"
     strip-final-newline "^2.0.0"
 
+expo-application@^5.8.3:
+  version "5.8.3"
+  resolved "https://registry.npmjs.org/expo-application/-/expo-application-5.8.3.tgz"
+  integrity sha512-IISxzpPX+Xe4ynnwX8yY52T6dm1g9sME1GCj4lvUlrdc5xeTPM6U35x7Wj82V7lLWBaVGe+/Tg9EeKqfylCEwA==
+
 expo-asset@~9.0.2:
   version "9.0.2"
   resolved "https://registry.npmjs.org/expo-asset/-/expo-asset-9.0.2.tgz"
@@ -5178,7 +5183,7 @@ expo-updates-interface@~0.15.1:
   resolved "https://registry.npmjs.org/expo-updates-interface/-/expo-updates-interface-0.15.3.tgz"
   integrity sha512-uLvsbaCmUsXgJqeen8rYH/jPr874ZUCXEvWpKHxrCv5/XATPlYEaDuecbNSGQ+cu78i6MdtB4BHOwZmoH2d47A==
 
-expo@*, expo@>=49.0.0, expo@~50.0.13:
+expo@*, expo@^50.0.0, expo@>=49.0.0:
   version "50.0.13"
   resolved "https://registry.npmjs.org/expo/-/expo-50.0.13.tgz"
   integrity sha512-p0FYrhUJZe92YOwOXx6GZ/WaxF6YtsLXtWkql9pFIIocYBN6iQ3OMGsbQCRSu0ao8rlxsk7HgQDEWK4D+y9tAg==

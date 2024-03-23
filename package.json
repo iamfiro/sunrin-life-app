@@ -16,7 +16,7 @@
     "@react-navigation/native-stack": "^6.9.25",
     "@sentry/react-native": "^5.20.0",
     "babel-preset-es2015": "^6.24.1",
-    "expo": "~50.0.13",
+    "expo": "^50.0.0",
     "expo-dev-client": "~3.3.10",
     "expo-splash-screen": "^0.26.4",
     "expo-status-bar": "~1.11.1",
