@@ -25,9 +25,13 @@
 `React Native (EXPO)` - **React 문법을 기반**으로 한 앱 개발 프레임워크<br/>
 `Typescript` - Javascript에 **Type**기능을 추가한 언어<br/>
 `Sentry` - 실시간 로그 취합 및 분석 도구 **오류 모니터링 플랫폼**<br/>
-<a id="#tech-server"></a>
 
-`FastAPI` - 서버 개발을 위한 **파이썬 웹 프레임워크**
+<a id="#tech-server"></a>
+`FastAPI` - 서버 개발을 위한 **파이썬 웹 프레임워크**<br/>
+`Nest.js` - **Node.js 기반** 서버 개발을 위한 **프레임워크** *FastApi가 메인*<br/>
+`Mysql` - 오픈소스 **관계형 데이터베이스** 관리 시스템<br/>
+`Redis` - Redis는 **Key-Value** 쌍의 해시 맵과 같은 구조를 가진 **NoSQL 데이터베이스 (데이터 캐시용)**<br/>
+`OpenWeatherMap` - 학교 날씨를 가져오기 위한 날씨 API<br/>
 
 ## 🖥️ 개발자 <a id="developer"></a>
 - <a href="github.com/iamfiro">@iamfiro</a> - 📱 앱 개발 / 🎨 앱 디자인
