@@ -9,6 +9,7 @@ import NavigationButton from "../components/navigationButton";
 import Icon from "react-native-vector-icons/AntDesign";
 import WidgetImage from '../assets/icon/menu/widget.png';
 import InstagramImage from '../assets/icon/menu/instagram.png';
+import DeveloperImage from '../assets/icon/menu/developer.png';
 import Button from "../components/button";
 import { FontList } from ".";
 
@@ -75,6 +76,7 @@ export default function ScreenMenu({ navigation }: IDefaultScreenProps) {
                 <Title size={3} color="#000000" weight="400">기타</Title>
                 <View style={{ height: 20 }} />
                 <MenuItem title="공식 인스타그램" icon={InstagramImage} onPress={() => Linking.openURL("https://www.instagram.com/sunrin_life")} />
+                <MenuItem title="개발자 정보" icon={DeveloperImage} onPress={() => Linking.openURL("https://www.instagram.com/sunrin_life")} />
                 <View style={{ height: 20 }} />
                 <Button type="primary" text="문의하기" onClick={() => { Linking.openURL("https://www.instagram.com/sunrin_life")}} />
                 <View style={{ height: 5 }} />
