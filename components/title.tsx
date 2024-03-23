@@ -10,6 +10,8 @@ interface TitleProps {
     weight: '100' | '200' | '300' | '400' | '500' | '600' | '700';
     children?: ReactNode;
     textAlign?: 'left' | 'center' | 'right';
+    marginTop?: number;
+    marginBottom?: number;
 }
 
 /**
@@ -74,17 +76,21 @@ function sizeToFontSize(size: TitleProps['size']) {
  * @param {string} props.color - The color of the title.
  * @param {string} props.weight - The font weight of the title.
  * @param {string} props.textAlign - The alignment of the title. Defaults to 'left'.
+ * @param {number} props.marginBottom - The margin bottom of the title.
+ * @param {number} props.marginTop - The margin top of the title.
  * @param {ReactNode} props.children - The content to be displayed within the title.
  * @returns {JSX.Element} The rendered title component.
  */
-export default function Title({ size, color, weight, children, textAlign }: TitleProps) {
+export default function Title({ size, color, weight, children, textAlign, marginBottom, marginTop }: TitleProps) {
     return (
         <Text style={{
             color,
             fontSize: sizeToFontSize(size), 
             fontFamily: weightToFontWeight(weight), 
             letterSpacing: -0.5, 
-            textAlign: textAlign ?? 'left'
+            textAlign: textAlign ?? 'left',
+            marginTop,
+            marginBottom
         }}>{children}</Text>
     )
 }

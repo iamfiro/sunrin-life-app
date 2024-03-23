@@ -33,8 +33,7 @@ function MenuItem({ title, icon, onPress }: MenuItemProps) {
 	return (
 		<TouchableOpacity style={style.menuItem} onPress={onPress}>
 			<Image source={icon} style={{ width: 43, height: 43 }} />
-			<View style={{ height: 7 }} />
-			<Title size={7} color="#000" weight="300">{title}</Title>
+			<Title size={7} color="#000" weight="300" marginTop={7}>{title}</Title>
 		</TouchableOpacity>
 	);
 }
@@ -78,10 +77,9 @@ export default function ScreenHome({ navigation }: any) {
 						<FilterSelectButton onPress={() => { }} selected={false}>📄  숙제</FilterSelectButton>
 					</ScrollView>
 				</View>
-				<View style={{ paddingHorizontal: 17.5 }}>
+				<View style={{ paddingHorizontal: 17.5, marginBottom: 150 }}>
 					<HomeArticleList navigation={navigation} />
 				</View>
-				<View style={{ height: 150 }} />
 			</ScrollView>
 			<BottomNavigation pageName="Home" navigation={navigation} />
 			<StatusBar backgroundColor={"#ffffff"} barStyle={"dark-content"} />

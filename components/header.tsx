@@ -60,9 +60,7 @@ export default function Header({ type, classNumber, grade }: HeaderProps) {
 
     return (
         <View style={style.container}>
-            <View style={{ marginBottom: 5 }}>
-                <Title size={4} color="#000000" weight="400">선린라이프 β</Title>
-            </View>
+            <Title size={4} color="#000000" weight="400" marginBottom={5}>선린라이프 β</Title>
             <View style={{ flexDirection: "row", alignItems: "center" }}>
                 <AccountButton type={type} onClick={handleAccountClick} />
                 <ClassButton grade={grade} classNumber={classNumber} onClick={handleClassClick} />

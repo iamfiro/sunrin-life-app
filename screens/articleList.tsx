@@ -34,8 +34,7 @@ export default function ScreenArticleList({ route, navigation }: any) {
         <ScrollView style={style.container} onLayout={onLayoutRootView}>
             <NavigationButton onClick={() => navigation.pop()} />
             <View style={{ paddingHorizontal: 17.5, marginTop: 10 }}>
-                <Title size={2} color="#000" weight="300">📢  공지 리스트</Title>
-                <View style={{ height: 10 }} />
+                <Title size={2} color="#000" weight="300" marginBottom={10}>📢  공지 리스트</Title>
             </View>
             <View style={style.ArticleSearchContainer}>
                 <TextInput style={style.input} placeholder="검색어를 입력하세요" />

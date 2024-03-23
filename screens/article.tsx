@@ -47,13 +47,9 @@ function AdminAnalytics() {
                 <Title size={4} color="#000" weight="300">📊 관리자 전용 통계</Title>
                 <Title size={7} color="#727272" weight="200" textAlign="right">선생님, 회장, 부회장만{'\n'}볼 수 있습니다</Title>
             </View>
-            <View style={{ height: 20 }} />
-            <Title size={5} color="#727272" weight="200">조회함</Title>
-            <View style={{ height: 5 }} />
-            <Title size={5} color="#000" weight="200">16명</Title>
-            <View style={{ height: 20 }} />
-            <Title size={5} color="#727272" weight="200">조회한 사람</Title>
-            <View style={{ height: 10 }} />
+            <Title size={5} color="#727272" weight="200" marginTop={20}>조회함</Title>
+            <Title size={5} color="#000" weight="200" marginTop={5}>16명</Title>
+            <Title size={5} color="#727272" weight="200" marginTop={20} marginBottom={10}>조회한 사람</Title>
             <Title size={5} color="#000" weight="200">10401 강성영후</Title>
             <Title size={5} color="#000" weight="200">10402 곽원영</Title>
             <Title size={5} color="#000" weight="200">10403 권동규</Title>
@@ -66,9 +62,7 @@ function AdminAnalytics() {
             <Title size={5} color="#000" weight="200">10404 권지원</Title>
             <Title size={5} color="#000" weight="200">10405 김민겸</Title>
             <Title size={5} color="#000" weight="200">10406 김성호</Title>
-            <View style={{ height: 20 }} />
-            <Title size={5} color="#727272" weight="200">게시글에 반응한 사람</Title>
-            <View style={{ height: 10 }} />
+            <Title size={5} color="#727272" weight="200" marginBottom={10} marginTop={20}>게시글에 반응한 사람</Title>
             <Title size={5} color="#000" weight="200">10401 강성영후</Title>
             <Title size={5} color="#000" weight="200">10402 곽원영</Title>
             <Title size={5} color="#000" weight="200">10403 권동규</Title>

@@ -66,8 +66,7 @@ export default function ScreenCompetitionList({ route, navigation }: any) {
         <ScrollView style={style.container} onLayout={onLayoutRootView}>
             <NavigationButton onClick={() => navigation.navigate("Home")} />
             <View style={{ paddingHorizontal: 17.5, marginTop: 10 }}>
-                <Title size={2} color="#000" weight="300">🏆  다가오는 대회</Title>
-                <View style={{ height: 40 }} />
+                <Title size={2} color="#000" weight="300" marginBottom={40}>🏆  다가오는 대회</Title>
                 {
                     data.map((item, index) => {
                         const isSameDate = preventListDate?.toString() === item.date?.toString();
@@ -81,16 +80,13 @@ export default function ScreenCompetitionList({ route, navigation }: any) {
                                             {
                                                 index !== 0 && <View style={{ height: 30 }} />
                                             }
-                                            <Title size={5} color="#909090" weight="200">{item.date.getFullYear()}년 {item.date.getMonth()}월 {item.date.getDay()}일</Title>
-                                            <View style={{ height: 5 }} />
+                                            <Title size={5} color="#909090" weight="200" marginBottom={5}>{item.date.getFullYear()}년 {item.date.getMonth()}월 {item.date.getDay()}일</Title>
                                         </View>
                                     )
                                 }
                                 <TouchableOpacity style={style.competitionContainer} key={Math.random()}>
-                                    <Title size={5} color="#000" weight="300">{item.title}</Title>
-                                    <View style={{ height: 5 }} />
-                                    <Title size={7} color="#838383" weight="200">{item.description}</Title>
-                                    <View style={{ height: 5 }} />
+                                    <Title size={5} color="#000" weight="300" marginBottom={5}>{item.title}</Title>
+                                    <Title size={7} color="#838383" weight="200" marginBottom={5}>{item.description}</Title>
                                     <Title size={7} color="#838383" weight="200">D - {Math.floor((item.date.getTime() - new Date().getTime()) / (1000 * 60 * 60 * 24))}</Title>
                                 </TouchableOpacity>
                             </View>
@@ -98,10 +94,9 @@ export default function ScreenCompetitionList({ route, navigation }: any) {
                     })
                 }
                 <View style={{ height: 40 }} />
-                <View style={{ marginTop: -20 }}>
+                <View style={{ marginTop: -20, marginBottom: 30 }}>
                     <Button type="secondary" text="올바른 정보가 아닌가요?" onClick={() => { Linking.openURL("https://www.instagram.com/sunrin_life")}} />
                 </View>
-                <View style={{ height: 30 }} />
             </View>
         </ScrollView>
         <StatusBar backgroundColor={"#ffffff"} barStyle={"dark-content"} />

@@ -21,10 +21,9 @@ interface SchoolInfoComponentProps {
 function SchoolInfoComponent({ emoji, title, data }: SchoolInfoComponentProps) {
     return (
         <View style={style.schoolInfoContainer}>
-            <Title size={3} color="#000" weight="300">{emoji}</Title>
-            <View style={{ marginTop: 10 }} />
-            <Title size={6} color="#000" weight="400">{title}</Title>
-            <View style={{ marginTop: 5 }} />
+            <Title size={3} color="#000" weight="300" marginBottom={10}>{emoji}</Title>
+            <Title size={6} color="#000" weight="400" marginBottom={5}>{title}</Title>
+
             <Title size={6} color="#838383" weight="200">{data}</Title>
         </View>
     )

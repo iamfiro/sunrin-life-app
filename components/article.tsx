@@ -21,8 +21,7 @@ export function ArticleReact({ emoji, count, isClicked }: ArticleReactProps) {
     const backgroundColor = isClicked ? "#477AFF" : "#fff";
     return (
         <View style={propsStyle(backgroundColor).reactContainer}>
-            <Title size={7} color={isClicked ? "#fff" : "#000"} weight="200">{emoji}</Title>
-            <View style={{ width: 3 }} />
+            <Title size={7} color={isClicked ? "#fff" : "#000"} weight="200" marginBottom={3}>{emoji}</Title>
             <Title size={7} color={isClicked ? "#fff" : "#000"} weight="200">{count}</Title>
         </View>
     )
