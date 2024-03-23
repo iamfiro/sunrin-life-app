@@ -1,4 +1,4 @@
-import { NavigationContainer } from "@react-navigation/native";
+import { NavigationContainer, useNavigationContainerRef } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import ScreenHome from "./screens/home";
 import ScreenArticle from "./screens/article";
@@ -8,9 +8,32 @@ import ScreenMenu from "./screens/menu";
 import ScreenWidgetSetting from "./screens/widgetSetting";
 import ScreenCommunity from "./screens/community";
 import ScreenWelcome from "./screens/welcome";
+import * as Sentry from '@sentry/react-native';
+import { useEffect } from "react";
+
+const routingInstrumentation = new Sentry.ReactNavigationInstrumentation();
+
+Sentry.init({
+  dsn: process.env.SENTRY_DSN,
+  debug: false,
+  integrations: [
+    new Sentry.ReactNativeTracing({
+      routingInstrumentation,
+    }),
+  ],
+});
+
 const Stack = createNativeStackNavigator();
 
-export default function App() {
+function App() {
+    const ref = useNavigationContainerRef();
+
+    useEffect(() => {
+        if (ref) {
+            routingInstrumentation.registerNavigationContainer(ref);
+        }
+    }, [ref]);
+
     return (
         <NavigationContainer>
             <Stack.Navigator screenOptions={{ headerShown: false }} initialRouteName="Home">
@@ -26,3 +49,5 @@ export default function App() {
         </NavigationContainer>
     );
 }
+
+export default Sentry.wrap(App)
