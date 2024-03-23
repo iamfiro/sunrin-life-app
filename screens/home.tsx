@@ -42,7 +42,6 @@ function MenuItem({ title, icon, onPress }: MenuItemProps) {
  */
 
 export default function ScreenHome({ navigation }: any) {
-
 	return (
 		<>
 			<ScrollView style={style.container} stickyHeaderIndices={[5]}>

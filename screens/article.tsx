@@ -2,10 +2,6 @@ import { StyleSheet, ScrollView, StatusBar, View, Text, TouchableOpacity } from 
 import NavigationButton from "../components/navigationButton";
 import Title from "../components/title";
 import Badge from "../components/badge";
-import * as SplashScreen from "expo-splash-screen";
-import { useFonts } from "expo-font";
-import { useCallback } from "react";
-import { FontList } from ".";
 
 /* Represents the props for the ArticleReact component. */
 interface ArticleReactProps {
