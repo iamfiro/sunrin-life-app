@@ -12,11 +12,14 @@
 
 </div>
 
+<div style="height: 40px">ㅤ</div>
+
 ## 📄 목차
 1. [개발 기술](#tech)
     - [App](#tech)
     - [Server](#tech-server)
-3. [개발자](#developer)
+2. [개발자](#developer)
+3. [문의](#contact)
 
 ## 🔍 개발 기술 <a id="tech"></a>
 `React Native (EXPO)` - **React 문법을 기반**으로 한 앱 개발 프레임워크<br/>
@@ -29,3 +32,7 @@
 ## 🖥️ 개발자 <a id="developer"></a>
 - <a href="github.com/iamfiro">@iamfiro</a> - 📱 앱 개발 / 🎨 앱 디자인
 - <a href="github.com/wntjd-0612">@wntjd-0612</a>, <a href="github.com/wntjd-0612">@jwkwon0817</a>  - 🌐 서버 개발
+
+## 📞 문의 <a id="contact"></a>
+<a href="https://www.instagram.com/sunrin_life/"><img style="border-radius: 4px" src="https://img.shields.io/badge/Instagram-E4405F?style=flat-square&logo=Instagram&logoColor=white&link=https://www.instagram.com/sunrin_life/"/></a>
+> **@sunrin_life** - 인스타그램
