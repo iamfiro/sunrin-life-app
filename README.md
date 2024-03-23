@@ -16,8 +16,6 @@
 
 ## 📄 목차
 1. [개발 기술](#tech)
-    - [App](#tech)
-    - [Server](#tech-server)
 2. [파일 / 폴더 구조](#folder)
 2. [개발자](#developer)
 3. [문의](#contact)
@@ -27,7 +25,6 @@
 `Typescript` - Javascript에 **Type**기능을 추가한 언어<br/>
 `Sentry` - 실시간 로그 취합 및 분석 도구 **오류 모니터링 플랫폼**<br/>
 
-<a id="#tech-server"></a>
 `FastAPI` - 서버 개발을 위한 **파이썬 웹 프레임워크**<br/>
 `Nest.js` - **Node.js 기반** 서버 개발을 위한 **프레임워크** *FastApi가 메인*<br/>
 `Mysql` - 오픈소스 **관계형 데이터베이스** 관리 시스템<br/>
@@ -39,25 +36,44 @@
 ## 📂 파일 / 폴더 구조 <a id="folder"></a>
 - 앱 (**React Native**)
 ```
-.expo - Expo 임시 빌드 데이터
-.github - Issue 템플릿 등 Github Repository 정보
-.vscode - Visual Studio Code 에디터 설정
-assets - 앱에서 사용하는 폰트 / 이미지 파일
-components - 앱에서 사용하는 각종 컴포넌트 파일
-node_modules - 각종 필수 라이브러리들
-screens - 앱 스크린 별 코드
-types - Typescript에서 사용하는 기본 Type, Interface, Enum 파일
+/.expo - Expo 임시 빌드 데이터
+
+/.github - Issue 템플릿 등 Github Repository 정보
+
+/.vscode - Visual Studio Code 에디터 설정
+
+/assets - 앱에서 사용하는 폰트 / 이미지 파일
+
+/components - 앱에서 사용하는 각종 컴포넌트 파일
+
+/node_modules - 각종 필수 라이브러리들
+
+/screens - 앱 스크린 별 코드
+
+/types - Typescript에서 사용하는 기본 Type, Interface, Enum 파일
+
 .env - 중요한 정보가 있는 파일 (🚫 Github에 올라가면 안됨)
+
 .gitignore - Github에 올라가면 안되는 파일을 적어둔 파일 (예시: .env 파일)
+
 app.json - 앱 이름, 패키지 이름 같은 중요한 정보
+
 App.tsx - 앱의 가장 최상위 파일로 주로 MiddleWare세팅, Routing에 사용
+
 babel.config.js - Javascript 컴파일러 설정
+
 eas.json - Expo 빌드 세팅
+
 package-lock.json - node_modules 디렉토리에 설치된 패키지들의 의존성 트리 (npm)
+
 package.json - 개발자가 배포한 패키지에 대해, 다른 사람들이 관리하고 설치하기 쉽게 하기 위한 문서
+
 react-app-env.d.ts - Typescript에서 이미지를 인식 못하는 버그가 있어 해결하는 파일
+
 README.md - 현재 보고있는 문서
+
 tsconfig.json - Typescript 세팅
+
 yarn.lock - node_modules 디렉토리에 설치된 패키지들의 의존성 트리 (Yarn)
 ```
 
