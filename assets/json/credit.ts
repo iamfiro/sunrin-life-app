@@ -1,5 +1,5 @@
 import { ImageSourcePropType } from "react-native";
-import jwkwon0817Profile from "../credit/jwkwon0817.webp";
+import jwkwon0817Profile from "../credit/jwkwon0817.png";
 import wntjd_0612Profile from "../credit/wntjd_0612.webp";
 import iamfiroProfile from "../credit/iamfiro.webp";
 
@@ -23,7 +23,7 @@ export const DeveloperCredit: IDeveloperCredit[] = [
         name: "권지원",
         image: jwkwon0817Profile,
         part: '서버 개발',
-        description: "관심 있으면 연락주세요",
+        description: "관심 있으면 연락주세요 😎",
         instagram: "jwkwon0817",
     },
     {

@@ -43,7 +43,7 @@ function App() {
 
     return (
         <NavigationContainer>
-            <Stack.Navigator screenOptions={{ headerShown: false }} initialRouteName="Competition">
+            <Stack.Navigator screenOptions={{ headerShown: false }} initialRouteName="Credit">
                 <Stack.Screen name="Home" component={ScreenHome} />
                 <Stack.Screen name="WidgetSetting" component={ScreenWidgetSetting} />
                 <Stack.Screen name="Article" component={ScreenArticle} />
