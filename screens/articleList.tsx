@@ -1,4 +1,4 @@
-import { StyleSheet, ScrollView, StatusBar, View, Text } from "react-native";
+import { StyleSheet, ScrollView, StatusBar, View, Text, TextInput } from "react-native";
 import NavigationButton from "../components/navigationButton";
 import Title from "../components/title";
 import * as SplashScreen from "expo-splash-screen";
@@ -41,7 +41,13 @@ export default function ScreenArticleList({ route, navigation }: any) {
                 <View style={{ height: 10 }} />
             </View>
             <View style={style.ArticleSearchContainer}>
+                <TextInput style={style.input} placeholder="검색어를 입력하세요" />
             </View>
+            <ScrollView style={style.ArticleFilterContainer} horizontal>
+                <FilterSelectButton onPress={() => { }} selected={true}>🗂️  전체</FilterSelectButton>
+                <FilterSelectButton onPress={() => { }} selected={false}>📢  공지</FilterSelectButton>
+                <FilterSelectButton onPress={() => { }} selected={false}>📄  숙제</FilterSelectButton>
+            </ScrollView>
             <View style={{ paddingHorizontal: 17.5 }}>
                 <HomeArticleList navigation={navigation} />
             </View>
@@ -64,8 +70,30 @@ const style = StyleSheet.create({
 		flexDirection: "row",
 
         marginVertical: 13,
-        marginLeft: 17.5,
+        marginHorizontal: 17.5,
 
         backgroundColor: "white",
+    },
+
+    input: {
+        width: "100%",
+
+        borderColor: '#ededed',
+        borderWidth: 1,
+        borderRadius: 13,
+
+        paddingHorizontal: 15,
+        paddingVertical: 10,
+
+        fontSize: 15,
+        fontFamily: 'Wanted Sans Medium',
+    },
+
+    ArticleFilterContainer: {
+		flexDirection: "row",
+        
+        marginVertical: 13,
+        marginLeft: 17.5,
+        marginTop: 0,
     }
 })
