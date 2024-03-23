@@ -46,13 +46,7 @@
 
 /components - 앱에서 사용하는 각종 컴포넌트 파일
 
-/node_modules - 각종 필수 라이브러리들
-
-/screens - 앱 스크린 별 코드
-
-/types - Typescript에서 사용하는 기본 Type, Interface, Enum 파일
-
-.env - 중요한 정보가 있는 파일 (🚫 Github에 올라가면 안됨)
+/node_modul조
 
 .gitignore - Github에 올라가면 안되는 파일을 적어둔 파일 (예시: .env 파일)
 
