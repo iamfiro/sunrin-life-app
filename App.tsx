@@ -9,6 +9,11 @@ import ScreenWidgetSetting from "./screens/widgetSetting";
 import ScreenCommunity from "./screens/community";
 import ScreenWelcome from "./screens/welcome";
 import * as Sentry from '@sentry/react-native';
+import ScreenCredit from "./screens/credit";
+import { useCallback } from "react";
+import { FontList } from "./screens";
+import * as SplashScreen from "expo-splash-screen";
+import { useFonts } from "expo-font";
 
 const routingInstrumentation = new Sentry.ReactNavigationInstrumentation();
 
@@ -26,9 +31,19 @@ const Stack = createNativeStackNavigator();
 
 function App() {
 
+    SplashScreen.preventAutoHideAsync();
+
+	const [fontsLoaded, fontError] = useFonts(FontList);
+
+	useCallback(async () => {
+		if (fontsLoaded || fontError) {
+			await SplashScreen.hideAsync();
+		} else return null;
+	}, [fontsLoaded, fontError]);
+
     return (
         <NavigationContainer>
-            <Stack.Navigator screenOptions={{ headerShown: false }} initialRouteName="Home">
+            <Stack.Navigator screenOptions={{ headerShown: false }} initialRouteName="Competition">
                 <Stack.Screen name="Home" component={ScreenHome} />
                 <Stack.Screen name="WidgetSetting" component={ScreenWidgetSetting} />
                 <Stack.Screen name="Article" component={ScreenArticle} />
@@ -37,6 +52,7 @@ function App() {
                 <Stack.Screen name="Community" component={ScreenCommunity} />
                 <Stack.Screen name="Competition" component={ScreenCompetitionList} />
                 <Stack.Screen name="Welcome" component={ScreenWelcome} />
+                <Stack.Screen name="Credit" component={ScreenCredit} />
             </Stack.Navigator>
         </NavigationContainer>
     );

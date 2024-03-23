@@ -1,13 +1,10 @@
 import { StyleSheet, ScrollView, StatusBar, View, Text, Linking } from "react-native";
 import NavigationButton from "../components/navigationButton";
 import Title from "../components/title";
-import * as SplashScreen from "expo-splash-screen";
-import { useFonts } from "expo-font";
-import { useCallback, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Button from "../components/button";
 import { CompetitionStateType } from "../types/competition";
 import { TouchableOpacity } from "react-native";
-import { FontList } from ".";
 
 /**
  * Renders the screen for the competition list.
@@ -18,17 +15,6 @@ import { FontList } from ".";
  */
 
 export default function ScreenCompetitionList({ route, navigation }: any) {
-    // 폰트 로딩
-	SplashScreen.preventAutoHideAsync();
-
-	const [fontsLoaded, fontError] = useFonts(FontList);
-
-	const onLayoutRootView = useCallback(async () => {
-		if (fontsLoaded || fontError) {
-			await SplashScreen.hideAsync();
-		} else return null;
-	}, [fontsLoaded, fontError]);
-
     const [data, setData] = useState<CompetitionStateType | []>([]);
     var preventListDate: Date | null = null;
 
@@ -63,7 +49,7 @@ export default function ScreenCompetitionList({ route, navigation }: any) {
 
     return (
         <>
-        <ScrollView style={style.container} onLayout={onLayoutRootView}>
+        <ScrollView style={style.container}>
             <NavigationButton onClick={() => navigation.navigate("Home")} />
             <View style={{ paddingHorizontal: 17.5, marginTop: 10 }}>
                 <Title size={2} color="#000" weight="300" marginBottom={40}>🏆  다가오는 대회</Title>

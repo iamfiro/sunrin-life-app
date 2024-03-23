@@ -1,7 +1,4 @@
 import { ScrollView, StatusBar, StyleSheet, View, Image, TouchableOpacity, ImageSourcePropType, ToastAndroid } from "react-native";
-import * as SplashScreen from "expo-splash-screen";
-import { useFonts } from "expo-font";
-import { useCallback } from "react";
 import Title from "../components/title";
 import HomeSchoolDataList from "../components/home/schoolDataList";
 import HomeArticleList from "../components/home/articleList";
@@ -11,7 +8,6 @@ import Banner from "../components/banner";
 import TrophyImage from '../assets/icon/trophy.png';
 import CalenderImage from '../assets/icon/calender.png';
 import BottomNavigation from "../components/bottomNavigation";
-import { FontList } from ".";
 
 /* Represents the props for a menu item. */
 interface MenuItemProps {
@@ -46,20 +42,10 @@ function MenuItem({ title, icon, onPress }: MenuItemProps) {
  */
 
 export default function ScreenHome({ navigation }: any) {
-	// 폰트 로딩
-	SplashScreen.preventAutoHideAsync();
-
-	const [fontsLoaded, fontError] = useFonts(FontList);
-
-	const onLayoutRootView = useCallback(async () => {
-		if (fontsLoaded || fontError) {
-			await SplashScreen.hideAsync();
-		} else return null;
-	}, [fontsLoaded, fontError]);
 
 	return (
 		<>
-			<ScrollView style={style.container} onLayout={onLayoutRootView} stickyHeaderIndices={[5]}>
+			<ScrollView style={style.container} stickyHeaderIndices={[5]}>
 				<Header type="president" grade={1} classNumber={4} />
 				<Banner imgUrl="https://images.unsplash.com/photo-1709290649154-54c725bd4484?q=80&w=3864&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
 				<View style={{ paddingHorizontal: 17.5, paddingVertical: 10, justifyContent: 'center', flexDirection: 'row' }}>

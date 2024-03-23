@@ -1,9 +1,6 @@
 import { StatusBar, Text, StyleSheet, ScrollView, View, TouchableOpacity, Image, ImageSourcePropType, Linking } from "react-native";
 import BottomNavigation from "../components/bottomNavigation";
 import { IDefaultScreenProps } from "../types/screen";
-import * as SplashScreen from "expo-splash-screen";
-import { useFonts } from "expo-font";
-import { useCallback } from "react";
 import Title from "../components/title";
 import NavigationButton from "../components/navigationButton";
 import Icon from "react-native-vector-icons/AntDesign";
@@ -11,7 +8,6 @@ import WidgetImage from '../assets/icon/menu/widget.png';
 import InstagramImage from '../assets/icon/menu/instagram.png';
 import DeveloperImage from '../assets/icon/menu/developer.png';
 import Button from "../components/button";
-import { FontList } from ".";
 
 /* Represents the props for a menu item. */
 interface MenuItemProps {
@@ -53,27 +49,16 @@ function MenuItem({ title, icon, onPress }: MenuItemProps) {
  * @returns {JSX.Element} The rendered menu screen.
  */
 export default function ScreenMenu({ navigation }: IDefaultScreenProps) {
-    // 폰트 로딩
-	SplashScreen.preventAutoHideAsync();
-
-	const [fontsLoaded, fontError] = useFonts(FontList);
-
-	const onLayoutRootView = useCallback(async () => {
-		if (fontsLoaded || fontError) {
-			await SplashScreen.hideAsync();
-		} else return null;
-	}, [fontsLoaded, fontError]);
-
     return (
         <>
-        <ScrollView style={style.container} onLayout={onLayoutRootView}>
+        <ScrollView style={style.container}>
             <NavigationButton onClick={() => navigation.navigate("Home")} />
             <View style={{ paddingHorizontal: 17.5, marginTop: 10 }}>
                 <Title size={3} color="#000000" weight="400" marginBottom={20}>기본 설정</Title>
                 <MenuItem title="메인 화면 위젯 설정" icon={WidgetImage} onPress={() => navigation.navigate("WidgetSetting")} />
                 <Title size={3} color="#000000" weight="400" marginBottom={20} marginTop={20}>기타</Title>
                 <MenuItem title="공식 인스타그램" icon={InstagramImage} onPress={() => Linking.openURL("https://www.instagram.com/sunrin_life")} />
-                <MenuItem title="개발자 정보" icon={DeveloperImage} onPress={() => Linking.openURL("https://www.instagram.com/sunrin_life")} />
+                <MenuItem title="개발자 정보" icon={DeveloperImage} onPress={() => navigation.navigate("Credit")} />
                 <View style={{ height: 20 }} />
                 <Button type="primary" text="문의하기" onClick={() => { Linking.openURL("https://www.instagram.com/sunrin_life")}} />
                 <View style={{ height: 5 }} />

@@ -89,20 +89,9 @@ function AdminAnalytics() {
  */
 
 export default function ScreenArticle({ navigation }: any) {
-	// 폰트 로딩
-	SplashScreen.preventAutoHideAsync();
-
-	const [fontsLoaded, fontError] = useFonts(FontList);
-
-	const onLayoutRootView = useCallback(async () => {
-		if (fontsLoaded || fontError) {
-			await SplashScreen.hideAsync();
-		} else return null;
-	}, [fontsLoaded, fontError]);
-
     return (
         <>
-        <ScrollView style={style.container} onLayout={onLayoutRootView}>
+        <ScrollView style={style.container}>
             <NavigationButton onClick={() => navigation.navigate("ArticleList")} />
             <View style={{ paddingHorizontal: 17.5, marginTop: 10 }}>
                 <Title size={6} color="#000000" weight="200">📄  숙제</Title>

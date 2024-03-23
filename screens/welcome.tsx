@@ -1,10 +1,6 @@
 import { StatusBar, Text, View, StyleSheet, Image, TouchableOpacity } from "react-native";
 import Title from "../components/title";
 import { IDefaultScreenProps } from "../types/screen";
-import * as SplashScreen from "expo-splash-screen";
-import { useFonts } from "expo-font";
-import { useCallback } from "react";
-import { FontList } from ".";
 
 /**
  * Renders the welcome screen.
@@ -13,24 +9,13 @@ import { FontList } from ".";
  * @returns {JSX.Element} The rendered welcome screen.
  */
 export default function ScreenWelcome({ navigation }: IDefaultScreenProps) {
-    // 폰트 로딩
-	SplashScreen.preventAutoHideAsync();
-
-	const [fontsLoaded, fontError] = useFonts(FontList);
-
-	const onLayoutRootView = useCallback(async () => {
-		if (fontsLoaded || fontError) {
-			await SplashScreen.hideAsync();
-		} else return null;
-	}, [fontsLoaded, fontError]);
-
     const handleLogin = () => {
         navigation.navigate("Home")
     };
 
     return (
         <>
-        <View style={style.container} onLayout={onLayoutRootView}>
+        <View style={style.container}>
             <View style={{ width: 100, height: 40, backgroundColor: '#e1e1e1', borderRadius: 8, marginBottom: 15 }} />
             <Title size={1} color="#000000" weight="400">선린라이프에 오신것을{'\n'}환영합니다 🖐️</Title>
             <View style={{ flex: 1, justifyContent: 'center', opacity: 0.35 }}>

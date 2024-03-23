@@ -1,13 +1,9 @@
 import { StyleSheet, ScrollView, StatusBar, View, Text, TextInput } from "react-native";
 import NavigationButton from "../components/navigationButton";
 import Title from "../components/title";
-import * as SplashScreen from "expo-splash-screen";
-import { useFonts } from "expo-font";
-import { useCallback } from "react";
 import BottomNavigation from "../components/bottomNavigation";
 import FilterSelectButton from "../components/filterSelectButton";
 import HomeArticleList from "../components/home/articleList";
-import { FontList } from ".";
 
 /**
  * Renders the screen for the article list.
@@ -18,20 +14,9 @@ import { FontList } from ".";
  */
 
 export default function ScreenArticleList({ route, navigation }: any) {
-	// 폰트 로딩
-	SplashScreen.preventAutoHideAsync();
-
-	const [fontsLoaded, fontError] = useFonts(FontList);
-
-	const onLayoutRootView = useCallback(async () => {
-		if (fontsLoaded || fontError) {
-			await SplashScreen.hideAsync();
-		} else return null;
-	}, [fontsLoaded, fontError]);
-
     return (
         <>
-        <ScrollView style={style.container} onLayout={onLayoutRootView}>
+        <ScrollView style={style.container}>
             <NavigationButton onClick={() => navigation.pop()} />
             <View style={{ paddingHorizontal: 17.5, marginTop: 10 }}>
                 <Title size={2} color="#000" weight="300" marginBottom={10}>📢  공지 리스트</Title>
