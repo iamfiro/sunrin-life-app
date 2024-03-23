@@ -1,4 +1,4 @@
-import { NavigationContainer, useNavigationContainerRef } from "@react-navigation/native";
+import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import ScreenHome from "./screens/home";
 import ScreenArticle from "./screens/article";
@@ -9,7 +9,6 @@ import ScreenWidgetSetting from "./screens/widgetSetting";
 import ScreenCommunity from "./screens/community";
 import ScreenWelcome from "./screens/welcome";
 import * as Sentry from '@sentry/react-native';
-import { useEffect } from "react";
 
 const routingInstrumentation = new Sentry.ReactNavigationInstrumentation();
 
@@ -26,17 +25,10 @@ Sentry.init({
 const Stack = createNativeStackNavigator();
 
 function App() {
-    const ref = useNavigationContainerRef();
-
-    useEffect(() => {
-        if (ref) {
-            routingInstrumentation.registerNavigationContainer(ref);
-        }
-    }, [ref]);
 
     return (
         <NavigationContainer>
-            <Stack.Navigator screenOptions={{ headerShown: false }} initialRouteName="Article">
+            <Stack.Navigator screenOptions={{ headerShown: false }} initialRouteName="Home">
                 <Stack.Screen name="Home" component={ScreenHome} />
                 <Stack.Screen name="WidgetSetting" component={ScreenWidgetSetting} />
                 <Stack.Screen name="Article" component={ScreenArticle} />
