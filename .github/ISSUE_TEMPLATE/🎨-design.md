@@ -2,7 +2,8 @@
 name: "\U0001F3A8 Design"
 about: Create a design report to help us improve
 title: "\U0001F3A8 [내용 (영어)]"
-labels: "\U0001F3A8 Design"
+labels: "bug, \U0001F3A8 Design, documentation, duplicate, enhancement, good first
+  issue, help wanted, invalid, question, wontfix"
 assignees: iamfiro
 
 ---
