@@ -60,6 +60,7 @@ export default function Article({ title, article, type, id, navigation }: Articl
             <View style={{ flexDirection: "row", justifyContent: 'space-between', alignItems: 'flex-end' }}>
                 <View style={{ flexDirection: "row", marginTop: 9, alignItems: 'center' }}>
                     <Title size={7} color="#b1b1b1" weight="200">좋아요 23개  ·  2024-03-15  ·  </Title>
+                    {/* TODO: 가운뎃 점 위치 변경 */}
                     {
                         type === "homework" && <Title size={7} color={ArticleTypeData(type).color} weight="200">2일 남음</Title>
                     }

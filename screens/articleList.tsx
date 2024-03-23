@@ -1,7 +1,6 @@
 import { StyleSheet, ScrollView, StatusBar, View, Text } from "react-native";
 import NavigationButton from "../components/navigationButton";
 import Title from "../components/title";
-import Badge from "../components/badge";
 import * as SplashScreen from "expo-splash-screen";
 import { useFonts } from "expo-font";
 import { useCallback } from "react";

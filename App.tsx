@@ -36,7 +36,7 @@ function App() {
 
     return (
         <NavigationContainer>
-            <Stack.Navigator screenOptions={{ headerShown: false }} initialRouteName="Home">
+            <Stack.Navigator screenOptions={{ headerShown: false }} initialRouteName="Article">
                 <Stack.Screen name="Home" component={ScreenHome} />
                 <Stack.Screen name="WidgetSetting" component={ScreenWidgetSetting} />
                 <Stack.Screen name="Article" component={ScreenArticle} />
