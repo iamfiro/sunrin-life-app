@@ -27,7 +27,7 @@ export default function ScreenCompetitionList({ route, navigation }: any) {
 	const onLayoutRootView = useCallback(async () => {
 		if (fontsLoaded || fontError) {
 			await SplashScreen.hideAsync();
-		}
+		} else return null;
 	}, [fontsLoaded, fontError]);
 
     const [data, setData] = useState<CompetitionStateType | []>([]);
@@ -60,10 +60,6 @@ export default function ScreenCompetitionList({ route, navigation }: any) {
             }
         ]);
     }, []);
-
-    if (!fontsLoaded && !fontError) {
-		return null;
-	}
 
     return (
         <>

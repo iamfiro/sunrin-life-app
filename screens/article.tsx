@@ -96,12 +96,8 @@ export default function ScreenArticle({ navigation }: any) {
 	const onLayoutRootView = useCallback(async () => {
 		if (fontsLoaded || fontError) {
 			await SplashScreen.hideAsync();
-		}
+		} else return null;
 	}, [fontsLoaded, fontError]);
-
-	if (!fontsLoaded && !fontError) {
-		return null;
-	}
 
     return (
         <>

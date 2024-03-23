@@ -21,12 +21,8 @@ export default function ScreenWelcome({ navigation }: IDefaultScreenProps) {
 	const onLayoutRootView = useCallback(async () => {
 		if (fontsLoaded || fontError) {
 			await SplashScreen.hideAsync();
-		}
+		} else return null;
 	}, [fontsLoaded, fontError]);
-
-	if (!fontsLoaded && !fontError) {
-		return null;
-	}
 
     const handleLogin = () => {
         navigation.navigate("Home")
