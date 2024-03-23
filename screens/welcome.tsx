@@ -48,7 +48,7 @@ export default function ScreenWelcome({ navigation }: IDefaultScreenProps) {
                 <View style={{ height: 25 }} />
                 <Title size={3} color="#000000" weight="300">등등 ...</Title>
             </View>
-            <TouchableOpacity style={style.googleButton} onPress={() => handleLogin()}>
+            <TouchableOpacity style={style.loginButton} onPress={() => handleLogin()}>
                 <Title size={5} color="#ffffff" weight="300">학교 이메일로 로그인</Title>
             </TouchableOpacity>
             <View style={{ height: 15 }} />
@@ -68,8 +68,8 @@ const style = StyleSheet.create({
         paddingHorizontal: 17.5,
         paddingVertical: 30,
     },
-    /* Style for the Google button. */
-    googleButton: {
+    /* Style for the Login button. */
+    loginButton: {
         width: "100%",
         height: 55,
         justifyContent: "center",
