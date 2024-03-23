@@ -1,6 +1,6 @@
 ---
 name: "⚙️ FEAT"
-about: Request to add features to help us improve
+about: 새 기능 요청
 title: "⚙️ [내용 (영어)]"
 labels: "⚙️ Feat"
 assignees: iamfiro

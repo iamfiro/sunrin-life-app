@@ -1,6 +1,6 @@
 ---
 name: "\U0001F3A8 Design"
-about: Create a design report to help us improve
+about: 디자인 개선점 요청
 title: "\U0001F3A8 [내용 (영어)]"
 labels: "bug, \U0001F3A8 Design, documentation, duplicate, enhancement, good first
   issue, help wanted, invalid, question, wontfix"
