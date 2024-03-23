@@ -5,6 +5,7 @@ import Badge from "../components/badge";
 import * as SplashScreen from "expo-splash-screen";
 import { useFonts } from "expo-font";
 import { useCallback } from "react";
+import { FontList } from ".";
 
 interface ArticleReactProps {
     emoji: string;
@@ -89,15 +90,7 @@ function AdminAnalytics() {
 export default function ScreenArticle({ navigation }: any) {
 	SplashScreen.preventAutoHideAsync();
 
-	const [fontsLoaded, fontError] = useFonts({
-		"Wanted Sans ExtraBlack": require("../assets/fonts/WantedSans-ExtraBlack.otf"),
-		"Wanted Sans Black": require("../assets/fonts/WantedSans-Black.otf"),
-		"Wanted Sans ExtraBold": require("../assets/fonts/WantedSans-ExtraBold.otf"),
-		"Wanted Sans Bold": require("../assets/fonts/WantedSans-Bold.otf"),
-		"Wanted Sans SemiBold": require("../assets/fonts/WantedSans-SemiBold.otf"),
-		"Wanted Sans Medium": require("../assets/fonts/WantedSans-Medium.otf"),
-		"Wanted Sans Regular": require("../assets/fonts/WantedSans-Regular.otf"),
-	});
+	const [fontsLoaded, fontError] = useFonts(FontList);
 
 	const onLayoutRootView = useCallback(async () => {
 		if (fontsLoaded || fontError) {

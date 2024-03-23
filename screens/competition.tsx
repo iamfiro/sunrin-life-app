@@ -8,6 +8,7 @@ import { useCallback, useEffect, useState } from "react";
 import Button from "../components/button";
 import { CompetitionStateType } from "../types/competition";
 import { TouchableOpacity } from "react-native";
+import { FontList } from ".";
 
 /**
  * Renders the screen for the competition list.
@@ -20,15 +21,7 @@ import { TouchableOpacity } from "react-native";
 export default function ScreenCompetitionList({ route, navigation }: any) {
 	SplashScreen.preventAutoHideAsync();
 
-	const [fontsLoaded, fontError] = useFonts({
-		"Wanted Sans ExtraBlack": require("../assets/fonts/WantedSans-ExtraBlack.otf"),
-		"Wanted Sans Black": require("../assets/fonts/WantedSans-Black.otf"),
-		"Wanted Sans ExtraBold": require("../assets/fonts/WantedSans-ExtraBold.otf"),
-		"Wanted Sans Bold": require("../assets/fonts/WantedSans-Bold.otf"),
-		"Wanted Sans SemiBold": require("../assets/fonts/WantedSans-SemiBold.otf"),
-		"Wanted Sans Medium": require("../assets/fonts/WantedSans-Medium.otf"),
-		"Wanted Sans Regular": require("../assets/fonts/WantedSans-Regular.otf"),
-	});
+	const [fontsLoaded, fontError] = useFonts(FontList);
 
 	const onLayoutRootView = useCallback(async () => {
 		if (fontsLoaded || fontError) {

@@ -11,6 +11,7 @@ import Banner from "../components/banner";
 import TrophyImage from '../assets/icon/trophy.png';
 import CalenderImage from '../assets/icon/calender.png';
 import BottomNavigation from "../components/bottomNavigation";
+import { FontList } from ".";
 
 interface MenuItemProps {
 	title: string;
@@ -39,15 +40,7 @@ function MenuItem({ title, icon, onPress }: MenuItemProps) {
 export default function ScreenHome({ navigation }: any) {
 	SplashScreen.preventAutoHideAsync();
 
-	const [fontsLoaded, fontError] = useFonts({
-		"Wanted Sans ExtraBlack": require("../assets/fonts/WantedSans-ExtraBlack.otf"),
-		"Wanted Sans Black": require("../assets/fonts/WantedSans-Black.otf"),
-		"Wanted Sans ExtraBold": require("../assets/fonts/WantedSans-ExtraBold.otf"),
-		"Wanted Sans Bold": require("../assets/fonts/WantedSans-Bold.otf"),
-		"Wanted Sans SemiBold": require("../assets/fonts/WantedSans-SemiBold.otf"),
-		"Wanted Sans Medium": require("../assets/fonts/WantedSans-Medium.otf"),
-		"Wanted Sans Regular": require("../assets/fonts/WantedSans-Regular.otf"),
-	});
+	const [fontsLoaded, fontError] = useFonts(FontList);
 
 	const onLayoutRootView = useCallback(async () => {
 		if (fontsLoaded || fontError) {
