@@ -13,9 +13,9 @@ function typeToKorean(type: HeaderProps['type']) {
         case 'teacher':
             return '선생님';
         case 'president':
-            return '반장';
+            return '회장';
         case 'twoPresident':
-            return '부반장';
+            return '부회장';
         case 'admin':
             return '관리자';
     }
