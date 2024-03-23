@@ -14,7 +14,7 @@ interface ArticleReactProps {
 
 function ReactButton({ emoji, count, isClicked }: ArticleReactProps) {
     const handlePress = () => {
-        
+
     };
 
     return (
@@ -112,7 +112,7 @@ export default function ScreenArticle({ navigation }: any) {
     return (
         <>
         <ScrollView style={style.container} onLayout={onLayoutRootView}>
-            <NavigationButton onClick={() => navigation.pop()} />
+            <NavigationButton onClick={() => navigation.navigate("ArticleList")} />
             <View style={{ paddingHorizontal: 17.5, marginTop: 10 }}>
                 <Title size={6} color="#000000" weight="200">📄  숙제</Title>
                 <View style={{ height: 10 }} />
