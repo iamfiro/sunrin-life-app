@@ -13,12 +13,22 @@ import CalenderImage from '../assets/icon/calender.png';
 import BottomNavigation from "../components/bottomNavigation";
 import { FontList } from ".";
 
+/* Represents the props for a menu item. */
 interface MenuItemProps {
+	/* The title of the menu item. */
 	title: string;
+	/* The icon of the menu item. */
 	icon: ImageSourcePropType;
+	/* The callback function to be called when the menu item is pressed. */
 	onPress: () => void;
 }
 
+/**
+ * Renders a menu item with a title, icon, and onPress event handler.
+ *
+ * @param {MenuItemProps} props - The props object containing the title, icon, and onPress function.
+ * @returns {JSX.Element} The rendered menu item component.
+ */
 function MenuItem({ title, icon, onPress }: MenuItemProps) {
 	return (
 		<TouchableOpacity style={style.menuItem} onPress={onPress}>
@@ -27,7 +37,6 @@ function MenuItem({ title, icon, onPress }: MenuItemProps) {
 			<Title size={7} color="#000" weight="300">{title}</Title>
 		</TouchableOpacity>
 	);
-
 }
 
 /**
@@ -80,10 +89,10 @@ export default function ScreenHome({ navigation }: any) {
 	);
 }
 
+/* Styles for the home screen. */
 const style = StyleSheet.create({
 	container: {
 		flex: 1,
-
 		backgroundColor: "#fff",
 	},
 
@@ -91,23 +100,21 @@ const style = StyleSheet.create({
 		flexDirection: "column",
 		alignItems: "center",
 		justifyContent: "center",
-
 		height: 90,
 		width: 85,
-
 		padding: 10,
-
 		borderRadius: 10,
 	},
 
-    section: {
-        padding: 17.5,
-        paddingTop: 30,
-        paddingBottom: 30,
-    },
-    
-    ArticleFilterContainer: {
+	section: {
+		padding: 17.5,
+		paddingTop: 30,
+		paddingBottom: 30,
+	},
+
+	/* Styles for the article filter container. */
+	ArticleFilterContainer: {
 		flexDirection: "row",
-        marginVertical: 13,
-    }
+		marginVertical: 13,
+	},
 });

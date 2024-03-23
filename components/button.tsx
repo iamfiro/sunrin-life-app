@@ -1,22 +1,24 @@
-/**
- * Renders a button component based on the specified type.
- *
- * @param {Object} props - The component props.
- * @param {string} props.type - The type of the button ('primary' or 'secondary').
- * @param {string} props.text - The text to display on the button.
- * @param {Function} props.onClick - The function to be called when the button is clicked.
- * @returns {JSX.Element} The rendered button component.
- */
-
 import { StyleSheet, Text, TouchableOpacity } from "react-native";
 import Title from "./title";
 
+/**
+ * Represents the props for the Button component.
+ */
 interface ButtonProps {
     type: 'primary' | 'secondary';
     text: string;
     onClick: () => void;
 }
 
+/**
+ * Renders a button component.
+ *
+ * @param {ButtonProps} props - The button props.
+ * @param {string} props.type - The type of the button.
+ * @param {string} props.text - The text to display on the button.
+ * @param {() => void} props.onClick - The function to call when the button is clicked.
+ * @returns {JSX.Element} The rendered button component.
+ */
 export default function Button({ type, text, onClick }: ButtonProps) {
     const { buttonStyle, titleColor } = buttonStyles[type] || {};
 
@@ -59,11 +61,20 @@ const style = StyleSheet.create({
     }
 });
 
+/**
+ * Styles for different types of buttons.
+ */
 const buttonStyles = {
+    /**
+     * Styles for primary buttons.
+     */
     primary: {
         buttonStyle: style.primaryButton,
         titleColor: "#ffffff"
     },
+    /**
+     * Styles for secondary buttons.
+     */
     secondary: {
         buttonStyle: style.secondaryButton,
         titleColor: "#50545C"

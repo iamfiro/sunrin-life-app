@@ -11,12 +11,25 @@ import WidgetImage from '../assets/icon/menu/widget.png';
 import Button from "../components/button";
 import { FontList } from ".";
 
+/* Represents the props for a menu item. */
 interface MenuItemProps {
+    /* The title of the menu item. */
     title: string;
+    /* The icon of the menu item. */
     icon: ImageSourcePropType;
+    /* The callback function to be called when the menu item is pressed. */
     onPress: () => void;
 }
 
+/**
+ * Renders a menu item component.
+ *
+ * @param {MenuItemProps} props - The props for the menu item.
+ * @param {string} props.title - The title of the menu item.
+ * @param {ImageSourcePropType} props.icon - The icon for the menu item.
+ * @param {() => void} props.onPress - The function to be called when the menu item is pressed.
+ * @returns {JSX.Element} The rendered menu item component.
+ */
 function MenuItem({ title, icon, onPress }: MenuItemProps) {
     return (
         <TouchableOpacity style={style.itemContainer} onPress={() => onPress()}>
@@ -72,34 +85,35 @@ export default function ScreenMenu({ navigation }: IDefaultScreenProps) {
     )
 }
 
+/* Styles for the menu screen. */
 const style = StyleSheet.create({
+    /* The container style for the menu screen. */
     container: {
         flex: 1,
-        
         backgroundColor: "#fff",
     },
+    /* The container style for each menu item. */
     itemContainer: {
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'space-between',
-
         marginBottom: 15,
     },
+    /* The style for the left side of each menu item. */
     itemLeft: {
         flexDirection: 'row',
         alignItems: 'center',
     },
+    /* The container style for the menu item image. */
     imageContainer: {
         width: 40,
         height: 40,
-
         borderRadius: 10,
-
         backgroundColor: '#f5f5f5',
-
         alignItems: 'center',
         justifyContent: 'center',
     },
+    /* The style for the menu item image. */
     itemImage: {
         width: 25,
         height: 25,

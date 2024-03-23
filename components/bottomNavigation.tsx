@@ -1,5 +1,4 @@
 import { View, StyleSheet, Text, Image, ImageSourcePropType } from "react-native";
-import Title from "./title";
 import HomeIcon from "../assets/icon/navigation/home.png";
 import HomeGrayIcon from "../assets/icon/navigation/home-gray.png";
 import MenuIcon from "../assets/icon/navigation/menu.png";
@@ -10,13 +9,30 @@ import ArticleIcon from "../assets/icon/navigation/article.png";
 import ArticleGrayIcon from "../assets/icon/navigation/article-gray.png";
 import { TouchableOpacity } from "react-native";
 
+/**
+ * Represents the props for a menu item in the bottom navigation.
+ */
 interface MenuItemProps {
+    /* The title of the menu item. */
     title: string;
+    /* The icon(s) for the menu item. */
     icon: ImageSourcePropType[];
+    /* The callback function to be called when the menu item is pressed. */
     onPress: () => void;
+    /* Indicates whether the menu item is currently selected. */
     isSelected: boolean;
 }
 
+/**
+ * Renders a menu item with a title, icon, and onPress event handler.
+ *
+ * @param {MenuItemProps} props - The props for the MenuItem component.
+ * @param {string} props.title - The title of the menu item.
+ * @param {Array<ImageSourcePropType>} props.icon - The icons for the menu item. The first icon is used when the item is selected, and the second icon is used when it's not selected.
+ * @param {() => void} props.onPress - The event handler for when the menu item is pressed.
+ * @param {boolean} props.isSelected - Indicates whether the menu item is currently selected.
+ * @returns {JSX.Element} The rendered MenuItem component.
+ */
 function MenuItem({ title, icon, onPress, isSelected }: MenuItemProps) {
     return (
         <TouchableOpacity style={style(isSelected).itemContainer} onPress={() => onPress()}>
@@ -26,11 +42,22 @@ function MenuItem({ title, icon, onPress, isSelected }: MenuItemProps) {
     )
 }
 
+/**
+ * Props for the BottomNavigation component.
+ */
 interface BottomNavigationProps {
     pageName: string;
     navigation: any;
 }
 
+/**
+ * Renders the bottom navigation component.
+ * 
+ * @param {Object} props - The component props.
+ * @param {string} props.pageName - The name of the current page.
+ * @param {Object} props.navigation - The navigation object.
+ * @returns {JSX.Element} The rendered bottom navigation component.
+ */
 export default function BottomNavigation({ pageName, navigation }: BottomNavigationProps) {
     return (
         <View style={style(false).container}>

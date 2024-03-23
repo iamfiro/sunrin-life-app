@@ -56,39 +56,36 @@ export default function ScreenArticleList({ route, navigation }: any) {
     )
 }
 
+/* Styles for the ArticleList screen. */
 const style = StyleSheet.create({
     container: {
         flex: 1,
-        
         backgroundColor: "#fff",
     },
 
+    /* Styles for the article search container. */
     ArticleSearchContainer: {
-		flexDirection: "row",
-
+        flexDirection: "row",
         marginVertical: 13,
         marginHorizontal: 17.5,
-
         backgroundColor: "white",
     },
 
+    /* Styles for the input field in the article search container. */
     input: {
         width: "100%",
-
         borderColor: '#ededed',
         borderWidth: 1,
         borderRadius: 13,
-
         paddingHorizontal: 15,
         paddingVertical: 10,
-
         fontSize: 15,
         fontFamily: 'Wanted Sans Medium',
     },
 
+    /* Styles for the article filter container. */
     ArticleFilterContainer: {
-		flexDirection: "row",
-        
+        flexDirection: "row",
         marginVertical: 13,
         marginLeft: 17.5,
         marginTop: 0,

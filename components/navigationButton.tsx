@@ -1,6 +1,9 @@
 import { StyleSheet, TouchableOpacity, View } from "react-native";
 import Icon from "react-native-vector-icons/AntDesign";
 
+/**
+ * Props for the NavigationButton component.
+ */
 interface NavigationButtonProps {
     onClick: () => void;
 }
@@ -19,6 +22,9 @@ export default function NavigationButton({ onClick }: NavigationButtonProps) {
     )
 }
 
+/**
+ * Styles for the navigation button container.
+ */
 const style = StyleSheet.create({
     container: {
         borderColor: "#ededed",

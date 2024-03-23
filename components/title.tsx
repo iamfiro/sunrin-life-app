@@ -1,6 +1,9 @@
 import { ReactNode } from "react";
 import { Text } from "react-native";
 
+/**
+ * Props for the Title component.
+ */
 interface TitleProps {
     size: 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8;
     color: string;
@@ -35,6 +38,11 @@ function weightToFontWeight(weight: TitleProps['weight']) {
     }
 }
 
+/**
+ * Converts a size value to a corresponding font size.
+ * @param size - The size value to convert.
+ * @returns The corresponding font size.
+ */
 function sizeToFontSize(size: TitleProps['size']) {
     switch (size) {
         case 0:
@@ -56,9 +64,19 @@ function sizeToFontSize(size: TitleProps['size']) {
         case 8:
             return 10
     }
-
 }
 
+/**
+ * Renders a title component with customizable size, color, weight, and alignment.
+ *
+ * @param {Object} props - The component props.
+ * @param {number} props.size - The font size of the title.
+ * @param {string} props.color - The color of the title.
+ * @param {string} props.weight - The font weight of the title.
+ * @param {string} props.textAlign - The alignment of the title. Defaults to 'left'.
+ * @param {ReactNode} props.children - The content to be displayed within the title.
+ * @returns {JSX.Element} The rendered title component.
+ */
 export default function Title({ size, color, weight, children, textAlign }: TitleProps) {
     return (
         <Text style={{

@@ -1,12 +1,22 @@
 import { View, StyleSheet, Text, TouchableOpacity } from "react-native";
 import Title from "./title";
 
+/* Props for the ArticleReact component. */
 interface ArticleReactProps {
     emoji: string;
     count: number;
     isClicked: boolean;
 }
 
+/**
+ * Renders an article component in React.
+ * 
+ * @param {ArticleReactProps} props - The props for the component.
+ * @param {string} props.emoji - The emoji to display.
+ * @param {number} props.count - The count to display.
+ * @param {boolean} props.isClicked - Indicates whether the article is clicked or not.
+ * @returns {JSX.Element} The rendered article component.
+ */
 export function ArticleReact({ emoji, count, isClicked }: ArticleReactProps) {
     const backgroundColor = isClicked ? "#477AFF" : "#fff";
     return (
@@ -18,6 +28,11 @@ export function ArticleReact({ emoji, count, isClicked }: ArticleReactProps) {
     )
 }
 
+/**
+ * Returns the text and color based on the provided article type.
+ * @param type - The type of the article.
+ * @returns An object containing the text and color for the article type.
+ */
 function ArticleTypeData(type: ArticleProps['type']) {
     switch (type) {
         case "notice":
@@ -27,6 +42,7 @@ function ArticleTypeData(type: ArticleProps['type']) {
     }
 }
 
+/* Represents the props for the Article component. */
 interface ArticleProps {
     title: string;
     article: string;
@@ -70,25 +86,32 @@ export default function Article({ title, article, type, id, navigation }: Articl
     )
 }
 
+/**
+ * Styles for the article component.
+ */
 const style = StyleSheet.create({
+    /* Style for the container of the article. */
     container: {
         borderWidth: 1,
         borderColor: "#f4f4f4",
-
         borderRadius: 15,
-
         padding: 20,
-
         marginBottom: 15,
     },
+    /* Style for the article type wrap. */
     articleTypeWrap: {
         marginBottom: 12,
-
         flexDirection: "row",
         justifyContent: "space-between",
     },
 });
 
+/**
+ * Creates a StyleSheet object with styles for the article component.
+ * 
+ * @param backgroundColor - The background color for the article component.
+ * @returns A StyleSheet object with styles for the article component.
+ */
 const propsStyle = (backgroundColor: string) => StyleSheet.create({
     container: {
         backgroundColor: backgroundColor,

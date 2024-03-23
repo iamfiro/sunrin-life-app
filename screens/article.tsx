@@ -7,12 +7,19 @@ import { useFonts } from "expo-font";
 import { useCallback } from "react";
 import { FontList } from ".";
 
+/* Represents the props for the ArticleReact component. */
 interface ArticleReactProps {
     emoji: string;
     count: number;
     isClicked: boolean;
 }
 
+/**
+ * Renders a React button component for reacting to an article.
+ *
+ * @param {ArticleReactProps} props - The props for the ReactButton component.
+ * @returns {JSX.Element} The rendered ReactButton component.
+ */
 function ReactButton({ emoji, count, isClicked }: ArticleReactProps) {
     const handlePress = () => {
 
@@ -127,22 +134,27 @@ export default function ScreenArticle({ navigation }: any) {
     )
 }
 
+/* Styles for the article screen. */
 const style = StyleSheet.create({
+    /* The main container style. */
     container: {
         flex: 1,
-        
         backgroundColor: "#fff",
     },
+    /* The container style for analytics. */
     analyticsContainer: {
         marginTop: 30,
         padding: 17.5,
-
         backgroundColor: "#f5f5f5",
-        
         borderRadius: 10,
     },
 })
 
+/**
+ * Returns the style object for the reactContainer component.
+ * @param isClicked - A boolean value indicating whether the component is clicked or not.
+ * @returns The style object for the reactContainer component.
+ */
 const propsStyle = (isClicked: boolean) => StyleSheet.create({
     reactContainer: {
         flexDirection: "row",

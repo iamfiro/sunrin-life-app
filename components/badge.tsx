@@ -1,8 +1,9 @@
 import { View, StyleSheet } from "react-native";
 import Title from "./title";
+import { UserRole } from "../types";
 
 interface BadgeProps {
-    type: 'teacher' | 'president' | 'twoPresident';
+    type: UserRole;
 }
 
 /**

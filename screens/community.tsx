@@ -26,6 +26,7 @@ export default function ScreenCommunity({ navigation }: IDefaultScreenProps) {
     )
 }
 
+/* Styles for the community screen. */
 const style = StyleSheet.create({
     container: {
         flex: 1,

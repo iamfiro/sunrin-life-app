@@ -59,14 +59,16 @@ export default function ScreenWelcome({ navigation }: IDefaultScreenProps) {
     )
 }
 
+/* Styles for the Welcome screen. */
 const style = StyleSheet.create({
+    /* Container style for the Welcome screen. */
     container: {
         flex: 1,
         backgroundColor: "#ffffff",
-
         paddingHorizontal: 17.5,
         paddingVertical: 30,
     },
+    /* Style for the Google button. */
     googleButton: {
         width: "100%",
         height: 55,

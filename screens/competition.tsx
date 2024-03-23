@@ -1,7 +1,6 @@
 import { StyleSheet, ScrollView, StatusBar, View, Text, Linking } from "react-native";
 import NavigationButton from "../components/navigationButton";
 import Title from "../components/title";
-import Badge from "../components/badge";
 import * as SplashScreen from "expo-splash-screen";
 import { useFonts } from "expo-font";
 import { useCallback, useEffect, useState } from "react";
@@ -34,6 +33,7 @@ export default function ScreenCompetitionList({ route, navigation }: any) {
     var preventListDate: Date | null = null;
 
     useEffect(() => {
+        // 더미 데이터
         setData([
             {
                 title: "2024 선린 해커톤",
@@ -109,18 +109,18 @@ export default function ScreenCompetitionList({ route, navigation }: any) {
     )
 }
 
+/* Styles for the competition screen. */
 const style = StyleSheet.create({
+    /* The main container style. */
     container: {
         flex: 1,
-        
         backgroundColor: "#fff",
     },
+    /* The container style for the competition section. */
     competitionContainer: {
         borderRadius: 10,
-
         padding: 15,
         marginTop: 10,
-
         borderColor: "#ededed",
         borderWidth: 1,
     }

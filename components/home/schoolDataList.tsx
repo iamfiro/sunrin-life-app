@@ -2,12 +2,22 @@ import { View, TouchableOpacity, StyleSheet, ScrollView } from "react-native";
 import Title from "../title";
 import { IDefaultScreenProps } from "../../types/screen";
 
+/* Props for the SchoolInfoComponent. */
 interface SchoolInfoComponentProps {
     emoji: string;
     title: string;
     data: string;
 }
 
+/**
+ * Renders a component displaying school information.
+ *
+ * @param {SchoolInfoComponentProps} props - The component props.
+ * @param {string} props.emoji - The emoji representing the school.
+ * @param {string} props.title - The title of the school.
+ * @param {string} props.data - The data related to the school.
+ * @returns {JSX.Element} The rendered school information component.
+ */
 function SchoolInfoComponent({ emoji, title, data }: SchoolInfoComponentProps) {
     return (
         <View style={style.schoolInfoContainer}>
@@ -55,11 +65,14 @@ export default function HomeSchoolDataList({ navigation }: IDefaultScreenProps) 
 }
 
 
+/* Represents the styles for the schoolDataList component. */
 const style = StyleSheet.create({
+    /* Represents the section style. */
     section: {
         paddingBottom: 25,
     },
     
+    /* Represents the schoolInfoContainer style. */
     schoolInfoContainer: {
         minWidth: 210,
 
