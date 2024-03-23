@@ -6,6 +6,58 @@ import * as SplashScreen from "expo-splash-screen";
 import { useFonts } from "expo-font";
 import { useCallback } from "react";
 
+interface ArticleAnalyticsProps {
+
+}
+
+// 선생님, 회장, 부회장, 관리자 전용 게시물 통계 컴포넌트
+function AdminAnalytics() {
+    return (
+        <>
+        <View style={style.analyticsContainer}>
+            <View style={{ flexDirection: 'row', justifyContent: 'space-between'}}>
+                <Title size={4} color="#000" weight="300">📊 관리자 전용 통계</Title>
+                <Title size={7} color="#727272" weight="200" textAlign="right">선생님, 회장, 부회장만{'\n'}볼 수 있습니다</Title>
+            </View>
+            <View style={{ height: 20 }} />
+            <Title size={5} color="#727272" weight="200">조회함</Title>
+            <View style={{ height: 5 }} />
+            <Title size={5} color="#000" weight="200">16명</Title>
+            <View style={{ height: 20 }} />
+            <Title size={5} color="#727272" weight="200">조회한 사람</Title>
+            <View style={{ height: 10 }} />
+            <Title size={5} color="#000" weight="200">10401 강성영후</Title>
+            <Title size={5} color="#000" weight="200">10402 곽원영</Title>
+            <Title size={5} color="#000" weight="200">10403 권동규</Title>
+            <Title size={5} color="#000" weight="200">10404 권지원</Title>
+            <Title size={5} color="#000" weight="200">10405 김민겸</Title>
+            <Title size={5} color="#000" weight="200">10406 김성호</Title>
+            <Title size={5} color="#000" weight="200">10401 강성영후</Title>
+            <Title size={5} color="#000" weight="200">10402 곽원영</Title>
+            <Title size={5} color="#000" weight="200">10403 권동규</Title>
+            <Title size={5} color="#000" weight="200">10404 권지원</Title>
+            <Title size={5} color="#000" weight="200">10405 김민겸</Title>
+            <Title size={5} color="#000" weight="200">10406 김성호</Title>
+            <View style={{ height: 20 }} />
+            <Title size={5} color="#727272" weight="200">게시글에 반응한 사람</Title>
+            <View style={{ height: 10 }} />
+            <Title size={5} color="#000" weight="200">10401 강성영후</Title>
+            <Title size={5} color="#000" weight="200">10402 곽원영</Title>
+            <Title size={5} color="#000" weight="200">10403 권동규</Title>
+            <Title size={5} color="#000" weight="200">10404 권지원</Title>
+            <Title size={5} color="#000" weight="200">10405 김민겸</Title>
+            <Title size={5} color="#000" weight="200">10406 김성호</Title>
+            <Title size={5} color="#000" weight="200">10401 강성영후</Title>
+            <Title size={5} color="#000" weight="200">10402 곽원영</Title>
+            <Title size={5} color="#000" weight="200">10403 권동규</Title>
+            <Title size={5} color="#000" weight="200">10404 권지원</Title>
+            <Title size={5} color="#000" weight="200">10405 김민겸</Title>
+            <Title size={5} color="#000" weight="200">10406 김성호</Title>
+        </View>
+        </>
+    )
+}
+
 /**
  * Renders the article screen.
  * 
@@ -58,6 +110,8 @@ export default function ScreenArticle({ route, navigation }: any) {
                     <View style={{ height: 7 }} />
                     <Title size={6} color="#838383" weight="200">2024-03-15  ·  23명 조회함</Title>
                 </View>
+                <AdminAnalytics />
+                <View style={{ height: 30 }} />
             </View>
         </ScrollView>
         <StatusBar backgroundColor={"#ffffff"} barStyle={"dark-content"} />
@@ -71,4 +125,12 @@ const style = StyleSheet.create({
         
         backgroundColor: "#fff",
     },
+    analyticsContainer: {
+        marginTop: 30,
+        padding: 17.5,
+
+        backgroundColor: "#f5f5f5",
+        
+        borderRadius: 10,
+    }
 })
