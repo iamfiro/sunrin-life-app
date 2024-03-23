@@ -84,7 +84,7 @@ export default function ScreenCompetitionList({ route, navigation }: any) {
                         preventListDate = item.date;
 
                         return (
-                            <>
+                            <View key={Math.random()}>
                                 {
                                     !isSameDate && (
                                         <View key={Math.random()}>
@@ -103,12 +103,14 @@ export default function ScreenCompetitionList({ route, navigation }: any) {
                                     <View style={{ height: 5 }} />
                                     <Title size={7} color="#838383" weight="200">D - {Math.floor((item.date.getTime() - new Date().getTime()) / (1000 * 60 * 60 * 24))}</Title>
                                 </TouchableOpacity>
-                            </>
+                            </View>
                         )
                     })
                 }
                 <View style={{ height: 40 }} />
-                <Button type="secondary" text="올바른 정보가 아닌가요?" onClick={() => { Linking.openURL("https://www.instagram.com/sunrin_life")}} />
+                <View style={{ marginTop: -20 }}>
+                    <Button type="secondary" text="올바른 정보가 아닌가요?" onClick={() => { Linking.openURL("https://www.instagram.com/sunrin_life")}} />
+                </View>
                 <View style={{ height: 30 }} />
             </View>
         </ScrollView>
