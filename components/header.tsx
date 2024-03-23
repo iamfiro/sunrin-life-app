@@ -31,7 +31,11 @@ function typeToKorean(type: HeaderProps['type']) {
 export default function Header({ type, classNumber, grade }: HeaderProps) {
     const handleAccountClick = (type: string) => {
         ToastAndroid.show(`나눈 ${type} 뚜비두밥ㅂ ╰(*°▽°*)╯`, ToastAndroid.SHORT);
-    }
+    };
+
+    const handleClassClick = (classNumber: HeaderProps['classNumber']) => {
+        ToastAndroid.show(`자랑스러운 우리 명예 ${classNumber}반 \nψ(｀∇´)ψ`, ToastAndroid.SHORT);
+    };
     return (
         <View style={style.container}>
             <View style={{ marginBottom: 5 }}>
@@ -41,9 +45,9 @@ export default function Header({ type, classNumber, grade }: HeaderProps) {
                 <TouchableOpacity style={{ backgroundColor: '#477AFF', borderRadius: 20, paddingHorizontal: 11, paddingVertical: 5, marginRight: 3 }} onPress={() => handleAccountClick(typeToKorean(type))}>
                     <Title size={7} color="#ffffff" weight="300">{typeToKorean(type)} 계정</Title>
                 </TouchableOpacity>
-                <View style={{ borderRadius: 20, paddingHorizontal: 11, paddingVertical: 5, borderColor: '#e8e8e8', borderWidth: 1 }}>
+                <TouchableOpacity style={{ borderRadius: 20, paddingHorizontal: 11, paddingVertical: 5, borderColor: '#e8e8e8', borderWidth: 1 }} onPress={() => handleClassClick(classNumber)}>
                     <Title size={7} color="#4f4f4f" weight="300">{grade}학년 {classNumber}반</Title>
-                </View>
+                </TouchableOpacity>
             </View>
         </View>
     )
