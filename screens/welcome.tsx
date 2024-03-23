@@ -61,6 +61,8 @@ export default function ScreenWelcome({ navigation }: IDefaultScreenProps) {
             <TouchableOpacity style={style.googleButton} onPress={() => handleLogin()}>
                 <Title size={5} color="#ffffff" weight="300">학교 이메일로 로그인</Title>
             </TouchableOpacity>
+            <View style={{ height: 15 }} />
+            <Title size={6} color="#a1a1a1" weight="300">학교 이메일은 @sunrint.hs.kr로 끝나요!{'\n'}신원 확인을 위해 학교 이메일로 로그인 부탁드려요 👏</Title>
         </View>
 		<StatusBar backgroundColor={"#ffffff"} barStyle={"dark-content"} />
         </>
