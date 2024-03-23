@@ -1,4 +1,4 @@
-import { View, StyleSheet } from "react-native";
+import { View, StyleSheet, ToastAndroid, TouchableOpacity } from "react-native";
 import Title from "./title";
 
 interface HeaderProps {
@@ -29,15 +29,18 @@ function typeToKorean(type: HeaderProps['type']) {
  * @returns {JSX.Element} The rendered header component.
  */
 export default function Header({ type, classNumber, grade }: HeaderProps) {
+    const handleAccountClick = (type: string) => {
+        ToastAndroid.show(`나눈 ${type} 뚜비두밥ㅂ ╰(*°▽°*)╯`, ToastAndroid.SHORT);
+    }
     return (
         <View style={style.container}>
             <View style={{ marginBottom: 5 }}>
                 <Title size={4} color="#000000" weight="400">선린라이프 β</Title>
             </View>
             <View style={{ flexDirection: "row", alignItems: "center" }}>
-                <View style={{ backgroundColor: '#477AFF', borderRadius: 20, paddingHorizontal: 11, paddingVertical: 5, marginRight: 3 }}>
+                <TouchableOpacity style={{ backgroundColor: '#477AFF', borderRadius: 20, paddingHorizontal: 11, paddingVertical: 5, marginRight: 3 }} onPress={() => handleAccountClick(typeToKorean(type))}>
                     <Title size={7} color="#ffffff" weight="300">{typeToKorean(type)} 계정</Title>
-                </View>
+                </TouchableOpacity>
                 <View style={{ borderRadius: 20, paddingHorizontal: 11, paddingVertical: 5, borderColor: '#e8e8e8', borderWidth: 1 }}>
                     <Title size={7} color="#4f4f4f" weight="300">{grade}학년 {classNumber}반</Title>
                 </View>
