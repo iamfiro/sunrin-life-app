@@ -72,8 +72,8 @@ yarn.lock - node_modules 디렉토리에 설치된 패키지들의 의존성 트
 ```
 
 ## 🖥️ 개발자 <a id="developer"></a>
-- <a href="github.com/iamfiro">@iamfiro</a> - 📱 앱 개발 / 🎨 앱 디자인
-- <a href="github.com/wntjd-0612">@wntjd-0612</a>, <a href="github.com/wntjd-0612">@jwkwon0817</a>  - 🌐 서버 개발
+- <a href="https://github.com/iamfiro">@iamfiro</a> - 📱 앱 개발 / 🎨 앱 디자인
+- <a href="https://github.com/wntjd-0612">@wntjd-0612</a>, <a href="github.com/wntjd-0612">@jwkwon0817</a>  - 🌐 서버 개발
 
 ## 📞 문의 <a id="contact"></a>
 <a href="https://www.instagram.com/sunrin_life/"><img style="border-radius: 4px" src="https://img.shields.io/badge/Instagram-E4405F?style=flat-square&logo=Instagram&logoColor=white&link=https://www.instagram.com/sunrin_life/"/></a>
