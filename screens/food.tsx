@@ -18,7 +18,6 @@ export default function ScreenFood({ navigation }: IDefaultScreenProps) {
 }
 
 const style = StyleSheet.create({
-    /* The container style for the menu screen. */
     container: {
         flex: 1,
         backgroundColor: "#fff",
