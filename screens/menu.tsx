@@ -64,7 +64,7 @@ export default function ScreenMenu({ navigation }: IDefaultScreenProps) {
                 <MenuItem title="메인 화면 위젯 설정" icon={WidgetImage} onPress={() => navigation.navigate("WidgetSetting")} />
                 <Title size={3} color="#000000" weight="400" marginTop={20} marginBottom={20}>학교</Title>
                 <MenuItem title="현재 선린인고의 날씨" icon={WeatherImage} onPress={() => navigation.navigate("WidgetSetting")} />
-                <MenuItem title="오늘 나오는 급식 보기" icon={FoodImage} onPress={() => navigation.navigate("WidgetSetting")} />
+                <MenuItem title="오늘 나오는 급식 보기" icon={FoodImage} onPress={() => navigation.navigate("Food")} />
                 <MenuItem title="대회 일정 한 눈에 보기" icon={TrophyImage} onPress={() => navigation.navigate("WidgetSetting")} />
                 <MenuItem title="학사 일정 쉽게 보기" icon={CalenderImage} onPress={() => navigation.navigate("WidgetSetting")} />
                 <Title size={3} color="#000000" weight="400" marginBottom={20} marginTop={20}>기타</Title>
