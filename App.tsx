@@ -20,7 +20,7 @@ function App() {
 
     return (
         <NavigationContainer>
-            <Stack.Navigator screenOptions={{ headerShown: false }} initialRouteName="Food">
+            <Stack.Navigator screenOptions={{ headerShown: false }} initialRouteName="Loading">
                 <Stack.Screen name="Home" component={ScreenHome} />
                 <Stack.Screen name="WidgetSetting" component={ScreenWidgetSetting} />
                 <Stack.Screen name="Article" component={ScreenArticle} />
