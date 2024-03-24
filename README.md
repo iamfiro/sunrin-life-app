@@ -23,7 +23,7 @@
 ## 🔍 개발 기술 <a id="tech"></a>
 `React Native (EXPO)` - **React 문법을 기반**으로 한 앱 개발 프레임워크<br/>
 `Typescript` - Javascript에 **Type**기능을 추가한 언어<br/>
-`Sentry` - 실시간 로그 취합 및 분석 도구 **오류 모니터링 플랫폼**<br/>
+`Sentry` - 실시간 로그 취합 및 분석 도구 **오류 모니터링 플랫폼** (삭제)<br/>
 
 `FastAPI` - 서버 개발을 위한 **파이썬 웹 프레임워크**<br/>
 `Nest.js` - **Node.js 기반** 서버 개발을 위한 **프레임워크** *FastApi가 메인*<br/>
