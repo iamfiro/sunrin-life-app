@@ -12,6 +12,7 @@ import ScreenCredit from "./screens/credit";
 import * as SplashScreen from "expo-splash-screen";
 import ScreenLoading from "./screens/loading";
 import ScreenFood from "./screens/food";
+import ScreenWeather from "./screens/weather";
 
 const Stack = createNativeStackNavigator();
 
@@ -32,6 +33,7 @@ function App() {
                 <Stack.Screen name="Credit" component={ScreenCredit} />
                 <Stack.Screen name="Loading" component={ScreenLoading} />
                 <Stack.Screen name="Food" component={ScreenFood} />
+                <Stack.Screen name="Weather" component={ScreenWeather} />
             </Stack.Navigator>
         </NavigationContainer>
     );

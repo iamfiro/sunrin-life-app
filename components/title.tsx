@@ -5,7 +5,7 @@ import { Text } from "react-native";
  * Props for the Title component.
  */
 interface TitleProps {
-    size: 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8;
+    size: -10 |-3 | -2 | -1 | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8;
     color: string;
     weight: '100' | '200' | '300' | '400' | '500' | '600' | '700';
     children?: ReactNode;
@@ -47,6 +47,14 @@ function weightToFontWeight(weight: TitleProps['weight']) {
  */
 function sizeToFontSize(size: TitleProps['size']) {
     switch (size) {
+        case -10:
+            return 60
+        case -3:
+            return 54
+        case -2:
+            return 48
+        case -1:
+            return 36
         case 0:
             return 32
         case 1:
