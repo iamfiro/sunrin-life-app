@@ -43,7 +43,7 @@ export default function ScreenFood({ navigation }: IDefaultScreenProps) {
                             return (
                                 <View key={index} style={{ paddingBottom: 20, marginBottom: 20, borderColor: '#f4f4f4', borderBottomWidth: 1 }}>
                                     <View style={{ flexDirection: 'row', alignItems: 'center' }}>
-                                        <Title size={4} color="#000000" weight="200" marginBottom={8}>{item.date.getFullYear()}. {item.date.getMonth() + 1}. {item.date.getDate()} {DayToKorean(item.date)}</Title>
+                                        <Title size={5} color="#000000" weight="400" marginBottom={8}>{item.date.getFullYear()}. {item.date.getMonth() + 1}. {item.date.getDate()} {DayToKorean(item.date)}</Title>
                                         {
                                             item.date.toDateString() === new Date().toDateString() ? 
                                                 <View style={{ backgroundColor: '#477AFF', paddingHorizontal: 7, paddingVertical: 5, borderRadius: 5, marginLeft: 10, marginBottom: 8 }}>
