@@ -17,8 +17,9 @@
 ## 📄 목차
 1. [개발 기술](#tech)
 2. [파일 / 폴더 구조](#folder)
-2. [개발자](#developer)
-3. [문의](#contact)
+3. [개발자](#developer)
+4. [문의](#contact)
+5. [감사](#thanks)
 
 ## 🔍 개발 기술 <a id="tech"></a>
 `React Native (EXPO)` - **React 문법을 기반**으로 한 앱 개발 프레임워크<br/>
@@ -78,3 +79,6 @@ yarn.lock - node_modules 디렉토리에 설치된 패키지들의 의존성 트
 ## 📞 문의 <a id="contact"></a>
 <a href="https://www.instagram.com/sunrin_life/"><img style="border-radius: 4px" src="https://img.shields.io/badge/Instagram-E4405F?style=flat-square&logo=Instagram&logoColor=white&link=https://www.instagram.com/sunrin_life/"/></a>
 > **@sunrin_life** - 인스타그램
+
+## 🙏 감사 <a id="thanks"></a>
+- <a href="https://github.com/NY0510">@NY0510</a> - 🍤 급식, 📅 시간표 API 제공
