@@ -40,9 +40,12 @@ function AdminAnalytics() {
         <>
         <View style={style.analyticsContainer}>
             <View style={{ flexDirection: 'row', justifyContent: 'space-between'}}>
-                <Title size={4} color="#000" weight="300">📊 관리자 전용 통계</Title>
+                <Title size={4} color="#000" weight="300">📊 관리자 전용 도구</Title>
                 <Title size={7} color="#727272" weight="200" textAlign="right">선생님, 회장, 부회장만{'\n'}볼 수 있습니다</Title>
             </View>
+            <TouchableOpacity style={style.deleteButton}>
+                <Title size={6} color="#ffffff" weight="200">게시글 삭제</Title>
+            </TouchableOpacity>
             <Title size={5} color="#727272" weight="200" marginTop={20}>조회함</Title>
             <Title size={5} color="#000" weight="200" marginTop={5}>16명</Title>
             <Title size={5} color="#727272" weight="200" marginTop={20} marginBottom={10}>조회한 사람</Title>
@@ -126,6 +129,19 @@ const style = StyleSheet.create({
         padding: 17.5,
         backgroundColor: "#f5f5f5",
         borderRadius: 10,
+    },
+    deleteButton: {
+        height: 35,
+        width: 100,
+
+        backgroundColor: "#ff4848",
+
+        borderRadius: 8,
+        
+        marginTop: 20,
+
+        alignItems: 'center',
+        justifyContent: 'center',
     },
 })
 
