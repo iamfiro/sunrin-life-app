@@ -2,7 +2,7 @@
   "expo": {
     "name": "선린라이프",
     "slug": "sunrin-arlimi",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
@@ -16,14 +16,15 @@
     ],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "kr.sunrin.life"
+      "bundleIdentifier": "com.sunrin.life"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "kr.sunrin.life"
+      "package": "com.sunrin.life",
+      "versionCode": 2
     },
     "web": {
       "favicon": "./assets/favicon.png"
