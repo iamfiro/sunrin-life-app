@@ -1,6 +1,6 @@
 /* Represents the state of a competition. */
 interface IFoodState {
-    data: string;
+    mealInfo: string;
     date: Date;
 }
 

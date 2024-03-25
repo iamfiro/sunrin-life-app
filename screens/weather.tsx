@@ -5,6 +5,7 @@ import Title from "../components/title";
 import { useEffect, useState } from "react";
 import { DummyWeather } from "../assets/dummy/weather";
 import { IWeatherState, StateDefaultWeather, WeatherConditionCodeToIcon, WeatherConditionCodeToKorean } from "../types/weather";
+import axios from "axios";
 
 interface IWeatherProps {
     title: string;
@@ -31,29 +32,28 @@ export default function ScreenWeather({ navigation }: IDefaultScreenProps) {
     const [data, setData] = useState<IWeatherState>(StateDefaultWeather);
 
     useEffect(() => {
-        fetch('https://jsonplaceholder.typicode.com/posts')
-            .then(data => {
-                const sunrise = new Date(Number(DummyWeather.sun.sunrise) * 1000);
-                const sunset = new Date(Number(DummyWeather.sun.sunset) * 1000);
-                setData({
-                    weather: {
-                        main: DummyWeather.weather.main,
-                        conditionCode: DummyWeather.weather.conditionCode,
-                        icon: DummyWeather.weather.icon
-                    },
-                    temperature: {
-                        current: DummyWeather.temperature.current,
-                        min: DummyWeather.temperature.min,
-                        max: DummyWeather.temperature.max
-                    },
-                    humidity: DummyWeather.humidity,
-                    sun: {
-                        sunrise: `${sunrise.getHours()}:${sunrise.getMinutes() < 10 ? `0${sunrise.getMinutes()}` : sunrise.getMinutes()}:${sunrise.getSeconds() < 10 ? `0${sunrise.getSeconds()}` : sunrise.getSeconds()} AM`,
-                        sunset: `${sunset.getHours()}:${sunset.getMinutes() < 10 ? `0${sunset.getMinutes()}` : sunset.getMinutes()}:${sunset.getSeconds() < 10 ? `0${sunset.getSeconds()}` : sunset.getSeconds()} PM`,
-                    },
-                    windSpeed: Math.floor(DummyWeather.windSpeed),
-                })
+        axios.get("https://jsonplaceholder.typicode.com/posts").then((res) => {
+            const sunrise = new Date(Number(DummyWeather.sun.sunrise) * 1000);
+            const sunset = new Date(Number(DummyWeather.sun.sunset) * 1000);
+            setData({
+                weather: {
+                    main: DummyWeather.weather.main,
+                    conditionCode: DummyWeather.weather.conditionCode,
+                    icon: DummyWeather.weather.icon
+                },
+                temperature: {
+                    current: DummyWeather.temperature.current,
+                    min: DummyWeather.temperature.min,
+                    max: DummyWeather.temperature.max
+                },
+                humidity: DummyWeather.humidity,
+                sun: {
+                    sunrise: `${sunrise.getHours()}:${sunrise.getMinutes() < 10 ? `0${sunrise.getMinutes()}` : sunrise.getMinutes()}:${sunrise.getSeconds() < 10 ? `0${sunrise.getSeconds()}` : sunrise.getSeconds()} AM`,
+                    sunset: `${sunset.getHours()}:${sunset.getMinutes() < 10 ? `0${sunset.getMinutes()}` : sunset.getMinutes()}:${sunset.getSeconds() < 10 ? `0${sunset.getSeconds()}` : sunset.getSeconds()} PM`,
+                },
+                windSpeed: Math.floor(DummyWeather.windSpeed),
             })
+        })
     }, [])
 
     return (
