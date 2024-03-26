@@ -59,7 +59,7 @@ export default function ScreenWeather({ navigation }: IDefaultScreenProps) {
     return (
         <>
             <ScrollView style={style.container}>
-                <NavigationButton onClick={() => navigation.navigate("Menu")} />
+                <NavigationButton onClick={() => navigation.pop()} />
                 <View style={{ paddingHorizontal: 17.5, marginTop: 40, alignItems: 'center' }}>
                     <Image source={WeatherConditionCodeToIcon(data.weather.icon)} style={{ width: 90, height: 90, marginBottom: 10 }} />
                     <Title size={-10} color="#000" weight="200" marginBottom={10}>{data.temperature.current ? data.temperature.current : '--'}°</Title>
