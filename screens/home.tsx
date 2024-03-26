@@ -8,7 +8,7 @@ import Banner from "../components/banner";
 import TrophyImage from '../assets/icon/trophy.png';
 import CalenderImage from '../assets/icon/calender.png';
 import BottomNavigation from "../components/bottomNavigation";
-
+import WeatherImage from '../assets/icon/weather/sun.png';
 /* Represents the props for a menu item. */
 interface MenuItemProps {
 	/* The title of the menu item. */
@@ -50,6 +50,7 @@ export default function ScreenHome({ navigation }: any) {
 				<View style={{ paddingHorizontal: 17.5, paddingVertical: 10, justifyContent: 'center', flexDirection: 'row' }}>
 					<MenuItem title="대회 일정" icon={TrophyImage} onPress={() => { navigation.navigate("Competition") }} />
 					<MenuItem title="학사 일정" icon={CalenderImage} onPress={() => { ToastAndroid.show('🛠️ 개발중인 구역입니다. 잠시만 이따 방문해주세요 🏃', ToastAndroid.SHORT); }} />
+					<MenuItem title="날씨" icon={WeatherImage} onPress={() => { navigation.navigate("Weather") }} />
 				</View>
 				<HomeSchoolDataList navigation={navigation} />
 				<View style={{ padding: 17.5, paddingTop: 30, paddingBottom: 10 }}>
