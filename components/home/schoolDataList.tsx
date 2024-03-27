@@ -65,13 +65,14 @@ const style = StyleSheet.create({
 
         width: width,
 
-        paddingBottom: 25,
         paddingHorizontal: 20,
     },
     
     /* Represents the schoolInfoContainer style. */
     schoolInfoContainer: {
-        width: (width / 2) - 22.5,
+        backgroundColor: "#fff",
+        
+        width: (width / 2) - 26,
 
         borderWidth: 1,
         borderColor: "#f4f4f4",
@@ -79,6 +80,5 @@ const style = StyleSheet.create({
 
         padding: 17,
         marginHorizontal: 'auto',
-        marginBottom: 10,
     },
 });

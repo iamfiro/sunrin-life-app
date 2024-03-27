@@ -26,7 +26,7 @@ const style = StyleSheet.create({
         alignItems: "center",
         justifyContent: "space-between",
 
-        height: 110,
+        height: 100,
 
         backgroundColor: "#dadada",
 

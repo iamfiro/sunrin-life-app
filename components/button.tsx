@@ -5,7 +5,7 @@ import Title from "./title";
  * Represents the props for the Button component.
  */
 interface ButtonProps {
-    type: 'primary' | 'secondary';
+    type: 'primary' | 'secondary' | 'white';
     text: string;
     onClick: () => void;
 }
@@ -58,6 +58,15 @@ const style = StyleSheet.create({
         alignItems: "center",
         backgroundColor: "#f5f5f5",
         borderRadius: 10,
+    },
+
+    whiteButton: {
+        width: "100%",
+        height: 55,
+        justifyContent: "center",
+        alignItems: "center",
+        backgroundColor: "#ffffff",
+        borderRadius: 10,
     }
 });
 
@@ -77,6 +86,11 @@ const buttonStyles = {
      */
     secondary: {
         buttonStyle: style.secondaryButton,
+        titleColor: "#50545C"
+    },
+
+    white: {
+        buttonStyle: style.whiteButton,
         titleColor: "#50545C"
     }
 };

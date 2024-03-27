@@ -1,15 +1,17 @@
-import { ScrollView, StatusBar, StyleSheet, View, Image, TouchableOpacity, ImageSourcePropType, ToastAndroid, Dimensions } from "react-native";
+import { ScrollView, StatusBar, StyleSheet, View, Image, TouchableOpacity, ImageSourcePropType, ToastAndroid, Dimensions, Linking } from "react-native";
 import Title from "../components/title";
 import HomeSchoolDataList from "../components/home/schoolDataList";
 import HomeArticleList from "../components/home/articleList";
-import FilterSelectButton from "../components/filterSelectButton";
 import Header from "../components/header";
 import Banner from "../components/banner";
-import TrophyImage from '../assets/icon/trophy.png';
-import CalenderImage from '../assets/icon/calender.png';
-import BottomNavigation from "../components/bottomNavigation";
-import WeatherImage from '../assets/icon/weather/sun.png';
+import SchoolImage from "../assets/icon/school.png";
+import TrophyImage from "../assets/icon/trophy.png";
+import CalendarImage from "../assets/icon/calender.png";
+import WeatherImage from "../assets/icon/weather/few-cloud.png";
+import ArticleImage from '../assets/icon/navigation/article.png';
 import FoodImage from '../assets/icon/menu/food.png';
+import InstagramImage from '../assets/icon/menu/instagram.png';
+import Toast from 'react-native-root-toast';
 
 /* Represents the props for a menu item. */
 interface MenuItemProps {
@@ -30,8 +32,8 @@ interface MenuItemProps {
 function MenuItem({ title, icon, onPress }: MenuItemProps) {
 	return (
 		<TouchableOpacity style={style.menuItem} onPress={onPress}>
-			<Image source={icon} style={{ width: 43, height: 43 }} />
-			<Title size={7} color="#4c4c4c" weight="300" marginTop={7}>{title}</Title>
+			<Title size={5} color="#000000" weight="400" marginTop={7}>{title}</Title>
+			<Image source={icon} style={{ width: 35, height: 35, marginLeft: 'auto' }} />
 		</TouchableOpacity>
 	);
 }
@@ -46,25 +48,43 @@ function MenuItem({ title, icon, onPress }: MenuItemProps) {
 export default function ScreenHome({ navigation }: any) {
 	return (
 		<>
-			<ScrollView style={style.container} stickyHeaderIndices={[5]}>
-				<Header type="president" grade={1} classNumber={4} />
-				<Banner imgUrl="https://images.unsplash.com/photo-1709290649154-54c725bd4484?q=80&w=3864&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
-				<View style={{ paddingHorizontal: 20, paddingVertical: 25, justifyContent: 'center', flexDirection: 'row' }}>
-					<MenuItem title="대회 일정" icon={TrophyImage} onPress={() => { navigation.navigate("Competition") }} />
-					<MenuItem title="학사 일정" icon={CalenderImage} onPress={() => { ToastAndroid.show('🛠️ 개발중인 구역입니다. 잠시만 이따 방문해주세요 🏃', ToastAndroid.SHORT); }} />
-					<MenuItem title="학교 날씨" icon={WeatherImage} onPress={() => { navigation.navigate("Weather") }} />
-					<MenuItem title="학교 급식" icon={FoodImage} onPress={() => { navigation.navigate("Food") }} />
+			<ScrollView style={style.container}>
+				<Header navigation={navigation} />
+				<View style={style.section}>
+					<Image source={SchoolImage} style={{ width: 42, height: 42 }} />
+					<View style={{ flexDirection: "column", marginLeft: 15 }}>
+						<Title size={7} color="#94929E" weight="200" marginBottom={3}>선린인터넷고등학교</Title>
+						<Title size={4} color="#000000" weight="400">조성주</Title>
+					</View>
+					<View style={{ flexDirection: "column", marginLeft: 'auto', alignItems: 'flex-end', marginRight: 10 }}>
+						<Title size={7} color="#94929E" weight="200" marginBottom={3}>학급</Title>
+						<Title size={5} color="#000000" weight="400">1학년 4반</Title>
+					</View>
 				</View>
+				<View style={{ height: 15 }} />
 				<HomeSchoolDataList navigation={navigation} />
-				<View style={{ padding: 20, paddingTop: 30, paddingBottom: 10 }}>
+				<View style={{ height: 15 }} />
+				<Banner imgUrl="https://images.unsplash.com/photo-1709290649154-54c725bd4484?q=80&w=3864&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+				<View style={{ height: 15 }} />
+				<View style={{ flexDirection: "row", justifyContent: "space-between", marginHorizontal: 20 }}>
+					<MenuItem title="공지" icon={ArticleImage} onPress={() => navigation.navigate("ArticleList")} />
+					<MenuItem title="대회정보" icon={TrophyImage} onPress={() => navigation.navigate("Competition")} />
+					<MenuItem title="학사일정" icon={CalendarImage} onPress={() => Toast.show("아직 개발중인 기능입니다")} />
+				</View>
+				<View style={{ height: 15 }} />
+				<View style={{ flexDirection: "row", justifyContent: "space-between", marginHorizontal: 20 }}>
+					<MenuItem title="날씨" icon={WeatherImage} onPress={() => navigation.navigate("Weather")} />
+					<MenuItem title="급식" icon={FoodImage} onPress={() => navigation.navigate("Food")} />
+					<MenuItem title="문의하기" icon={InstagramImage} onPress={() => Linking.openURL(`https://www.instagram.com/sunrin_life`)} />
+				</View>
+				<View style={{ padding: 20, paddingTop: 30, paddingBottom: 5 }}>
 					<Title size={4} color="#000" weight="400" marginBottom={10}>최근에 올라온 공지</Title>
 				</View>
 				<View style={{ paddingHorizontal: 20, marginBottom: 100 }}>
 					<HomeArticleList navigation={navigation} />
 				</View>
 			</ScrollView>
-			<BottomNavigation pageName="Home" navigation={navigation} />
-			<StatusBar backgroundColor={"#ffffff"} barStyle={"dark-content"} />
+			<StatusBar backgroundColor={"#F6F6F9"} barStyle={"dark-content"} />
 		</>
 	);
 }
@@ -73,23 +93,36 @@ export default function ScreenHome({ navigation }: any) {
 const style = StyleSheet.create({
 	container: {
 		flex: 1,
-		backgroundColor: "#fff",
+
+		backgroundColor: "#F6F6F9",
 	},
 
 	menuItem: {
+		backgroundColor: "#fff",
+
 		flexDirection: "column",
-		alignItems: "center",
-		justifyContent: "center",
-		height: 90,
-		width: 85,
-		padding: 10,
+		justifyContent: "space-between",
+		
+		height: 115,
+		width: 115,
+
+		padding: 15,
+		paddingTop: 10,
+
 		borderRadius: 10,
 	},
 
 	section: {
-		padding: 20,
-		paddingTop: 30,
-		paddingBottom: 30,
+		flexDirection: "row",
+		justifyContent: "center",
+
+		backgroundColor: "#fff",
+
+		marginHorizontal: 20,
+		paddingVertical: 20,
+		paddingHorizontal: 20,
+
+		borderRadius: 15,
 	},
 
 	/* Styles for the article filter container. */

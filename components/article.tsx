@@ -91,11 +91,14 @@ export default function Article({ title, article, type, id, navigation }: Articl
 const style = StyleSheet.create({
     /* Style for the container of the article. */
     container: {
+        backgroundColor: "#fff",
+        
         borderWidth: 1,
         borderColor: "#f4f4f4",
         borderRadius: 15,
+
         padding: 20,
-        marginBottom: 15,
+        marginBottom: 10,
     },
     /* Style for the article type wrap. */
     articleTypeWrap: {
