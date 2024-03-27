@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import { StyleSheet, Pressable, Text } from "react-native";
+import { StyleSheet, Text, TouchableOpacity } from "react-native";
 
 /**
  * Props for the FilterSelectButton component.
@@ -20,11 +20,11 @@ interface FilterSelectButtonProps {
  */
 export default function FilterSelectButton({ children, onPress, selected }: FilterSelectButtonProps) {
     return (
-        <Pressable style={[style.button, selected ? style.buttonSelected : null]}>
+        <TouchableOpacity style={[style.button, selected ? style.buttonSelected : null]}>
             <Text style={[style.text, selected ? style.textSelected : null]}>
                 {children}
             </Text>
-        </Pressable>
+        </TouchableOpacity>
     )
 }
 

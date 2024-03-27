@@ -72,7 +72,7 @@ function sizeToFontSize(size: TitleProps['size']) {
         case 7:
             return 12
         case 8:
-            return 10
+            return 11
     }
 }
 

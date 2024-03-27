@@ -212,3 +212,17 @@ export function WeatherConditionCodeToIcon(code: string) {
             return sun;
     }
 }
+
+export interface IWidgetWeatherState {
+    status: 'loading' | 'success' | 'error';
+    currentTemperature: number;
+    conditionCode: number;
+    icon: string;
+}
+
+export const StateDefaultWidgetWeather: IWidgetWeatherState = {
+    status: 'loading',
+    currentTemperature: 0,
+    conditionCode: 0,
+    icon: ''
+};
