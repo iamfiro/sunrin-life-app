@@ -51,7 +51,6 @@ const ClassButton = ({ grade, classNumber, onClick }:  { grade: HeaderProps['gra
 export default function Header({ type, classNumber, grade }: HeaderProps) {
     const handleAccountClick = () => {
         ToastAndroid.show(`나눈 ${userRoleToKorean(type)}이닷! 뚜비두밥ㅂ \n╰(*°▽°*)╯`, ToastAndroid.SHORT);
-        throw new Error('My first Sentry error!');
     };
 
     const handleClassClick = () => {
@@ -77,7 +76,7 @@ const style = StyleSheet.create({
         flexDirection: "row",
         alignItems: "center",
         justifyContent: "space-between",
-        height: 60,
+        height: 65,
         paddingLeft: 17.5,
         paddingRight: 17.5,
     },
