@@ -3,7 +3,7 @@
 
 <br/>
 <p align="center">🏫 선린인터넷고등학교</p>
-<p align="center"><b>📢 학급 공지 / 🗨️ 커뮤니티 / 🍤 급식 / 📅 시간표 / 🏆 대회 일정 / 📆 학사 일정</b></p>
+<p align="center"><b>📢 학급 공지 / 🍤 급식 / 📅 시간표 / 🏆 대회 일정 / 📆 학사 일정</b></p>
 
 <div align="center">
 
