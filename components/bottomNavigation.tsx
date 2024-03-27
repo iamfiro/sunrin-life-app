@@ -85,7 +85,7 @@ const style = (selected: boolean) => StyleSheet.create({
 
         backgroundColor: '#ffffff',
 
-        borderColor: '#ededed',
+        borderColor: '#f4f4f4',
         borderTopWidth: 1,
         borderLeftWidth: 1,
         borderRightWidth: 1,

@@ -43,8 +43,8 @@ export default function ScreenFood({ navigation }: IDefaultScreenProps) {
     return (
         <>
             <ScrollView style={style.container}>
-                <NavigationButton onClick={() => navigation.navigate("Menu")} />
-                <View style={{ paddingHorizontal: 17.5, marginTop: 0 }}>
+                <NavigationButton onClick={() => navigation.pop()} />
+                <View style={{ paddingHorizontal: 20, marginTop: 0 }}>
                     <Title size={2} color="#000" weight="300" marginBottom={30}>🍤  선린인터넷고등학교</Title>
                     {
                         isLoading && (

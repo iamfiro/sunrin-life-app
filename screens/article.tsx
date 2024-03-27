@@ -92,7 +92,7 @@ export default function ScreenArticle({ navigation }: any) {
         <>
         <ScrollView style={style.container}>
             <NavigationButton onClick={() => navigation.navigate("ArticleList")} />
-            <View style={{ paddingHorizontal: 17.5, marginTop: 10 }}>
+            <View style={{ paddingHorizontal: 20, marginTop: 10 }}>
                 <Title size={6} color="#000000" weight="200">📄  숙제</Title>
                 <View style={{ height: 10 }} />
                 <Title size={3} color="#000" weight="300">영어 3245p 숙제</Title>
@@ -126,7 +126,7 @@ const style = StyleSheet.create({
     /* The container style for analytics. */
     analyticsContainer: {
         marginTop: 30,
-        padding: 17.5,
+        padding: 20,
         backgroundColor: "#f5f5f5",
         borderRadius: 10,
     },
@@ -161,7 +161,7 @@ const propsStyle = (isClicked: boolean) => StyleSheet.create({
 
         backgroundColor: isClicked ? '#477AFF' : '#fff',
 
-        borderColor: "#ededed",
+        borderColor: "#f4f4f4",
         borderWidth: isClicked ? 0 : 1,
         borderRadius: 100,
 

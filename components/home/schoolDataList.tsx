@@ -66,7 +66,7 @@ const style = StyleSheet.create({
         width: width,
 
         paddingBottom: 25,
-        paddingHorizontal: 17.5,
+        paddingHorizontal: 20,
     },
     
     /* Represents the schoolInfoContainer style. */
@@ -74,7 +74,7 @@ const style = StyleSheet.create({
         width: (width / 2) - 22.5,
 
         borderWidth: 1,
-        borderColor: "#ededed",
+        borderColor: "#f4f4f4",
         borderRadius: 10,
 
         padding: 17,

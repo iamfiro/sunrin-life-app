@@ -126,7 +126,7 @@ const propsStyle = (backgroundColor: string) => StyleSheet.create({
 
         backgroundColor: backgroundColor,
 
-        borderColor: "#ededed",
+        borderColor: "#f4f4f4",
         borderWidth: backgroundColor === "04C28F" ? 0 : 1,
         borderRadius: 100,
 

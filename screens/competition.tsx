@@ -51,7 +51,7 @@ export default function ScreenCompetitionList({ route, navigation }: any) {
         <>
         <ScrollView style={style.container}>
             <NavigationButton onClick={() => navigation.navigate("Home")} />
-            <View style={{ paddingHorizontal: 17.5, marginTop: 10 }}>
+            <View style={{ paddingHorizontal: 20, marginTop: 10 }}>
                 <Title size={2} color="#000" weight="300" marginBottom={40}>🏆  다가오는 대회</Title>
                 {
                     data.map((item, index) => {
@@ -102,7 +102,7 @@ const style = StyleSheet.create({
         borderRadius: 10,
         padding: 15,
         marginTop: 10,
-        borderColor: "#ededed",
+        borderColor: "#f4f4f4",
         borderWidth: 1,
     }
 })

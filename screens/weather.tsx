@@ -60,7 +60,7 @@ export default function ScreenWeather({ navigation }: IDefaultScreenProps) {
         <>
             <ScrollView style={style.container}>
                 <NavigationButton onClick={() => navigation.pop()} />
-                <View style={{ paddingHorizontal: 17.5, marginTop: 40, alignItems: 'center' }}>
+                <View style={{ paddingHorizontal: 20, marginTop: 40, alignItems: 'center' }}>
                     <Image source={WeatherConditionCodeToIcon(data.weather.icon)} style={{ width: 90, height: 90, marginBottom: 10 }} />
                     <Title size={-10} color="#000" weight="200" marginBottom={10}>{data.temperature.current ? data.temperature.current : '--'}°</Title>
                     <Title size={3} color="#0274ff" weight="200" marginBottom={30}>{data.weather.conditionCode ? WeatherConditionCodeToKorean(data.weather.conditionCode) : '날씨 데이터를 불러오는 중'}</Title>
@@ -71,7 +71,7 @@ export default function ScreenWeather({ navigation }: IDefaultScreenProps) {
                 <List title="일출 시간" value={data.sun.sunrise ? data.sun.sunrise : '--:--:-- -'} />
                 <List title="일몰 시간" value={data.sun.sunset ? data.sun.sunset : '--:--:-- -'} />
                 <List title="풍속" value={`${data.windSpeed ? data.windSpeed : '-'}m/s`} />
-                <View style={{ paddingHorizontal: 17.5, marginTop: 40 }}>
+                <View style={{ paddingHorizontal: 20, marginTop: 40 }}>
                     <Title size={6} color="#b7b7b7" weight="200" marginBottom={30}>데이터 제공: OpenWeatherMaps API</Title>
                 </View>
             </ScrollView>

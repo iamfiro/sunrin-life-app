@@ -30,7 +30,7 @@ const style = StyleSheet.create({
 
         backgroundColor: "#dadada",
 
-        marginHorizontal: 17.5,
+        marginHorizontal: 20,
 
         borderRadius: 10,
     },

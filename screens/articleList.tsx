@@ -18,7 +18,7 @@ export default function ScreenArticleList({ route, navigation }: any) {
         <>
         <ScrollView style={style.container}>
             <NavigationButton onClick={() => navigation.navigate("Home")} />
-            <View style={{ paddingHorizontal: 17.5, marginTop: 10 }}>
+            <View style={{ paddingHorizontal: 20, marginTop: 10 }}>
                 <Title size={2} color="#000" weight="300" marginBottom={10}>📢  공지 리스트</Title>
             </View>
             <View style={style.ArticleSearchContainer}>
@@ -29,7 +29,7 @@ export default function ScreenArticleList({ route, navigation }: any) {
                 <FilterSelectButton onPress={() => { }} selected={false}>📢  공지</FilterSelectButton>
                 <FilterSelectButton onPress={() => { }} selected={false}>📄  숙제</FilterSelectButton>
             </ScrollView>
-            <View style={{ paddingHorizontal: 17.5 }}>
+            <View style={{ paddingHorizontal: 20 }}>
                 <HomeArticleList navigation={navigation} />
             </View>
             <View style={{ height: 70 }} />
@@ -51,14 +51,14 @@ const style = StyleSheet.create({
     ArticleSearchContainer: {
         flexDirection: "row",
         marginVertical: 13,
-        marginHorizontal: 17.5,
+        marginHorizontal: 20,
         backgroundColor: "white",
     },
 
     /* Styles for the input field in the article search container. */
     input: {
         width: "100%",
-        borderColor: '#ededed',
+        borderColor: '#f4f4f4',
         borderWidth: 1,
         borderRadius: 13,
         paddingHorizontal: 15,
@@ -71,7 +71,7 @@ const style = StyleSheet.create({
     ArticleFilterContainer: {
         flexDirection: "row",
         marginVertical: 13,
-        marginLeft: 17.5,
+        marginLeft: 20,
         marginTop: 0,
     }
 })

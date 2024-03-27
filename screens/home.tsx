@@ -49,24 +49,17 @@ export default function ScreenHome({ navigation }: any) {
 			<ScrollView style={style.container} stickyHeaderIndices={[5]}>
 				<Header type="president" grade={1} classNumber={4} />
 				<Banner imgUrl="https://images.unsplash.com/photo-1709290649154-54c725bd4484?q=80&w=3864&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
-				<View style={{ paddingHorizontal: 17.5, paddingVertical: 15, justifyContent: 'center', flexDirection: 'row' }}>
+				<View style={{ paddingHorizontal: 20, paddingVertical: 25, justifyContent: 'center', flexDirection: 'row' }}>
 					<MenuItem title="대회 일정" icon={TrophyImage} onPress={() => { navigation.navigate("Competition") }} />
 					<MenuItem title="학사 일정" icon={CalenderImage} onPress={() => { ToastAndroid.show('🛠️ 개발중인 구역입니다. 잠시만 이따 방문해주세요 🏃', ToastAndroid.SHORT); }} />
 					<MenuItem title="학교 날씨" icon={WeatherImage} onPress={() => { navigation.navigate("Weather") }} />
-					<MenuItem title="학교 급식" icon={FoodImage} onPress={() => { navigation.navigate("Weather") }} />
+					<MenuItem title="학교 급식" icon={FoodImage} onPress={() => { navigation.navigate("Food") }} />
 				</View>
 				<HomeSchoolDataList navigation={navigation} />
-				<View style={{ padding: 17.5, paddingTop: 30, paddingBottom: 10 }}>
-					<Title size={4} color="#000" weight="400">최근에 올라온 공지</Title>
+				<View style={{ padding: 20, paddingTop: 30, paddingBottom: 10 }}>
+					<Title size={4} color="#000" weight="400" marginBottom={10}>최근에 올라온 공지</Title>
 				</View>
-				<View style={{ backgroundColor: "white", paddingLeft: 17.5 }}>
-					<View style={style.ArticleFilterContainer}>
-						<FilterSelectButton onPress={() => { }} selected={true}>🗂️  전체</FilterSelectButton>
-						<FilterSelectButton onPress={() => { }} selected={false}>📢  공지</FilterSelectButton>
-						<FilterSelectButton onPress={() => { }} selected={false}>📄  숙제</FilterSelectButton>
-					</View>
-				</View>
-				<View style={{ paddingHorizontal: 17.5, marginBottom: 100 }}>
+				<View style={{ paddingHorizontal: 20, marginBottom: 100 }}>
 					<HomeArticleList navigation={navigation} />
 				</View>
 			</ScrollView>
@@ -94,7 +87,7 @@ const style = StyleSheet.create({
 	},
 
 	section: {
-		padding: 17.5,
+		padding: 20,
 		paddingTop: 30,
 		paddingBottom: 30,
 	},

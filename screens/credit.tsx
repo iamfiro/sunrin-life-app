@@ -40,7 +40,7 @@ export default function ScreenCredit({ navigation }: IDefaultScreenProps) {
         <>
             <ScrollView style={style.container}>
                 <NavigationButton onClick={() => navigation.pop()} />
-                <View style={{ paddingHorizontal: 17.5, marginTop: 10 }}>
+                <View style={{ paddingHorizontal: 20, marginTop: 10 }}>
                     <Title size={2} color="#000" weight="300" marginBottom={10}>😺  개발자 정보</Title>
                     {
                         DeveloperCredit.map((developer, index) => {

@@ -59,7 +59,7 @@ export default function ScreenMenu({ navigation }: IDefaultScreenProps) {
         <>
         <ScrollView style={style.container}>
             <NavigationButton onClick={() => navigation.navigate("Home")} />
-            <View style={{ paddingHorizontal: 17.5, marginTop: 10 }}>
+            <View style={{ paddingHorizontal: 20, marginTop: 10 }}>
                 <Title size={3} color="#000000" weight="400" marginBottom={20}>설정</Title>
                 <MenuItem title="메인 화면 위젯 설정" icon={WidgetImage} onPress={() => navigation.navigate("WidgetSetting")} />
                 <Title size={3} color="#000000" weight="400" marginTop={20} marginBottom={20}>학교</Title>

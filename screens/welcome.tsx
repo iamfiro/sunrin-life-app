@@ -44,7 +44,7 @@ const style = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: "#ffffff",
-        paddingHorizontal: 17.5,
+        paddingHorizontal: 20,
         paddingVertical: 30,
     },
     /* Style for the Login button. */

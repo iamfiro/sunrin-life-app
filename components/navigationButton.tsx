@@ -27,14 +27,14 @@ export default function NavigationButton({ onClick }: NavigationButtonProps) {
  */
 const style = StyleSheet.create({
     container: {
-        borderColor: "#ededed",
+        borderColor: "#f4f4f4",
         // borderBottomWidth: 1,
 
         height: 70,
 
         alignItems: "center",
 
-        paddingHorizontal: 17.5,
+        paddingHorizontal: 20,
 
         flexDirection: "row",
     }
