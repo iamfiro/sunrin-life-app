@@ -9,7 +9,6 @@ import { DayToKorean } from "../types";
 import axios from "axios";
 import FoodImage from '../assets/icon/menu/food.png'
 import Toast from "../lib/toast";
-import * as Clipboard from 'expo-clipboard';
 
 /**
  * Renders the widget setting screen.
@@ -56,19 +55,19 @@ export default function ScreenFood({ navigation }: IDefaultScreenProps) {
                             </View>
                         ) : (
                             <>
-                                <Image source={FoodImage} style={{ width: 60, height: 60, marginLeft: 15 }} />
-                                <View style={{ paddingHorizontal: 20 }}>
-                                    <Title size={3} color="#52585a" weight="200" marginTop={20} marginBottom={20}>{data[0].mealInfo.replaceAll(' ', '\n')}</Title>
-                                    <Title size={5} color="#7e7e7e" weight="200" marginBottom={30}>{date.getFullYear()}년 {date.getMonth()}월 {date.getDate()}일</Title>
+                                <View style={style.section}>
+                                    <Image source={FoodImage} style={{ width: 60, height: 60, marginLeft: -5 }} />
+                                    <Title size={4} color="#52585a" weight="200" marginTop={20} marginBottom={20}>{data[0].mealInfo.replaceAll(' ', '\n')}</Title>
+                                    <Title size={5} color="#7e7e7e" weight="300">{date.getFullYear()}년 {date.getMonth()}월 {date.getDate()}일</Title>
                                 </View>
-                                <View style={{ height: 17, backgroundColor: '#F6F6F9', width: '100%', marginBottom: 20 }} />
-                                <View style={{ paddingHorizontal: 20 }}>
+                                <View style={{ height: 30 }} />
+                                <View style={{ padding: 20, marginHorizontal: 20, backgroundColor: '#fff', borderRadius: 15 }}>
                                     {
                                         data.map((item, index) => {
                                             const itemDate = new Date(item.date);
                                             if(index === 0) return null;
                                             return (
-                                                <View key={index} style={{ paddingBottom: 20, marginBottom: 20, borderColor: '#f4f4f4', borderBottomWidth: 1, flexDirection: 'row' }}>
+                                                <View key={index} style={{ flexDirection: 'row' }}>
                                                     <View style={{ flexDirection: 'column', alignItems: 'center', marginRight: 25 }}>
                                                         <Title size={6} color="#9e9e9e" weight="200">{itemDate.getMonth() + 1}월</Title>
                                                         <Title size={2} color="#000000" weight="300" marginBottom={8}>{itemDate.getDate()}</Title>
@@ -78,13 +77,13 @@ export default function ScreenFood({ navigation }: IDefaultScreenProps) {
                                             )
                                         })
                                     }
-                                    <Title size={6} color="#b7b7b7" weight="200" marginTop={10} marginBottom={40}>데이터 제공: slunch.ny64.kr</Title>
                                 </View>
+                                <Title size={6} color="#b7b7b7" weight="200" marginTop={10} marginBottom={40}>데이터 제공: slunch.ny64.kr</Title>
                             </>
                         )
                     }
             </ScrollView>
-            <StatusBar backgroundColor={"#ffffff"} barStyle={"dark-content"} />
+            <StatusBar backgroundColor={"#F6F6F9"} barStyle={"dark-content"} />
         </>
     )
 }
@@ -92,6 +91,16 @@ export default function ScreenFood({ navigation }: IDefaultScreenProps) {
 const style = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: "#ffffff",
+        backgroundColor: "#F6F6F9",
     },
+    section: {
+        flexDirection: "column",
+
+		backgroundColor: "#fff",
+
+		padding: 20,
+        marginHorizontal: 20,
+
+		borderRadius: 15,
+    }
 });
