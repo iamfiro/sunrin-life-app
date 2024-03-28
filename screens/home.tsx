@@ -51,7 +51,7 @@ export default function ScreenHome({ navigation }: any) {
 		<>
 			<ScrollView style={style.container}>
 				<Header navigation={navigation} />
-				<ServiceNotification text="서비스가 종료되었습니다." />
+				<ServiceNotification text="공지 테스트" />
 				<View style={style.section}>
 					<Image source={SchoolImage} style={{ width: 42, height: 42 }} />
 					<View style={{ flexDirection: "column", marginLeft: 15 }}>
