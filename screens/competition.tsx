@@ -104,6 +104,9 @@ const style = StyleSheet.create({
 
         padding: 15,
         marginTop: 10,
+
+        shadowColor: '#0000002d',
+        elevation: 20,
     },
 
     section: {
