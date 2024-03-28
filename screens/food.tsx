@@ -56,9 +56,11 @@ export default function ScreenFood({ navigation }: IDefaultScreenProps) {
                         ) : (
                             <>
                                 <View style={{ paddingHorizontal: 20 }}>
-                                    <Title size={4} color="#52585a" weight="200" marginTop={20} marginBottom={30}>{data[0].mealInfo.replaceAll(' ', '\n')}</Title>
+                                    <Title size={3} color="#52585a" weight="200" marginTop={20} marginBottom={30}>{data[0].mealInfo.replaceAll(' ', '\n')}</Title>
+                                    <Button text="친구에게 급식 공유하기" type="secondary" onClick={() => navigation.navigate("FoodTomorrow")} />
+                                    <View style={{ height: 20 }} />
                                 </View>
-                                <View style={{ height: 17, backgroundColor: '#eaeaea', width: '100%', marginBottom: 20 }} />
+                                <View style={{ height: 17, backgroundColor: '#F6F6F9', width: '100%', marginBottom: 20 }} />
                                 <View style={{ paddingHorizontal: 20 }}>
                                     {
                                         data.map((item, index) => {
@@ -81,7 +83,7 @@ export default function ScreenFood({ navigation }: IDefaultScreenProps) {
                         )
                     }
             </ScrollView>
-            <StatusBar backgroundColor={"#F6F6F9"} barStyle={"dark-content"} />
+            <StatusBar backgroundColor={"#ffffff"} barStyle={"dark-content"} />
         </>
     )
 }
@@ -89,6 +91,6 @@ export default function ScreenFood({ navigation }: IDefaultScreenProps) {
 const style = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: "#F6F6F9",
+        backgroundColor: "#ffffff",
     },
 });
