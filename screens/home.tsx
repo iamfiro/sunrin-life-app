@@ -12,6 +12,7 @@ import ArticleImage from '../assets/icon/navigation/article.png';
 import FoodImage from '../assets/icon/menu/food.png';
 import InstagramImage from '../assets/icon/menu/instagram.png';
 import Toast from 'react-native-root-toast';
+import ServiceNotification from "../components/notification";
 
 /* Represents the props for a menu item. */
 interface MenuItemProps {
@@ -50,6 +51,7 @@ export default function ScreenHome({ navigation }: any) {
 		<>
 			<ScrollView style={style.container}>
 				<Header navigation={navigation} />
+				<ServiceNotification text="서비스가 종료되었습니다." />
 				<View style={style.section}>
 					<Image source={SchoolImage} style={{ width: 42, height: 42 }} />
 					<View style={{ flexDirection: "column", marginLeft: 15 }}>
@@ -62,7 +64,7 @@ export default function ScreenHome({ navigation }: any) {
 					</View>
 				</View>
 				<View style={{ height: 15 }} />
-				<HomeSchoolDataList navigation={navigation} />
+				<HomeSchoolDataList />
 				<View style={{ height: 15 }} />
 				<Banner imgUrl="https://images.unsplash.com/photo-1709290649154-54c725bd4484?q=80&w=3864&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
 				<View style={{ height: 15 }} />
