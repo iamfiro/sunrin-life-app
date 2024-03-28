@@ -23,7 +23,7 @@ export default function ScreenCompetitionList({ route, navigation }: any) {
         setData([
             {
                 title: "2024 선린 해커톤",
-                date: new Date("2025-03-15"), // Update the date property to be of type Date
+                date: new Date("2024-04-29"), // Update the date property to be of type Date
                 url: "https://www.instagram.com/sunrin_life",
                 description: '선린인터넷고등학교에서 주최하는 코딩경진대회입니다. 많은 참여 부탁드립니다!'
             },
@@ -50,9 +50,8 @@ export default function ScreenCompetitionList({ route, navigation }: any) {
     return (
         <>
         <ScrollView style={style.container}>
-            <NavigationButton onClick={() => navigation.navigate("Home")} />
+            <NavigationButton onClick={() => navigation.pop()} text="다가오는 대회" />
             <View style={{ paddingHorizontal: 20, marginTop: 10 }}>
-                <Title size={2} color="#000" weight="300" marginBottom={40}>🏆  다가오는 대회</Title>
                 {
                     data.map((item, index) => {
                         const isSameDate = preventListDate?.toString() === item.date?.toString();
@@ -73,7 +72,7 @@ export default function ScreenCompetitionList({ route, navigation }: any) {
                                 <TouchableOpacity style={style.competitionContainer} key={Math.random()}>
                                     <Title size={5} color="#000" weight="300" marginBottom={5}>{item.title}</Title>
                                     <Title size={7} color="#838383" weight="200" marginBottom={5}>{item.description}</Title>
-                                    <Title size={7} color="#838383" weight="200">D - {Math.floor((item.date.getTime() - new Date().getTime()) / (1000 * 60 * 60 * 24))}</Title>
+                                    <Title size={7} color="#838383" weight="200">D - {Math.floor((item.date.getTime() - new Date().getTime()) / (1000 * 60 * 60 * 24)) + 1}</Title>
                                 </TouchableOpacity>
                             </View>
                         )
@@ -81,11 +80,11 @@ export default function ScreenCompetitionList({ route, navigation }: any) {
                 }
                 <View style={{ height: 40 }} />
                 <View style={{ marginTop: -20, marginBottom: 30 }}>
-                    <Button type="secondary" text="올바른 정보가 아닌가요?" onClick={() => { Linking.openURL("https://www.instagram.com/sunrin_life")}} />
+                    <Button type="white" text="올바른 정보가 아닌가요?" onClick={() => { Linking.openURL("https://www.instagram.com/sunrin_life")}} />
                 </View>
             </View>
         </ScrollView>
-        <StatusBar backgroundColor={"#ffffff"} barStyle={"dark-content"} />
+        <StatusBar backgroundColor={"#F6F6F9"} barStyle={"dark-content"} />
         </>
     )
 }
@@ -95,14 +94,26 @@ const style = StyleSheet.create({
     /* The main container style. */
     container: {
         flex: 1,
-        backgroundColor: "#fff",
+        backgroundColor: "#F6F6F9",
     },
     /* The container style for the competition section. */
     competitionContainer: {
+        backgroundColor: "#fff",
+
         borderRadius: 10,
+
         padding: 15,
         marginTop: 10,
-        borderColor: "#f4f4f4",
-        borderWidth: 1,
+    },
+
+    section: {
+        flexDirection: "row",
+        alignItems: "center",
+
+		backgroundColor: "#fff",
+
+		padding: 20,
+
+		borderRadius: 15,
     }
 })
