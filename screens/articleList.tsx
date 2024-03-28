@@ -1,7 +1,6 @@
 import { StyleSheet, ScrollView, StatusBar, View, Text, TextInput } from "react-native";
 import NavigationButton from "../components/navigationButton";
 import Title from "../components/title";
-import BottomNavigation from "../components/bottomNavigation";
 import FilterSelectButton from "../components/filterSelectButton";
 import HomeArticleList from "../components/home/articleList";
 
@@ -17,10 +16,7 @@ export default function ScreenArticleList({ route, navigation }: any) {
     return (
         <>
         <ScrollView style={style.container}>
-            <NavigationButton onClick={() => navigation.navigate("Home")} />
-            <View style={{ paddingHorizontal: 20, marginTop: 10 }}>
-                <Title size={2} color="#000" weight="300" marginBottom={10}>📢  공지 리스트</Title>
-            </View>
+            <NavigationButton onClick={() => navigation.pop()} text="공지 리스트" />
             <View style={style.ArticleSearchContainer}>
                 <TextInput style={style.input} placeholder="검색어를 입력하세요" />
             </View>
@@ -34,8 +30,7 @@ export default function ScreenArticleList({ route, navigation }: any) {
             </View>
             <View style={{ height: 70 }} />
         </ScrollView>
-        <BottomNavigation pageName="ArticleList" navigation={navigation} />
-        <StatusBar backgroundColor={"#ffffff"} barStyle={"dark-content"} />
+        <StatusBar backgroundColor={"#F6F6F9"} barStyle={"dark-content"} />
         </>
     )
 }
@@ -44,27 +39,35 @@ export default function ScreenArticleList({ route, navigation }: any) {
 const style = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: "#fff",
+        backgroundColor: "#F6F6F9",
     },
 
     /* Styles for the article search container. */
     ArticleSearchContainer: {
         flexDirection: "row",
-        marginVertical: 13,
+        
+        marginBottom: 15,
         marginHorizontal: 20,
-        backgroundColor: "white",
     },
 
     /* Styles for the input field in the article search container. */
     input: {
         width: "100%",
+
+        backgroundColor: "#fff",
+        
         borderColor: '#f4f4f4',
         borderWidth: 1,
         borderRadius: 13,
+
         paddingHorizontal: 15,
         paddingVertical: 10,
+
         fontSize: 15,
         fontFamily: 'Wanted Sans Medium',
+
+        shadowColor: '#0000002d',
+        elevation: 20,
     },
 
     /* Styles for the article filter container. */
