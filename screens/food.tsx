@@ -78,7 +78,9 @@ export default function ScreenFood({ navigation }: IDefaultScreenProps) {
                                         })
                                     }
                                 </View>
-                                <Title size={6} color="#b7b7b7" weight="200" marginTop={10} marginBottom={40}>데이터 제공: slunch.ny64.kr</Title>
+                                <View style={{ marginLeft: 20}}>
+                                    <Title size={6} color="#b7b7b7" weight="200" marginTop={30}>데이터 제공: slunch.ny64.kr</Title>
+                                </View>
                             </>
                         )
                     }
