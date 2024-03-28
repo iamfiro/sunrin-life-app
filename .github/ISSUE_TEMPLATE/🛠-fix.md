@@ -1,7 +1,7 @@
 ---
 name: "\U0001F6E0 FIX"
 about: 기능 수정
-title: "\U0001F6E0 [내용 (영어)]"
+title: "\U0001F6E0 [내용]"
 labels: "\U0001F6E0 FIX"
 assignees: iamfiro
 

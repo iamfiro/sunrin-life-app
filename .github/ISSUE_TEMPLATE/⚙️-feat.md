@@ -1,7 +1,7 @@
 ---
 name: "⚙️ FEAT"
 about: 새 기능 요청
-title: "⚙️ [내용 (영어)]"
+title: "⚙️ [내용]"
 labels: "⚙️ Feat"
 assignees: iamfiro
 

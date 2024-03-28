@@ -1,7 +1,7 @@
 ---
 name: "\U0001F41B BUG"
 about: 버그 제보
-title: "\U0001F41B [내용 (영어)]"
+title: "\U0001F41B [내용]"
 labels: bug
 assignees: iamfiro
 
