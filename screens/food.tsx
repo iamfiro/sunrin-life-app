@@ -1,4 +1,4 @@
-import { ActivityIndicator, Linking, ScrollView, StatusBar, StyleSheet, ToastAndroid, View } from "react-native";
+import { ActivityIndicator, Image, ScrollView, StatusBar, StyleSheet, ToastAndroid, View } from "react-native";
 import { IDefaultScreenProps } from "../types/screen";
 import NavigationButton from "../components/navigationButton";
 import Title from "../components/title";
@@ -7,6 +7,7 @@ import { FoodStateType } from "../types/food";
 import { useEffect, useState } from "react";
 import { DayToKorean } from "../types";
 import axios from "axios";
+import FoodImage from '../assets/icon/menu/food.png'
 /**
  * Renders the widget setting screen.
  * 
@@ -43,43 +44,43 @@ export default function ScreenFood({ navigation }: IDefaultScreenProps) {
     return (
         <>
             <ScrollView style={style.container}>
-                <NavigationButton onClick={() => navigation.pop()} />
-                <View style={{ paddingHorizontal: 20, marginTop: 0 }}>
-                    <Title size={2} color="#000" weight="300" marginBottom={30}>🍤  선린인터넷고등학교</Title>
+                <NavigationButton onClick={() => navigation.pop()} text="급식" />
+                    <Image source={FoodImage} style={{ width: 60, height: 60, marginLeft: 15 }} />
                     {
-                        isLoading && (
+                        isLoading ? (
                             <View style={{ marginTop: 100 }}>
                                 <ActivityIndicator size="large" color="#000" />
                                 <Title size={6} color="#b7b7b7" weight="200" marginTop={20} marginBottom={40} textAlign="center">데이터를 불러오는 중입니다...</Title>
                             </View>
+                        ) : (
+                            <>
+                                <View style={{ paddingHorizontal: 20 }}>
+                                    <Title size={4} color="#52585a" weight="200" marginTop={20} marginBottom={30}>{data[0].mealInfo.replaceAll(' ', '\n')}</Title>
+                                </View>
+                                <View style={{ height: 17, backgroundColor: '#eaeaea', width: '100%', marginBottom: 20 }} />
+                                <View style={{ paddingHorizontal: 20 }}>
+                                    {
+                                        data.map((item, index) => {
+                                            const itemDate = new Date(item.date);
+                                            if(index === 0) return null;
+                                            return (
+                                                <View key={index} style={{ paddingBottom: 20, marginBottom: 20, borderColor: '#f4f4f4', borderBottomWidth: 1, flexDirection: 'row' }}>
+                                                    <View style={{ flexDirection: 'column', alignItems: 'center', marginRight: 25 }}>
+                                                        <Title size={6} color="#9e9e9e" weight="200">{itemDate.getMonth() + 1}월</Title>
+                                                        <Title size={2} color="#000000" weight="300" marginBottom={8}>{itemDate.getDate()}</Title>
+                                                    </View>
+                                                    <Title size={5} color="#919191" weight="200">{item.mealInfo.replaceAll(' ', '\n')}</Title>
+                                                </View>
+                                            )
+                                        })
+                                    }
+                                    <Title size={6} color="#b7b7b7" weight="200" marginTop={10} marginBottom={40}>데이터 제공: slunch.ny64.kr</Title>
+                                </View>
+                            </>
                         )
                     }
-                    {
-                        data.map((item, index) => {
-                            const itemDate = new Date(item.date);
-                            return (
-                                <View key={index} style={{ paddingBottom: 20, marginBottom: 20, borderColor: '#f4f4f4', borderBottomWidth: 1, flexDirection: 'row' }}>
-                                    <View style={{ flexDirection: 'column', alignItems: 'center', marginRight: 25 }}>
-                                        <Title size={6} color="#9e9e9e" weight="200">{itemDate.getMonth() + 1}월</Title>
-                                        <Title size={2} color="#000000" weight="300" marginBottom={8}>{itemDate.getDate()}</Title>
-                                        {
-                                            itemDate.toDateString() === new Date().toDateString() ? 
-                                                <View style={{ backgroundColor: '#477AFF', paddingHorizontal: 7, paddingVertical: 5, borderRadius: 5 }}>
-                                                    <Title size={8} weight="200" color="#fff">오늘</Title>
-                                                </View> : null
-                                        }
-                                    </View>
-                                    <Title size={5} color="#919191" weight="200">{item.mealInfo.replaceAll(' ', '\n')}</Title>
-                                </View>
-                            )
-                        })
-                    }
-                    {
-                        !isLoading && <Title size={6} color="#b7b7b7" weight="200" marginTop={10} marginBottom={40}>데이터 제공: slunch.ny64.kr</Title>
-                    }
-                </View>
             </ScrollView>
-            <StatusBar backgroundColor={"#ffffff"} barStyle={"dark-content"} />
+            <StatusBar backgroundColor={"#F6F6F9"} barStyle={"dark-content"} />
         </>
     )
 }
@@ -87,6 +88,6 @@ export default function ScreenFood({ navigation }: IDefaultScreenProps) {
 const style = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: "#fff",
+        backgroundColor: "#F6F6F9",
     },
 });
