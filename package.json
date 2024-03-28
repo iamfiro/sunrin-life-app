@@ -6,8 +6,7 @@
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
-    "web": "expo start --web",
-    "build:android-preview": "npx eas build -p android --profile development"
+    "web": "expo start --web"
   },
   "dependencies": {
     "@expo/metro-runtime": "~3.1.3",
