@@ -9,6 +9,8 @@ import { DayToKorean } from "../types";
 import axios from "axios";
 import FoodImage from '../assets/icon/menu/food.png'
 import Toast from "../lib/toast";
+import * as Clipboard from 'expo-clipboard';
+
 /**
  * Renders the widget setting screen.
  * 
@@ -17,7 +19,7 @@ import Toast from "../lib/toast";
 export default function ScreenFood({ navigation }: IDefaultScreenProps) {
     const [data, setData] = useState<FoodStateType | []>([]);
     const [isLoading, setIsLoading] = useState<boolean>(true);
-
+    const date = new Date();
     useEffect(() => {
         axios.get("https://slunch.ny64.kr/api/meals").then((res: any) => {
             const date = new Date();
@@ -46,7 +48,6 @@ export default function ScreenFood({ navigation }: IDefaultScreenProps) {
         <>
             <ScrollView style={style.container}>
                 <NavigationButton onClick={() => navigation.pop()} text="급식" />
-                    <Image source={FoodImage} style={{ width: 60, height: 60, marginLeft: 15 }} />
                     {
                         isLoading ? (
                             <View style={{ marginTop: 100 }}>
@@ -55,10 +56,10 @@ export default function ScreenFood({ navigation }: IDefaultScreenProps) {
                             </View>
                         ) : (
                             <>
+                                <Image source={FoodImage} style={{ width: 60, height: 60, marginLeft: 15 }} />
                                 <View style={{ paddingHorizontal: 20 }}>
-                                    <Title size={3} color="#52585a" weight="200" marginTop={20} marginBottom={30}>{data[0].mealInfo.replaceAll(' ', '\n')}</Title>
-                                    <Button text="친구에게 급식 공유하기" type="secondary" onClick={() => navigation.navigate("FoodTomorrow")} />
-                                    <View style={{ height: 20 }} />
+                                    <Title size={3} color="#52585a" weight="200" marginTop={20} marginBottom={20}>{data[0].mealInfo.replaceAll(' ', '\n')}</Title>
+                                    <Title size={5} color="#7e7e7e" weight="200" marginBottom={30}>{date.getFullYear()}년 {date.getMonth()}월 {date.getDate()}일</Title>
                                 </View>
                                 <View style={{ height: 17, backgroundColor: '#F6F6F9', width: '100%', marginBottom: 20 }} />
                                 <View style={{ paddingHorizontal: 20 }}>
