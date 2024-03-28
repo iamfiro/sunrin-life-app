@@ -1,4 +1,4 @@
-import { ScrollView, StatusBar, StyleSheet, View, Image, TouchableOpacity, ImageSourcePropType, ToastAndroid, Dimensions, Linking } from "react-native";
+import { ScrollView, StatusBar, StyleSheet, View, Image, TouchableOpacity, ImageSourcePropType, Linking } from "react-native";
 import Title from "../components/title";
 import HomeSchoolDataList from "../components/home/schoolDataList";
 import HomeArticleList from "../components/home/articleList";
@@ -11,8 +11,8 @@ import WeatherImage from "../assets/icon/weather/few-cloud.png";
 import ArticleImage from '../assets/icon/navigation/article.png';
 import FoodImage from '../assets/icon/menu/food.png';
 import InstagramImage from '../assets/icon/menu/instagram.png';
-import Toast from 'react-native-root-toast';
 import ServiceNotification from "../components/notification";
+import Toast from "../lib/toast";
 
 /* Represents the props for a menu item. */
 interface MenuItemProps {
@@ -71,7 +71,7 @@ export default function ScreenHome({ navigation }: any) {
 				<View style={{ flexDirection: "row", justifyContent: "space-between", marginHorizontal: 20 }}>
 					<MenuItem title="공지" icon={ArticleImage} onPress={() => navigation.navigate("ArticleList")} />
 					<MenuItem title="대회정보" icon={TrophyImage} onPress={() => navigation.navigate("Competition")} />
-					<MenuItem title="학사일정" icon={CalendarImage} onPress={() => Toast.show("아직 개발중인 기능입니다")} />
+					<MenuItem title="학사일정" icon={CalendarImage} onPress={() => Toast("🛠️ 아직 개발중인 기능입니다")} />
 				</View>
 				<View style={{ height: 15 }} />
 				<View style={{ flexDirection: "row", justifyContent: "space-between", marginHorizontal: 20 }}>

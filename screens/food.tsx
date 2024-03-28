@@ -1,4 +1,4 @@
-import { ActivityIndicator, Image, ScrollView, StatusBar, StyleSheet, ToastAndroid, View } from "react-native";
+import { ActivityIndicator, Image, ScrollView, StatusBar, StyleSheet, View } from "react-native";
 import { IDefaultScreenProps } from "../types/screen";
 import NavigationButton from "../components/navigationButton";
 import Title from "../components/title";
@@ -8,6 +8,7 @@ import { useEffect, useState } from "react";
 import { DayToKorean } from "../types";
 import axios from "axios";
 import FoodImage from '../assets/icon/menu/food.png'
+import Toast from "../lib/toast";
 /**
  * Renders the widget setting screen.
  * 
@@ -37,7 +38,7 @@ export default function ScreenFood({ navigation }: IDefaultScreenProps) {
             setData(mealData);
             setIsLoading(false);
         }).catch((err) => {
-            ToastAndroid.show("데이터를 불러오는 중 오류가 발생했습니다.", ToastAndroid.SHORT);
+            Toast("데이터를 불러오는 중 오류가 발생했습니다.");
         })
     }, []);
 

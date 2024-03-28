@@ -1,4 +1,4 @@
-import { View, StyleSheet, ToastAndroid, TouchableOpacity } from "react-native";
+import { View, StyleSheet, TouchableOpacity } from "react-native";
 import Icon from "react-native-vector-icons/MaterialIcons";
 import { IDefaultScreenProps } from "../types/screen";
 

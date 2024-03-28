@@ -1,5 +1,4 @@
-import { StatusBar, StyleSheet, ScrollView, View, TouchableOpacity, Image, ImageSourcePropType, Linking, ToastAndroid } from "react-native";
-import BottomNavigation from "../components/bottomNavigation";
+import { StatusBar, StyleSheet, ScrollView, View, TouchableOpacity, Image, ImageSourcePropType, Linking } from "react-native";
 import { IDefaultScreenProps } from "../types/screen";
 import Title from "../components/title";
 import NavigationButton from "../components/navigationButton";
@@ -14,6 +13,7 @@ import WeatherImage from "../assets/icon/menu/weather.png";
 import TrophyImage from "../assets/icon/trophy.png";
 import CalenderImage from "../assets/icon/calender.png";
 import BearImage from "../assets/icon/menu/bear.png";
+import Toast from "../lib/toast";
 
 /* Represents the props for a menu item. */
 interface MenuItemProps {
@@ -41,8 +41,8 @@ function MenuItem({ title, icon, onPress }: MenuItemProps) {
                 <View style={style.imageContainer}>
                     <Image source={icon} style={style.itemImage} />
                 </View>
-                <View style={{ width: 15 }} />
-                <Title size={4} color="#5a5a5a" weight="200">{title}</Title>
+                <View style={{ width: 5 }} />
+                <Title size={5} color="#5a5a5a" weight="200">{title}</Title>
             </View>
             <Icon name="right" size={20} color="#797979" />
         </TouchableOpacity>
@@ -66,7 +66,7 @@ export default function ScreenMenu({ navigation }: IDefaultScreenProps) {
                 <MenuItem title="현재 선린인고의 날씨" icon={WeatherImage} onPress={() => navigation.navigate("Weather")} />
                 <MenuItem title="오늘 나오는 급식 보기" icon={FoodImage} onPress={() => navigation.navigate("Food")} />
                 <MenuItem title="대회 일정 한 눈에 보기" icon={TrophyImage} onPress={() => navigation.navigate("Competition")} />
-                <MenuItem title="학사 일정 쉽게 보기" icon={CalenderImage} onPress={() => ToastAndroid.show('🛠️ 개발중인 구역입니다. 잠시만 이따 방문해주세요 🏃', ToastAndroid.SHORT)} />
+                <MenuItem title="학사 일정 쉽게 보기" icon={CalenderImage} onPress={() => Toast('🛠️ 아직 개발중인 기능입니다')} />
                 <Title size={3} color="#000000" weight="400" marginBottom={20} marginTop={20}>기타</Title>
                 <MenuItem title="공식 인스타그램" icon={InstagramImage} onPress={() => Linking.openURL("https://www.instagram.com/sunrin_life")} />
                 <MenuItem title="선린라이프 Github" icon={GithubImage} onPress={() => Linking.openURL("https://github.com/sunrin-life/app")} />
@@ -81,8 +81,7 @@ export default function ScreenMenu({ navigation }: IDefaultScreenProps) {
                 <View style={{ height: 100 }} />
             </View>
         </ScrollView>
-        <BottomNavigation pageName="Menu" navigation={navigation} />
-		<StatusBar backgroundColor={"#ffffff"} barStyle={"dark-content"} />
+		<StatusBar backgroundColor={"#F6F6F9"} barStyle={"dark-content"} />
         </>
     )
 }
@@ -92,14 +91,23 @@ const style = StyleSheet.create({
     /* The container style for the menu screen. */
     container: {
         flex: 1,
-        backgroundColor: "#fff",
+        backgroundColor: "#F6F6F9",
     },
     /* The container style for each menu item. */
     itemContainer: {
         flexDirection: 'row',
         alignItems: 'center',
+
         justifyContent: 'space-between',
-        marginBottom: 15,
+
+        backgroundColor: '#ffffff',
+
+        padding: 10,
+        paddingRight: 15,
+
+        borderRadius: 10,
+
+        marginBottom: 10,
     },
     /* The style for the left side of each menu item. */
     itemLeft: {
@@ -111,7 +119,7 @@ const style = StyleSheet.create({
         width: 40,
         height: 40,
         borderRadius: 10,
-        backgroundColor: '#f5f5f5',
+        backgroundColor: '#ffffff',
         alignItems: 'center',
         justifyContent: 'center',
     },
