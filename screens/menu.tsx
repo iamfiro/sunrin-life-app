@@ -77,7 +77,7 @@ export default function ScreenMenu({ navigation }: IDefaultScreenProps) {
                 <Button type="primary" text="문의하기" onClick={() => { Linking.openURL("https://www.instagram.com/sunrin_life")}} />
                 <View style={{ height: 5 }} />
                 <Button type="secondary" text="앱 로그아웃" onClick={() => { }} />
-                <Title size={6} color="#9d9d9d" weight="200" marginTop={20}>애플리케이션 버전 1.0.0</Title>
+                <Title size={6} color="#9d9d9d" weight="200" marginTop={20}>애플리케이션 버전 0.0.0-beta</Title>
                 <View style={{ height: 100 }} />
             </View>
         </ScrollView>
