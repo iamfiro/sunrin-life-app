@@ -56,7 +56,7 @@ export default function HomeSchoolDataList() {
     }, []);
 
     useEffect(() => {
-        axios.get("https://api.ny64.kr/comcigan/1/4").then((res: any) => {
+        axios.get("https://npi.ny64.kr/v1/snt/comcigan/1/4").then((res: any) => {
             const date = new Date();
             let data: string = '';
 
