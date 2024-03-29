@@ -1,4 +1,4 @@
-import { StyleSheet, ScrollView, StatusBar, View, Text, TouchableOpacity } from "react-native";
+import { StyleSheet, ScrollView, StatusBar, View, Text, TouchableOpacity, Dimensions } from "react-native";
 import NavigationButton from "../components/navigationButton";
 import Title from "../components/title";
 import Badge from "../components/badge";
@@ -25,7 +25,7 @@ function ReactButton({ emoji, count, isClicked }: ArticleReactProps) {
         <TouchableOpacity style={propsStyle(isClicked).reactContainer} onPress={handlePress}>
             <Title size={5} color="#000" weight="200">{emoji}</Title>
             <View style={{ width: 3 }} />
-            <Title size={5} color={isClicked ? '#fff' : '#bbb'} weight="200">{count}</Title>
+            <Title size={5} color={isClicked ? '#fff' : '#ccc'} weight="200">{count}</Title>
         </TouchableOpacity>
     )
 }
@@ -91,7 +91,7 @@ export default function ScreenArticle({ navigation }: any) {
     return (
         <>
         <ScrollView style={style.container}>
-            <NavigationButton onClick={() => navigation.navigate("ArticleList")} />
+            <NavigationButton onClick={() => navigation.navigate("ArticleList")} text="공지" />
             <View style={{ paddingHorizontal: 20, marginTop: 10 }}>
                 <Title size={6} color="#000000" weight="200">📄  숙제</Title>
                 <View style={{ height: 10 }} />
@@ -121,13 +121,19 @@ const style = StyleSheet.create({
     /* The main container style. */
     container: {
         flex: 1,
-        backgroundColor: "#fff",
+
+        width: Dimensions.get('window').width,
+        maxWidth: 500,
+
+        backgroundColor: "#F6F6F9",
+
+        marginHorizontal: "auto",
     },
     /* The container style for analytics. */
     analyticsContainer: {
         marginTop: 30,
         padding: 20,
-        backgroundColor: "#f5f5f5",
+        backgroundColor: "#fff",
         borderRadius: 10,
     },
     deleteButton: {
