@@ -1,4 +1,4 @@
-import { StatusBar, Text, View, StyleSheet, Image, TouchableOpacity } from "react-native";
+import { StatusBar, Text, View, StyleSheet, Image, TouchableOpacity, Dimensions } from "react-native";
 import Title from "../components/title";
 import { IDefaultScreenProps } from "../types/screen";
 
@@ -43,7 +43,14 @@ const style = StyleSheet.create({
     /* Container style for the Welcome screen. */
     container: {
         flex: 1,
-        backgroundColor: "#ffffff",
+        
+        width: Dimensions.get('window').width,
+        maxWidth: 500,
+
+        backgroundColor: "#F6F6F9",
+
+        marginHorizontal: "auto",
+        
         paddingHorizontal: 20,
         paddingVertical: 30,
     },

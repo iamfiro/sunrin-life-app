@@ -11,7 +11,7 @@ interface SchoolInfoComponentProps {
     data: string;
 }
 
-const width = Dimensions.get('window').width;
+const width = Dimensions.get('window').width > 500 ? 460 : Dimensions.get('window').width;
 
 /**
  * Renders a component displaying school information.
@@ -99,13 +99,12 @@ const style = StyleSheet.create({
     schoolInfoContainer: {
         backgroundColor: "#fff",
         
-        width: (width / 2) - 26,
+        width: (width / 2) - 25,
 
         borderWidth: 1,
         borderColor: "#f4f4f4",
         borderRadius: 10,
 
         padding: 17,
-        marginHorizontal: 'auto',
     },
 });

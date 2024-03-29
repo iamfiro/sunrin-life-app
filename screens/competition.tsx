@@ -1,4 +1,4 @@
-import { StyleSheet, ScrollView, StatusBar, View, Text, Linking } from "react-native";
+import { StyleSheet, ScrollView, StatusBar, View, Text, Linking, Dimensions } from "react-native";
 import NavigationButton from "../components/navigationButton";
 import Title from "../components/title";
 import { useEffect, useState } from "react";
@@ -94,7 +94,13 @@ const style = StyleSheet.create({
     /* The main container style. */
     container: {
         flex: 1,
+        
+        width: Dimensions.get('window').width,
+        maxWidth: 500,
+
         backgroundColor: "#F6F6F9",
+
+        marginHorizontal: "auto",
     },
     /* The container style for the competition section. */
     competitionContainer: {

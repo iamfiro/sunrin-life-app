@@ -97,6 +97,12 @@ const style = StyleSheet.create({
 		flex: 1,
 
 		backgroundColor: "#F6F6F9",
+
+		maxWidth: 500,
+
+		marginHorizontal: "auto",
+
+		overflow: 'hidden',
 	},
 
 	menuItem: {

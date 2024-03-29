@@ -1,4 +1,4 @@
-import { ImageSourcePropType, Linking, ScrollView, StyleSheet, View, Image, TouchableOpacity, StatusBar } from "react-native";
+import { ImageSourcePropType, Linking, ScrollView, StyleSheet, View, Image, TouchableOpacity, StatusBar, Dimensions } from "react-native";
 import { IDefaultScreenProps } from "../types/screen";
 import NavigationButton from "../components/navigationButton";
 import Title from "../components/title";
@@ -51,7 +51,6 @@ export default function ScreenCredit({ navigation }: IDefaultScreenProps) {
                     }
                 </View>
             </ScrollView>
-            <BottomNavigation pageName="Menu" navigation={navigation} />
 		    <StatusBar backgroundColor={"#ffffff"} barStyle={"dark-content"} />
         </>
     )
@@ -61,7 +60,13 @@ export default function ScreenCredit({ navigation }: IDefaultScreenProps) {
 const style = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: "#fff",
+        
+        width: Dimensions.get('window').width,
+        maxWidth: 500,
+
+        backgroundColor: "#F6F6F9",
+
+        marginHorizontal: "auto",
     },
     developerContainer: {
         marginTop: 30,
