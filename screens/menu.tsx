@@ -60,8 +60,8 @@ export default function ScreenMenu({ navigation }: IDefaultScreenProps) {
         <ScrollView style={style.container}>
             <NavigationButton onClick={() => navigation.navigate("Home")} />
             <View style={{ paddingHorizontal: 20, marginTop: 10 }}>
-                <Title size={3} color="#000000" weight="400" marginBottom={20}>설정</Title>
-                <MenuItem title="메인 화면 위젯 설정" icon={WidgetImage} onPress={() => navigation.navigate("WidgetSetting")} />
+                {/* <Title size={3} color="#000000" weight="400" marginBottom={20}>설정</Title>
+                <MenuItem title="메인 화면 위젯 설정" icon={WidgetImage} onPress={() => navigation.navigate("WidgetSetting")} /> */}
                 <Title size={3} color="#000000" weight="400" marginTop={20} marginBottom={20}>학교</Title>
                 <MenuItem title="현재 선린인고의 날씨" icon={WeatherImage} onPress={() => navigation.navigate("Weather")} />
                 <MenuItem title="오늘 나오는 급식 보기" icon={FoodImage} onPress={() => navigation.navigate("Food")} />
