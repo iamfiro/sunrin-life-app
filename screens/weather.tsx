@@ -93,7 +93,13 @@ export default function ScreenWeather({ navigation }: IDefaultScreenProps) {
 const style = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#F6F6F9',
+        
+        width: Dimensions.get('window').width,
+        maxWidth: 500,
+
+        backgroundColor: "#F6F6F9",
+
+        marginHorizontal: "auto",
     },
     listContainer: {
         width: 180,

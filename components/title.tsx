@@ -1,11 +1,11 @@
 import { ReactNode } from "react";
-import { Text } from "react-native";
+import { Platform, Text } from "react-native";
 
 /**
  * Props for the Title component.
  */
 interface TitleProps {
-    size: -10 |-3 | -2 | -1 | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8;
+    size: -10 | -3 | -2 | -1 | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8;
     color: string;
     weight: '100' | '200' | '300' | '400' | '500' | '600' | '700';
     children?: ReactNode;
@@ -90,6 +90,12 @@ function sizeToFontSize(size: TitleProps['size']) {
  * @returns {JSX.Element} The rendered title component.
  */
 export default function Title({ size, color, weight, children, textAlign, marginBottom, marginTop }: TitleProps) {
+    if (Platform.OS === 'web') {
+        if (Number(weight) > 100) {
+            const x = Number(weight) - 100;
+            weight = x.toString() as TitleProps['weight'];
+        }
+    }
     return (
         <Text style={{
             color,

@@ -1,4 +1,4 @@
-import { ActivityIndicator, Image, ScrollView, StatusBar, StyleSheet, View } from "react-native";
+import { ActivityIndicator, Dimensions, Image, ScrollView, StatusBar, StyleSheet, View } from "react-native";
 import { IDefaultScreenProps } from "../types/screen";
 import NavigationButton from "../components/navigationButton";
 import Title from "../components/title";
@@ -9,6 +9,8 @@ import { DayToKorean } from "../types";
 import axios from "axios";
 import FoodImage from '../assets/icon/menu/food.png'
 import Toast from "../lib/toast";
+
+const Dimension = Dimensions.get('window');
 
 /**
  * Renders the widget setting screen.
@@ -93,7 +95,13 @@ export default function ScreenFood({ navigation }: IDefaultScreenProps) {
 const style = StyleSheet.create({
     container: {
         flex: 1,
+        
+        width: Dimensions.get('window').width,
+        maxWidth: 500,
+
         backgroundColor: "#F6F6F9",
+
+        marginHorizontal: "auto",
     },
     section: {
         flexDirection: "column",

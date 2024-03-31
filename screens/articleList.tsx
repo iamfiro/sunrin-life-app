@@ -1,4 +1,4 @@
-import { StyleSheet, ScrollView, StatusBar, View, Text, TextInput } from "react-native";
+import { StyleSheet, ScrollView, StatusBar, View, Text, TextInput, Dimensions } from "react-native";
 import NavigationButton from "../components/navigationButton";
 import Title from "../components/title";
 import FilterSelectButton from "../components/filterSelectButton";
@@ -39,7 +39,13 @@ export default function ScreenArticleList({ route, navigation }: any) {
 const style = StyleSheet.create({
     container: {
         flex: 1,
+        
+        width: Dimensions.get('window').width,
+        maxWidth: 500,
+
         backgroundColor: "#F6F6F9",
+
+        marginHorizontal: "auto",
     },
 
     /* Styles for the article search container. */

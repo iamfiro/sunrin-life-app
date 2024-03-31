@@ -11,7 +11,7 @@ interface SchoolInfoComponentProps {
     data: string;
 }
 
-const width = Dimensions.get('window').width;
+const width = Dimensions.get('window').width > 500 ? 460 : Dimensions.get('window').width;
 
 /**
  * Renders a component displaying school information.
@@ -56,7 +56,7 @@ export default function HomeSchoolDataList() {
     }, []);
 
     useEffect(() => {
-        axios.get("https://api.ny64.kr/comcigan/1/4").then((res: any) => {
+        axios.get("https://npi.ny64.kr/v1/snt/comcigan/1/4").then((res: any) => {
             const date = new Date();
             let data: string = '';
 
@@ -99,13 +99,12 @@ const style = StyleSheet.create({
     schoolInfoContainer: {
         backgroundColor: "#fff",
         
-        width: (width / 2) - 26,
+        width: (width / 2) - 25,
 
         borderWidth: 1,
         borderColor: "#f4f4f4",
         borderRadius: 10,
 
         padding: 17,
-        marginHorizontal: 'auto',
     },
 });

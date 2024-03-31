@@ -1,4 +1,4 @@
-import { StatusBar, StyleSheet, ScrollView, View, TouchableOpacity, Image, ImageSourcePropType, Linking } from "react-native";
+import { StatusBar, StyleSheet, ScrollView, View, TouchableOpacity, Image, ImageSourcePropType, Linking, Dimensions } from "react-native";
 import { IDefaultScreenProps } from "../types/screen";
 import Title from "../components/title";
 import NavigationButton from "../components/navigationButton";
@@ -42,7 +42,7 @@ function MenuItem({ title, icon, onPress }: MenuItemProps) {
                     <Image source={icon} style={style.itemImage} />
                 </View>
                 <View style={{ width: 5 }} />
-                <Title size={5} color="#5a5a5a" weight="200">{title}</Title>
+                <Title size={4} color="#5a5a5a" weight="200">{title}</Title>
             </View>
             <Icon name="right" size={20} color="#797979" />
         </TouchableOpacity>
@@ -60,8 +60,8 @@ export default function ScreenMenu({ navigation }: IDefaultScreenProps) {
         <ScrollView style={style.container}>
             <NavigationButton onClick={() => navigation.navigate("Home")} />
             <View style={{ paddingHorizontal: 20, marginTop: 10 }}>
-                <Title size={3} color="#000000" weight="400" marginBottom={20}>설정</Title>
-                <MenuItem title="메인 화면 위젯 설정" icon={WidgetImage} onPress={() => navigation.navigate("WidgetSetting")} />
+                {/* <Title size={3} color="#000000" weight="400" marginBottom={20}>설정</Title>
+                <MenuItem title="메인 화면 위젯 설정" icon={WidgetImage} onPress={() => navigation.navigate("WidgetSetting")} /> */}
                 <Title size={3} color="#000000" weight="400" marginTop={20} marginBottom={20}>학교</Title>
                 <MenuItem title="현재 선린인고의 날씨" icon={WeatherImage} onPress={() => navigation.navigate("Weather")} />
                 <MenuItem title="오늘 나오는 급식 보기" icon={FoodImage} onPress={() => navigation.navigate("Food")} />
@@ -77,7 +77,7 @@ export default function ScreenMenu({ navigation }: IDefaultScreenProps) {
                 <Button type="primary" text="문의하기" onClick={() => { Linking.openURL("https://www.instagram.com/sunrin_life")}} />
                 <View style={{ height: 5 }} />
                 <Button type="secondary" text="앱 로그아웃" onClick={() => { }} />
-                <Title size={6} color="#9d9d9d" weight="200" marginTop={20}>애플리케이션 버전 1.0.0</Title>
+                <Title size={6} color="#9d9d9d" weight="200" marginTop={20}>애플리케이션 버전 0.0.0-beta</Title>
                 <View style={{ height: 100 }} />
             </View>
         </ScrollView>
@@ -91,7 +91,13 @@ const style = StyleSheet.create({
     /* The container style for the menu screen. */
     container: {
         flex: 1,
+        
+        width: Dimensions.get('window').width,
+        maxWidth: 500,
+
         backgroundColor: "#F6F6F9",
+
+        marginHorizontal: "auto",
     },
     /* The container style for each menu item. */
     itemContainer: {
