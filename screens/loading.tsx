@@ -6,6 +6,28 @@ import { useEffect, useState } from "react";
 import { useFonts } from "expo-font";
 import * as SplashScreen from "expo-splash-screen";
 import { IDefaultScreenProps } from "../types/screen";
+import { Logger } from "../lib/logger";
+
+const textArr = [
+    '급식에 스테이크 나올 때까지 존버중',
+    '체육시간만 기다리는 중',
+    '나는야 모범생',
+    '열차가 지연중 입니다',
+    '이번역은~ 남영 남영 역입니다',
+    '기숙사 건설까지 존버중...',
+    '오늘 급식 기대하는 중',
+    '이차함수가 뭐지?!',
+    '지각 변명 찾는 중...',
+    '태정태세문단세... 뭐더라',
+    '오늘도 ㄴr는 Com퓨터를 킨ㄷr...',
+    '아.. 나도.. 맥북 사고 싶다',
+    '남아서 야자 하는 중',
+    '이거 끝나면 뭐하지?',
+    '오늘이 빨간 날이었으면...',
+    '체육대회가 언제였더라',
+    '집 가고 싶다',
+    '으아악! 교과서 두고왔다...ㅠ',
+];
 
 /**
  * Renders the widget setting screen.
@@ -17,37 +39,27 @@ export default function ScreenLoading({ navigation }: IDefaultScreenProps) {
     const [fontsLoaded, fontError] = useFonts(FontList);
 
     useEffect(() => {
-        SplashScreen.preventAutoHideAsync();
-        
-        if (fontsLoaded || fontError) {
-			navigation.navigate('Home');
-		};
+        (async () => {
+            SplashScreen.preventAutoHideAsync();
 
-        setInterval(() => {
-            const textArr = [
-                '급식에 스테이크 나올 때까지 존버중',
-                '체육시간만 기다리는 중',
-                '나는야 모범생',
-                '열차가 지연중 입니다',
-                '이번역은~ 남영 남영 역입니다',
-                '기숙사 건설까지 존버중...',
-                '오늘 급식 기대하는 중',
-                '이차함수가 뭐지?!',
-                '지각 변명 찾는 중...',
-                '태정태세문단세... 뭐더라',
-                '오늘도 ㄴr는 Com퓨터를 킨ㄷr...',
-                '아.. 나도.. 맥북 사고 싶다',
-                '남아서 야자 하는 중',
-                '이거 끝나면 뭐하지?',
-                '오늘이 빨간 날이었으면...',
-                '체육대회가 언제였더라',
-                '집 가고 싶다',
-                '으아악! 교과서 두고왔다...ㅠ',
-            ];
+            if (fontsLoaded || fontError) {
+                navigation.navigate('Home');
+            }
+        })();
+
+        const timeout = setTimeout(() => {
             const random = Math.floor(Math.random() * textArr.length);
             setText(textArr[random]);
-        }, 2000)
+        }, 2000);
+
+        return () => clearTimeout(timeout);
     }, [fontsLoaded, fontError]);
+
+    useEffect(() => {
+        (async () => {
+            await Logger({ eventType: 'event', eventName: 'APP_INITIALIZE', content: '앱이 로딩 됨'});
+        })();
+    }, [])
 
     return (
         <>
